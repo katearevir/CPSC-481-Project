@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="events.png" />
+    <None Remove="events_filter.png" />
+    <None Remove="events_pin.png" />
+    <None Remove="gear.png" />
+    <None Remove="interest_filter.png" />
+    <None Remove="interest_pin.png" />
+    <None Remove="itinerary_pin.png" />
+    <None Remove="map.png" />
+    <None Remove="restau_filter.png" />
+    <None Remove="restau_pin.png" />
+    <None Remove="search.png" />
+    <None Remove="sunshine.png" />
+    <None Remove="trvl_logo.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="events_filter.png" />
+    <Resource Include="events_pin.png" />
+    <Resource Include="gear.png" />
+    <Resource Include="interest_filter.png" />
+    <Resource Include="interest_pin.png" />
+    <Resource Include="itinerary_pin.png" />
+    <Resource Include="map.png" />
+    <Resource Include="restau_filter.png" />
+    <Resource Include="restau_pin.png" />
+    <Resource Include="search.png" />
+    <Resource Include="sunshine.png" />
+    <Resource Include="trvl_logo.jpg" />
+  </ItemGroup>
+
+</Project>
