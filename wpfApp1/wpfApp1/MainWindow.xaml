@@ -118,7 +118,6 @@
                 <ImageBrush ImageSource="/interest_pin.png"/>
             </Button.Background>
         </Button>
-        <WrapPanel/>
 
     </Grid>
 </Window>
