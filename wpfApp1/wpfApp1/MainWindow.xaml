@@ -76,12 +76,12 @@
                 <ImageBrush ImageSource="/gear.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="22" Margin="0,2,0,0" VerticalAlignment="Top" Width="22" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+        <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="22" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
             <Button.Background>
                 <ImageBrush ImageSource="/sunshine.png"/>
             </Button.Background>
         </Button>
-        <TextBlock HorizontalAlignment="Left" Height="14" Margin="22,6,0,0" Text="16°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="31" FontFamily="Century Gothic"/>
+        <TextBlock HorizontalAlignment="Left" Height="14" Margin="22,5,0,0" Text="16°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="31" FontFamily="Century Gothic"/>
         <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="40" Margin="82,26,0,0" VerticalAlignment="Top" Width="40" FontWeight="Normal">
             <Button.Background>
                 <ImageBrush ImageSource="/interest_filter.png"/>
