@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:trvlApp"
         mc:Ignorable="d"
-        Title="itineraryWindow" Height="479" Width="260" Background="White">
+        Title="itineraryWindow" Height="480" Width="221" Background="White">
     <Grid Background="White">
         <ListBox Margin="44,82,0,33" Background="White" BorderThickness="2, 2, 0, 2" BorderBrush="Black">
             <TextBlock Text="TextBlock" TextWrapping="Wrap"/>
@@ -35,7 +35,7 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="14" Margin="236,49,0,0" VerticalAlignment="Top" Width="14" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+        <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="14" Margin="197,49,0,0" VerticalAlignment="Top" Width="14" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
             <Button.Background>
                 <ImageBrush ImageSource="/right_arrow.png"/>
             </Button.Background>
@@ -45,7 +45,7 @@
                 <ImageBrush ImageSource="/left_arrow.png.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="24" Margin="235,0,0,0" VerticalAlignment="Top" Width="22" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+        <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="24" Margin="199,0,0,0" VerticalAlignment="Top" Width="22" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
             <Button.Background>
                 <ImageBrush ImageSource="/gear.png"/>
             </Button.Background>
@@ -56,7 +56,7 @@
             </Button.Background>
         </Button>
         <TextBlock HorizontalAlignment="Left" Height="14" Margin="22,5,0,0" Text="16°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="31" FontFamily="Century Gothic"/>
-        <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="31" Margin="219,410,0,0" VerticalAlignment="Top" Width="31" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+        <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="31" Margin="188,392,0,0" VerticalAlignment="Top" Width="32" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
             <Button.Background>
                 <ImageBrush ImageSource="/add.png"/>
             </Button.Background>
