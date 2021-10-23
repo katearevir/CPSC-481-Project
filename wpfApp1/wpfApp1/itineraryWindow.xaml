@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:trvlApp"
         mc:Ignorable="d"
-        Title="itineraryWindow" Height="480" Width="221" Background="White">
-    <Grid Background="White" Width="221" Height="480">
+        Title="itineraryWindow" Height="480" Width="233" Background="White">
+    <Grid Background="White" Width="233" Height="480">
         <ListBox Margin="44,82,0,39" Background="White" BorderThickness="2, 2, 0, 2" BorderBrush="Black">
             <TextBlock Text="TextBlock" TextWrapping="Wrap"/>
             <TextBlock Text="TextBlock" TextWrapping="Wrap"/>
