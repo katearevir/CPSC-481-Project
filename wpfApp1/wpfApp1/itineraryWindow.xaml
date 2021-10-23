@@ -6,26 +6,60 @@
         xmlns:local="clr-namespace:trvlApp"
         mc:Ignorable="d"
         Title="itineraryWindow" Height="480" Width="233" Background="White">
+    <Window.Resources>
+        <Style TargetType="ScrollBar">
+            <Setter Property="Width" Value="0"/>
+        </Style>
+    </Window.Resources>
     <Grid Background="White" Width="233" Height="480">
-        <ListBox Margin="44,82,0,39" Background="White" BorderThickness="2, 2, 0, 2" BorderBrush="Black">
-            <TextBlock Text="TextBlock" TextWrapping="Wrap"/>
-            <TextBlock Text="TextBlock" TextWrapping="Wrap"/>
-            <TextBlock Text="TextBlock" TextWrapping="Wrap"/>
-            <TextBlock Text="TextBlock" TextWrapping="Wrap"/>
-            <TextBlock Text="TextBlock" TextWrapping="Wrap"/>
-            <TextBlock Text="TextBlock" TextWrapping="Wrap"/>
-            <TextBlock Text="TextBlock" TextWrapping="Wrap"/>
-            <TextBlock Text="TextBlock" TextWrapping="Wrap"/>
-            <Button Content="Button"/>
+
+        <ListBox Margin="29,82,0,39" Background="White" BorderThickness="2, 2, 0, 2" BorderBrush="Black">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="Margin" Value="0"/>
+                    <Setter Property="Padding" Value="0"/>
+
+                    <!-- For setting height of control-->
+                </Style>
+            </ListBox.ItemContainerStyle>
+            <TextBlock Text="9:00am" TextWrapping="Wrap" FontFamily="Century Gothic" Foreground="#FF9E9E9E"/>
+            <Button Content="Calgary Tower" BorderThickness="0" Height="23" Width="199" HorizontalContentAlignment="Left" Background="#FF246400" Foreground="White" FontFamily="Century Gothic"/>
+
+            <TextBlock Text="10:00am" TextWrapping="Wrap" FontFamily="Century Gothic" Foreground="#FF9E9E9E"/>
+            <Button Content="Prince's Island Park" BorderThickness="0" Height="62" Width="200" HorizontalContentAlignment="Left" Background="#FF67CD00" Foreground="White" FontFamily="Century Gothic"/>
+
+            <TextBlock Text="12:00pm" TextWrapping="Wrap" FontFamily="Century Gothic" Foreground="#FF9E9E9E"/>
+            <!-- Empty textblock, placeholder-->
+            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="199" Height="62"/>
+
+            <TextBlock Text="1:00pm" TextWrapping="Wrap" FontFamily="Century Gothic" Foreground="#FF9E9E9E"/>
+            <!-- Empty textblock, placeholder-->
+            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="199" Height="62"/>
+            <TextBlock Text="2:00pm" TextWrapping="Wrap" FontFamily="Century Gothic" Foreground="#FF9E9E9E"/>
+            <!-- Empty textblock, placeholder-->
+            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="199" Height="62"/>
+            <TextBlock Text="3:00pm" TextWrapping="Wrap" FontFamily="Century Gothic" Foreground="#FF9E9E9E"/>
+            <!-- Empty textblock, placeholder-->
+            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="199" Height="62"/>
+            <TextBlock Text="4:00pm" TextWrapping="Wrap" FontFamily="Century Gothic" Foreground="#FF9E9E9E"/>
+            <!-- Empty textblock, placeholder-->
+            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="199" Height="62"/>
+            <TextBlock Text="5:00pm" TextWrapping="Wrap" FontFamily="Century Gothic" Foreground="#FF9E9E9E"/>
+            <!-- Empty textblock, placeholder-->
+            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="199" Height="62"/>
+            <TextBlock Text="6:00pm" TextWrapping="Wrap" FontFamily="Century Gothic" Foreground="#FF9E9E9E"/>
+            <!-- Empty textblock, placeholder-->
+            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="199" Height="62"/>
+
         </ListBox>
-        <Button Content="    Monday&#xa;Sept 27, 2021" BorderThickness="0" HorizontalAlignment="Center" Margin="0,29,0,0" VerticalAlignment="Top" Width="119" Height="53" FontFamily="Century Gothic" FontWeight="Bold" Background="{x:Null}" FontStretch="Normal"/>
+        <Button Content="    Monday&#xa;Sept 27, 2021" BorderThickness="0" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" Width="119" Height="53" FontFamily="Century Gothic" FontWeight="Bold" Background="{x:Null}" FontStretch="Normal"/>
         <TextBlock HorizontalAlignment="Center"  Height="24" TextWrapping="Wrap" VerticalAlignment="Top" Width="260">
             <TextBlock.Background>
                 <ImageBrush ImageSource="/trvl_logo.jpg"/>
             </TextBlock.Background>
         </TextBlock>
-        <Ellipse HorizontalAlignment="Left" Height="143" Margin="-27,0,0,0" Stroke="#FF686868" VerticalAlignment="Center" Width="51" Fill="#FF686868" Opacity="0.5"/>
-        <TextBlock HorizontalAlignment="Left" Height="27" Margin="-58,261,0,0" Text="MAP" TextWrapping="Wrap" VerticalAlignment="Top" Width="118" RenderTransformOrigin="0.5,0.5" FontFamily="Century Gothic" Foreground="White">
+        <Ellipse HorizontalAlignment="Left" Height="142" Margin="-27,0,0,0" Stroke="#FF686868" VerticalAlignment="Center" Width="51" Fill="#FF686868" Opacity="0.5"/>
+        <TextBlock HorizontalAlignment="Left" Height="27" Margin="-58,268,0,0" Text="MAP" TextWrapping="Wrap" VerticalAlignment="Top" Width="118" RenderTransformOrigin="0.5,0.5" FontFamily="Century Gothic" Foreground="White">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -35,12 +69,12 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="14" Margin="197,49,0,0" VerticalAlignment="Top" Width="14" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+        <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="14" Margin="209,45,0,0" VerticalAlignment="Top" Width="14" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
             <Button.Background>
                 <ImageBrush ImageSource="/right_arrow.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="14" Margin="10,49,0,0" VerticalAlignment="Top" Width="14" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+        <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="14" Margin="10,45,0,0" VerticalAlignment="Top" Width="14" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
             <Button.Background>
                 <ImageBrush ImageSource="/left_arrow.png.png"/>
             </Button.Background>
