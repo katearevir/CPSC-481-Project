@@ -97,7 +97,7 @@
                 <ImageBrush ImageSource="/interest_pin.png"/>
             </Button.Background>
         </Button>
-        <StackPanel Orientation="Horizontal" Margin="0,24,114,414">
+        <StackPanel Orientation="Horizontal" Margin="0,24,118,414">
             <Button Content="" BorderThickness="0" Height="34" Width="34" FontWeight="Normal">
                 <Button.Background>
                     <ImageBrush ImageSource="/restau_filter.png"/>
