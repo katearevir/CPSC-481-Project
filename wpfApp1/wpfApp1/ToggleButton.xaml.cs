@@ -20,8 +20,8 @@ namespace trvlApp
     /// </summary>
     public partial class ToggleButton : UserControl
     {
-        Thickness LeftSide = new Thickness(-158, 0, 0, 0);
-        Thickness RightSide = new Thickness(0, 0, -159, 0);
+        Thickness LeftSide = new Thickness(-50, 0, 0, 0);
+        Thickness RightSide = new Thickness(0, 0, 50, 0);
         SolidColorBrush ButtonOff = new SolidColorBrush(Color.FromRgb(160,160,160));
         SolidColorBrush ButtonOn = new SolidColorBrush(Color.FromRgb(130,190,125));
         private bool Toggled = false; 
@@ -48,13 +48,12 @@ namespace trvlApp
 
                 ToggleButtonCircle.Margin = RightSide;
 
-            } else
+            }
+            else
+            {
                 ToggleButtonBackground.Fill = ButtonOff;
                 Toggled = false;
                 ToggleButtonCircle.Margin = LeftSide;
-
-            {
-
             }
         }
 
