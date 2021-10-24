@@ -43,6 +43,7 @@
         <local:ToggleButton x:Name="Toggle3" Margin="173,0,0,264" HorizontalAlignment="Left" Width="39" Height="45" VerticalAlignment="Bottom" Grid.Row="1"/>
         <local:ToggleButton x:Name="Toggle4" Margin="173,0,0,296" HorizontalAlignment="Left" Width="39" Height="45" VerticalAlignment="Bottom" Grid.Row="1"/>
         <local:ToggleButton x:Name="Toggle5" Margin="173,0,0,233" HorizontalAlignment="Left" Width="39" Height="45" VerticalAlignment="Bottom" Grid.Row="1"/>
+        <Button x:Name="BackButton" Content="◀" HorizontalAlignment="Left" Margin="10,368,0,0" VerticalAlignment="Top" Height="20" Width="20" Grid.Row="1" RenderTransformOrigin="0.529,0.464" Click="BackToMainWindow"/>
         <StackPanel Margin="0,10,0,392" HorizontalAlignment="Center" Width="212" Orientation="Horizontal" Grid.RowSpan="2">
             <Label Content="Alerts" Height="26" Width="164" FontWeight="Bold"/>
             <local:ToggleButton x:Name="Toggle1" Width="40" Height="41" VerticalAlignment="Bottom" HorizontalAlignment="Stretch"/>

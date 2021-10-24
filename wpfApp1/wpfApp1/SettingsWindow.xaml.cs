@@ -24,5 +24,11 @@ namespace trvlApp
             InitializeComponent();
         }
 
+        private void BackToMainWindow(object sender, RoutedEventArgs e)
+        {
+            wpfApp1.MainWindow objSettingsWindow = new wpfApp1.MainWindow();
+            this.Visibility = Visibility.Hidden; // hiding current window 
+            objSettingsWindow.Show();
+        }
     }
 }
