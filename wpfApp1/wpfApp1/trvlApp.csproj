@@ -25,6 +25,7 @@
     <None Remove="save.png" />
     <None Remove="search.png" />
     <None Remove="sunshine.png" />
+    <None Remove="TRVL-nobackground-cropped.png" />
     <None Remove="trvl_logo.jpg" />
   </ItemGroup>
 
@@ -45,6 +46,7 @@
     <Resource Include="save.png" />
     <Resource Include="search.png" />
     <Resource Include="sunshine.png" />
+    <Resource Include="TRVL-nobackground-cropped.png" />
     <Resource Include="trvl_logo.jpg" />
   </ItemGroup>
 
