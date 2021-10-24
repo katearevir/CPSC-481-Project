@@ -4,10 +4,12 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="add.png" />
+    <None Remove="delete.png" />
     <None Remove="events.png" />
     <None Remove="events_filter.png" />
     <None Remove="events_pin.png" />
@@ -20,6 +22,7 @@
     <None Remove="restau_filter.png" />
     <None Remove="restau_pin.png" />
     <None Remove="right_arrow.png" />
+    <None Remove="save.png" />
     <None Remove="search.png" />
     <None Remove="sunshine.png" />
     <None Remove="trvl_logo.jpg" />
@@ -27,6 +30,7 @@
 
   <ItemGroup>
     <Resource Include="add.png" />
+    <Resource Include="delete.png" />
     <Resource Include="events_filter.png" />
     <Resource Include="events_pin.png" />
     <Resource Include="gear.png" />
@@ -38,6 +42,7 @@
     <Resource Include="restau_filter.png" />
     <Resource Include="restau_pin.png" />
     <Resource Include="right_arrow.png" />
+    <Resource Include="save.png" />
     <Resource Include="search.png" />
     <Resource Include="sunshine.png" />
     <Resource Include="trvl_logo.jpg" />
