@@ -4,10 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:trvlApp"
-             mc:Ignorable="d" Height="161" Width="405">
+             mc:Ignorable="d" Height="161" Width="384">
 
-    <Viewbox Stretch="Uniform" Margin="0,-18,0,0">
-        <Grid HorizontalAlignment="Center" Height="118" VerticalAlignment="Center" Width="279">
+    <Viewbox Stretch="Uniform" Margin="0">
+        <Grid HorizontalAlignment="Center" Height="118" Margin="0" VerticalAlignment="Center" Width="279">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="22*"/>
                 <ColumnDefinition Width="45*"/>
@@ -15,7 +15,7 @@
                 <ColumnDefinition Width="23*"/>
             </Grid.ColumnDefinitions>
             <Rectangle x:Name="ToggleButtonBackground" HorizontalAlignment="Left" Width="277" RadiusX="60.334" RadiusY="60.334" Fill="#FFA0A0A0" Margin="1,0,0,0" Height="114" VerticalAlignment="Center" MouseLeftButtonDown="toggleBackgroundDown" Grid.ColumnSpan="4"/>
-            <Ellipse x:Name="ToggleButtonCircle" HorizontalAlignment="Left" Height="105" VerticalAlignment="Center" Width="105" Fill="White" MouseLeftButtonDown="toggleCircleButtonDown" Grid.Column="2" Margin="20,0,0,0"/>
+            <Ellipse x:Name="ToggleButtonCircle" HorizontalAlignment="Left" Height="106" VerticalAlignment="Center" Width="105" Fill="White" MouseLeftButtonDown="toggleCircleButtonDown" Grid.Column="2" Margin="20,0,0,0"/>
         </Grid>
     </Viewbox>
 
