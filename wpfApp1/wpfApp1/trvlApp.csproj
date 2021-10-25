@@ -19,6 +19,7 @@
     <None Remove="itinerary_pin.png" />
     <None Remove="left_arrow.png.png" />
     <None Remove="map.png" />
+    <None Remove="restau_example.png" />
     <None Remove="restau_filter.png" />
     <None Remove="restau_pin.png" />
     <None Remove="right_arrow.png" />
@@ -40,6 +41,9 @@
     <Resource Include="itinerary_pin.png" />
     <Resource Include="left_arrow.png.png" />
     <Resource Include="map.png" />
+    <Resource Include="restau_example.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="restau_filter.png" />
     <Resource Include="restau_pin.png" />
     <Resource Include="right_arrow.png" />
