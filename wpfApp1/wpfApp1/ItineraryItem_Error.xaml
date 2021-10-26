@@ -7,10 +7,10 @@
         mc:Ignorable="d"
         Title="Itinerary Item Error" Height="150" Width="200">
     <Grid>
-        <TextBlock TextWrapping="WrapWithOverflow" HorizontalAlignment="Center" Margin="0,15,0,0" VerticalAlignment="Top" Height="78" Width="180">
+        <TextBlock TextWrapping="WrapWithOverflow" HorizontalAlignment="Center" Margin="0,15,0,0" VerticalAlignment="Top" Height="78" Width="180" FontFamily="Global User Interface">
             Error! The 'Name', 'Location', 'Time Start' and 'Time End' Fields must not be empty! The Time Fields are on a 12 hour clock."
         </TextBlock>
         <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="404,7,0,0" VerticalAlignment="Top"/>
-        <Button Content="OK" HorizontalAlignment="Center" Margin="0,104,0,0" VerticalAlignment="Top" Width="90"/>
+        <Button Content="OK" HorizontalAlignment="Center" Margin="0,104,0,0" VerticalAlignment="Top" Width="90" FontFamily="Global User Interface"/>
     </Grid>
 </Window>

@@ -12,7 +12,7 @@
         <Viewbox Stretch= "Fill" Height="300" Width="200">
             <Calendar HorizontalAlignment="Center" VerticalAlignment="Center" DisplayDate="9/27/2021" DisplayDateStart="8/29/2021" DisplayDateEnd="10/9/2021" Height="178" Width="200"
                       IsTodayHighlighted="True" SelectedDatesChanged="Calendar_SelectedDatesChanged" SelectedDate="9/27" SelectionMode="SingleDate"
-                      Background="BlanchedAlmond"/>
+                      Background="BlanchedAlmond" FontFamily="Global User Interface"/>
         </Viewbox>
     </Grid>
 </Window>

@@ -197,39 +197,39 @@
                     <!-- For setting height of control-->
                 </Style>
             </ListBox.ItemContainerStyle>
-            <TextBlock Text="9:00am" TextWrapping="Wrap" FontFamily="Century Gothic" Foreground="#FF9E9E9E"/>
-            <Button Content="Calgary Tower" BorderThickness="0" Height="23" Width="172" HorizontalContentAlignment="Left" Background="#FF246400" Foreground="White" FontFamily="Century Gothic"/>
+            <TextBlock Text="9:00am" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+            <Button Content="Calgary Tower" BorderThickness="0" Height="23" Width="172" HorizontalContentAlignment="Left" Background="#FF246400" Foreground="White" FontFamily="Global User Interface"/>
 
-            <TextBlock Text="10:00am" TextWrapping="Wrap" FontFamily="Century Gothic" Foreground="#FF9E9E9E"/>
-            <Button Content="Prince's Island Park" BorderThickness="0" Height="62" Width="173" HorizontalContentAlignment="Left" Background="#FF67CD00" Foreground="White" FontFamily="Century Gothic"/>
+            <TextBlock Text="10:00am" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+            <Button Content="Prince's Island Park" BorderThickness="0" Height="62" Width="173" HorizontalContentAlignment="Left" Background="#FF67CD00" Foreground="White" FontFamily="Global User Interface"/>
 
-            <TextBlock Text="12:00pm" TextWrapping="Wrap" FontFamily="Century Gothic" Foreground="#FF9E9E9E"/>
+            <TextBlock Text="12:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
             <!-- Empty textblock, placeholder-->
             <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="62"/>
 
-            <TextBlock Text="1:00pm" TextWrapping="Wrap" FontFamily="Century Gothic" Foreground="#FF9E9E9E"/>
+            <TextBlock Text="1:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
             <!-- Empty textblock, placeholder-->
             <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="62"/>
-            <TextBlock Text="2:00pm" TextWrapping="Wrap" FontFamily="Century Gothic" Foreground="#FF9E9E9E"/>
+            <TextBlock Text="2:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
             <!-- Empty textblock, placeholder-->
             <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="62"/>
-            <TextBlock Text="3:00pm" TextWrapping="Wrap" FontFamily="Century Gothic" Foreground="#FF9E9E9E"/>
+            <TextBlock Text="3:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
             <!-- Empty textblock, placeholder-->
             <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="62"/>
-            <TextBlock Text="4:00pm" TextWrapping="Wrap" FontFamily="Century Gothic" Foreground="#FF9E9E9E"/>
+            <TextBlock Text="4:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
             <!-- Empty textblock, placeholder-->
             <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="62"/>
-            <TextBlock Text="5:00pm" TextWrapping="Wrap" FontFamily="Century Gothic" Foreground="#FF9E9E9E"/>
+            <TextBlock Text="5:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
             <!-- Empty textblock, placeholder-->
             <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="62"/>
-            <TextBlock Text="6:00pm" TextWrapping="Wrap" FontFamily="Century Gothic" Foreground="#FF9E9E9E"/>
+            <TextBlock Text="6:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
             <!-- Empty textblock, placeholder-->
             <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="62"/>
 
         </ListBox>
-        <Button Content="    Monday&#xA;Sept 27, 2021" BorderThickness="0" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" Width="119" Height="53" FontFamily="Century Gothic" FontWeight="Bold" Background="{x:Null}" FontStretch="Normal"/>
+        <Button Content="    Monday&#xA;Sept 27, 2021" BorderThickness="0" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" Width="119" Height="53" FontFamily="Global User Interface" FontWeight="Bold" Background="{x:Null}" FontStretch="Normal" TextBlock.FontFamily="Global User Interface"/>
         <Ellipse HorizontalAlignment="Left" Height="142" Margin="-27,0,0,0" Stroke="#FF686868" VerticalAlignment="Center" Width="51" Fill="#FF686868" Opacity="0.5"/>
-        <TextBlock HorizontalAlignment="Left" Height="27" Margin="-58,268,0,0" Text="MAP" TextWrapping="Wrap" VerticalAlignment="Top" Width="118" RenderTransformOrigin="0.5,0.5" FontFamily="Century Gothic" Foreground="White">
+        <TextBlock HorizontalAlignment="Left" Height="27" Margin="-58,268,0,0" Text="MAP" TextWrapping="Wrap" VerticalAlignment="Top" Width="118" RenderTransformOrigin="0.5,0.5" FontFamily="Global User Interface" Foreground="White">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -260,7 +260,7 @@
                 <ImageBrush ImageSource="/sunshine.png"/>
             </Button.Background>
         </Button>
-        <TextBlock HorizontalAlignment="Left" Height="14" Margin="22,5,0,0" Text="16°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="31" FontFamily="Century Gothic"/>
+        <TextBlock HorizontalAlignment="Left" Height="14" Margin="22,5,0,0" Text="16°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="31" FontFamily="Global User Interface"/>
         <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="31" Margin="191,401,0,0" VerticalAlignment="Top" Width="32" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
             <Button.Background>
                 <ImageBrush ImageSource="/add.png"/>
