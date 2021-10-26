@@ -14,6 +14,7 @@
     <None Remove="events_filter.png" />
     <None Remove="events_pin.png" />
     <None Remove="gear.png" />
+    <None Remove="Image1.png" />
     <None Remove="interest_filter.png" />
     <None Remove="interest_pin.png" />
     <None Remove="itinerary_pin.png" />
@@ -36,6 +37,7 @@
     <Resource Include="events_filter.png" />
     <Resource Include="events_pin.png" />
     <Resource Include="gear.png" />
+    <Resource Include="Image1.png" />
     <Resource Include="interest_filter.png" />
     <Resource Include="interest_pin.png" />
     <Resource Include="itinerary_pin.png" />
