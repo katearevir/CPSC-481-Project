@@ -198,33 +198,33 @@
                 </Style>
             </ListBox.ItemContainerStyle>
             <TextBlock Text="9:00am" TextWrapping="Wrap" FontFamily="Century Gothic" Foreground="#FF9E9E9E"/>
-            <Button Content="Calgary Tower" BorderThickness="0" Height="23" Width="199" HorizontalContentAlignment="Left" Background="#FF246400" Foreground="White" FontFamily="Century Gothic"/>
+            <Button Content="Calgary Tower" BorderThickness="0" Height="23" Width="172" HorizontalContentAlignment="Left" Background="#FF246400" Foreground="White" FontFamily="Century Gothic"/>
 
             <TextBlock Text="10:00am" TextWrapping="Wrap" FontFamily="Century Gothic" Foreground="#FF9E9E9E"/>
-            <Button Content="Prince's Island Park" BorderThickness="0" Height="62" Width="200" HorizontalContentAlignment="Left" Background="#FF67CD00" Foreground="White" FontFamily="Century Gothic"/>
+            <Button Content="Prince's Island Park" BorderThickness="0" Height="62" Width="173" HorizontalContentAlignment="Left" Background="#FF67CD00" Foreground="White" FontFamily="Century Gothic"/>
 
             <TextBlock Text="12:00pm" TextWrapping="Wrap" FontFamily="Century Gothic" Foreground="#FF9E9E9E"/>
             <!-- Empty textblock, placeholder-->
-            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="199" Height="62"/>
+            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="62"/>
 
             <TextBlock Text="1:00pm" TextWrapping="Wrap" FontFamily="Century Gothic" Foreground="#FF9E9E9E"/>
             <!-- Empty textblock, placeholder-->
-            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="199" Height="62"/>
+            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="62"/>
             <TextBlock Text="2:00pm" TextWrapping="Wrap" FontFamily="Century Gothic" Foreground="#FF9E9E9E"/>
             <!-- Empty textblock, placeholder-->
-            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="199" Height="62"/>
+            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="62"/>
             <TextBlock Text="3:00pm" TextWrapping="Wrap" FontFamily="Century Gothic" Foreground="#FF9E9E9E"/>
             <!-- Empty textblock, placeholder-->
-            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="199" Height="62"/>
+            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="62"/>
             <TextBlock Text="4:00pm" TextWrapping="Wrap" FontFamily="Century Gothic" Foreground="#FF9E9E9E"/>
             <!-- Empty textblock, placeholder-->
-            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="199" Height="62"/>
+            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="62"/>
             <TextBlock Text="5:00pm" TextWrapping="Wrap" FontFamily="Century Gothic" Foreground="#FF9E9E9E"/>
             <!-- Empty textblock, placeholder-->
-            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="199" Height="62"/>
+            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="62"/>
             <TextBlock Text="6:00pm" TextWrapping="Wrap" FontFamily="Century Gothic" Foreground="#FF9E9E9E"/>
             <!-- Empty textblock, placeholder-->
-            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="199" Height="62"/>
+            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="62"/>
 
         </ListBox>
         <Button Content="    Monday&#xA;Sept 27, 2021" BorderThickness="0" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" Width="119" Height="53" FontFamily="Century Gothic" FontWeight="Bold" Background="{x:Null}" FontStretch="Normal"/>

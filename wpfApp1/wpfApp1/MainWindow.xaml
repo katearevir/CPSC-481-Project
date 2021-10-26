@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:wpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="480" Width="233">
+        Title="MainWindow" Height="500" Width="250">
     <Grid Width="233" Height="480">
         <Grid.Background>
             <ImageBrush ImageSource="/map.png" Stretch="UniformToFill"/>
