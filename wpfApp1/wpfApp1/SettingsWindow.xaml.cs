@@ -30,5 +30,7 @@ namespace trvlApp
             this.Visibility = Visibility.Hidden; // hiding current window 
             objSettingsWindow.Show();
         }
+
+        
     }
 }
