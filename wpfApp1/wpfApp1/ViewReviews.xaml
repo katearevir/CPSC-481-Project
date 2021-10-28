@@ -239,18 +239,24 @@
             </Button>
         </StackPanel>
         <Frame Background="White" Content="Restaurant A&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;    Reviews" HorizontalAlignment="Left" Height="365" Margin="22,71,0,0" VerticalAlignment="Top" Width="183" BorderBrush="Black" BorderThickness="2" Navigated="Frame_Navigated" FontFamily="Global User Interface"/>
-        <Image Source="/restau_example.png" Stretch="UniformToFill" HorizontalAlignment="Left" Height="97" Margin="36,113,0,0" VerticalAlignment="Top" Width="114"/>
-        <Frame Content="Hours&#xD;&#xA;Mon-&#xD;&#xA;Fri&#xD;&#xA;12-10" HorizontalAlignment="Left" Height="128" Margin="157,113,0,0" VerticalAlignment="Top" Width="39" Navigated="Frame_Navigated_1" FontFamily="Global User Interface"/>
-
-        <Image Source="/stars.png" Stretch="Fill" HorizontalAlignment="Left" Height="26" Margin="36,0,0,0" VerticalAlignment="Center" Width="114"/>
+        <Image Source="/restau_example.png" Stretch="UniformToFill" HorizontalAlignment="Left" Height="87" Margin="32,98,0,0" VerticalAlignment="Top" Width="162"/>
+        <Frame Content="Hours :&#xD;&#xA;Mon-Fri&#x9;      12-10" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="130" Navigated="Frame_Navigated_1" FontFamily="Global User Interface" Margin="48,217,0,0"/>
         <Image Source="add.png" HorizontalAlignment="Left" Height="29" Margin="167,399,0,0" VerticalAlignment="Top" Width="29" RenderTransformOrigin="0.049,0.474"/>
         <Image Source="left_arrow.png.png" Stretch="UniformToFill" HorizontalAlignment="Left" Height="34" Margin="24,394,0,0" VerticalAlignment="Top" Width="24" RenderTransformOrigin="0.937,0.615"/>
-        <ListBox HorizontalAlignment="Left" Height="82" Margin="36,307,0,0" VerticalAlignment="Top" Width="155" Background="LightGray">
-            <TextBlock Text="Example Review" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="White" Width="116" Height="34"/>
-            <TextBlock Text="Review" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="White" Width="116" Height="34"/>
-            <TextBlock Text="Review" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="White" Width="116" Height="34"/>
-            <TextBlock Text="Review" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="White" Width="116" Height="34"/>
+        <ListBox HorizontalAlignment="Left" Height="82" Margin="36,307,0,0" VerticalAlignment="Top" Width="155" Background="Gray">
+            <TextBlock Text="       Scam, not coming back again" TextWrapping="Wrap" FontFamily="Global User Interface" FontSize="10" Foreground="White" Width="116" Height="34"/>
+            <TextBlock Text="       Great Place, would recommond" TextWrapping="Wrap" FontFamily="Global User Interface" FontSize="9" Foreground="White" Width="116" Height="34"/>
+            <TextBlock Text="       Love the waitress, shes nice" TextWrapping="Wrap" FontFamily="Global User Interface" FontSize="9" Foreground="White" Width="116" Height="34"/>
+            <TextBlock Text="       Just a other ok restaurant" TextWrapping="Wrap" FontFamily="Global User Interface" FontSize="9" Foreground="White" Width="116" Height="34"/>
+            <Image Source="/user profile.png" Height="20" Width="18" RenderTransformOrigin="0.431,0.485"/>
         </ListBox>
+        <Image Source="/star.png" HorizontalAlignment="Left" Height="21" Margin="49,196,0,0" VerticalAlignment="Top" Width="26"/>
+        <Image Source="/star.png" HorizontalAlignment="Left" Height="21" Margin="74,196,0,0" VerticalAlignment="Top" Width="27"/>
+        <Image Source="/star.png" HorizontalAlignment="Left" Height="21" Margin="99,196,0,0" VerticalAlignment="Top" Width="26"/>
+        <Image Source="/empty star.png" HorizontalAlignment="Left" Height="21" Margin="124,196,0,0" VerticalAlignment="Top" Width="26"/>
+        <Image Source="/empty star.png" HorizontalAlignment="Left" Height="21" Margin="149,196,0,0" VerticalAlignment="Top" Width="26"/>
+        <Image Source="/user profile.png" HorizontalAlignment="Left" Height="20" Margin="42,307,0,0" VerticalAlignment="Top" Width="18" RenderTransformOrigin="0.431,0.485"/>
+        <Image Source="/user profile.png" HorizontalAlignment="Left" Height="20" Margin="41,339,0,0" VerticalAlignment="Top" Width="18" RenderTransformOrigin="0.431,0.485"/>
 
 
     </Grid>
