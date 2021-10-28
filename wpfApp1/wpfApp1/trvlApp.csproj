@@ -27,6 +27,7 @@
     <None Remove="sunshine.png" />
     <None Remove="trash.png" />
     <None Remove="trvl_logo.jpg" />
+	<None Remove="TRVL-nobackground-cropped.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -48,6 +49,7 @@
     <Resource Include="sunshine.png" />
     <Resource Include="trash.png" />
     <Resource Include="trvl_logo.jpg" />
+	<Resource Include="TRVL-nobackground-cropped.png" />
   </ItemGroup>
 
 </Project>
