@@ -23,5 +23,12 @@ namespace trvlApp
         {
             InitializeComponent();
         }
+
+        public void OpenSettingsWindow(object sender, RoutedEventArgs e)
+        {
+            trvlApp.SettingsWindow objSettingsWindow = new trvlApp.SettingsWindow();
+            this.Visibility = Visibility.Hidden; // hiding current window 
+            objSettingsWindow.Show();
+        }
     }
 }
