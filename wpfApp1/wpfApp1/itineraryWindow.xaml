@@ -198,27 +198,28 @@
                 </Style>
             </ListBox.ItemContainerStyle>
             <TextBlock Text="9:00am" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
-            <Button Content="Calgary Tower" BorderThickness="0" Height="23" Width="172" HorizontalContentAlignment="Left" Background="#FF246400" Foreground="White" FontFamily="Global User Interface"/>
+            <Button Content="Calgary Tower" BorderThickness="0" Height="23" Width="172" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Background="#FF246400" Foreground="White" FontFamily="Global User Interface"/>
 
             <TextBlock Text="10:00am" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
-            <Button Content="Prince's Island Park" BorderThickness="0" Height="62" Width="173" HorizontalContentAlignment="Left" Background="#FF67CD00" Foreground="White" FontFamily="Global User Interface"/>
+            <Button Content="Prince's Island Park" BorderThickness="0" Height="62" Width="173" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Background="#FF67CD00" Foreground="White" FontFamily="Global User Interface"/>
+            <TextBlock Text="11:00am" TextWrapping="Wrap" FontFamily="Global User Interface" Margin="0, -40, 0, 0" Opacity="0.5" Foreground="#FF686868"/>
 
             <TextBlock Text="12:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
             <!-- Empty textblock, placeholder-->
-            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="62"/>
+            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
 
             <TextBlock Text="1:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
             <!-- Empty textblock, placeholder-->
-            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="62"/>
+            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="39"/>
             <TextBlock Text="2:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
             <!-- Empty textblock, placeholder-->
-            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="62"/>
+            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="41"/>
             <TextBlock Text="3:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
             <!-- Empty textblock, placeholder-->
-            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="62"/>
+            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="37"/>
             <TextBlock Text="4:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
             <!-- Empty textblock, placeholder-->
-            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="62"/>
+            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="20"/>
             <TextBlock Text="5:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
             <!-- Empty textblock, placeholder-->
             <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="62"/>
