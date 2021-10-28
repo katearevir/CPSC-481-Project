@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="settingsWindow" Height="480" Width="233">
     <Grid Background="#FFCBC5C5" Width="233" Margin="0,0,0,-1">
-        <Rectangle HorizontalAlignment="Center" Height="24" Stroke="Black" VerticalAlignment="Top" Width="247" Fill="White"/>
+        <Rectangle HorizontalAlignment="Center" Height="24" Stroke="Black" VerticalAlignment="Top" Width="247" Fill="White" Margin="0,1,0,0"/>
         <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="24" Margin="211,0,0,0" VerticalAlignment="Top" Width="22" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
             <Button.Background>
                 <ImageBrush ImageSource="/gear.png"/>
@@ -24,8 +24,6 @@
                 <ImageBrush ImageSource="/TRVL-nobackground-cropped.png" Stretch="UniformToFill"/>
             </TextBlock.Background>
         </TextBlock>
-
-        <Button HorizontalAlignment="Left" Margin="164,23,0,0" Grid.Row="1" VerticalAlignment="Top"/>
 
         <Button x:Name="BackButton" BorderThickness="0" Content="◀" HorizontalAlignment="Left" Margin="10,435,0,0" VerticalAlignment="Top" Height="20" Width="20" RenderTransformOrigin="0.529,0.464" Click="BackToMainWindow" Background="{x:Null}"/>
 
