@@ -239,7 +239,9 @@
             </Button>
         </StackPanel>
 
-        <StackPanel Width="200" Height="300" Margin="16,96,17,84" Orientation="Vertical" Background="White">
+        <Rectangle HorizontalAlignment="Center" Width="200" Height="300" Margin="0,96,0,0" Stroke="Black" Fill="White" VerticalAlignment="Top"/>
+
+        <StackPanel Width="200" Height="300" Margin="16,96,17,84" Orientation="Vertical">
             <TextBlock Text=" Restaurant A" FontFamily="Global User Interface" FontSize="15" FontWeight="Bold"></TextBlock>
             <Image Source="/restau_example.png" Stretch="Fill" HorizontalAlignment="Center" Height="89" Width="156"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
@@ -253,7 +255,7 @@
             <TextBlock Text="Hours" FontFamily="Global User Interface" FontWeight="Bold" HorizontalAlignment="Center"/>
             <TextBlock Text="Mon-Fri 12pm-10pm" FontFamily="Global User Interface" FontSize="10" Height="13" HorizontalAlignment="Center"></TextBlock>
             <TextBlock Text="Reviews" FontFamily="Global User Interface" Height="16" HorizontalAlignment="Center" FontWeight="Bold"/>
-            <ListBox HorizontalAlignment="Center" Height="89" Width="156" Background="Gray">
+            <ListBox HorizontalAlignment="Center" Height="95" Width="156" Background="Gray">
                 <StackPanel Orientation="Horizontal" Height="24" Width="122">
                     <Image Source="/user profile.png" Height="20" VerticalAlignment="Center" Width="22"/>
                     <TextBlock Text=" John" Foreground="White" VerticalAlignment="Center" Width="52" FontFamily="Global User Interface"></TextBlock>
@@ -277,18 +279,18 @@
                 <TextBlock Text="Love the waitress, shes nice" TextWrapping="Wrap" FontFamily="Global User Interface" FontSize="9" Foreground="White" Width="116" Height="34"/>
                 <TextBlock Text="Just a other ok restaurant" TextWrapping="Wrap" FontFamily="Global User Interface" FontSize="9" Foreground="White" Width="116" Height="34"/>
             </ListBox>
-            <StackPanel Orientation="Horizontal" Height="35" Margin="0, 5, 0, 0" Width="198">
-                <Button Content="" BorderThickness="0" Height="20" Width="20" FontWeight="Normal">
+            <StackPanel Orientation="Horizontal" Height="27" Margin="0, 5, 0, 0" Width="198">
+                <Button Content="" BorderThickness="0" Height="18" Width="17" FontWeight="Normal">
                     <Button.Background>
                         <ImageBrush ImageSource="/left_arrow.png"/>
                     </Button.Background>
                 </Button>
-                <Button Content="" BorderThickness="0" Height="28" Width="28" Margin="120, 0, 0, 0" FontWeight="Normal">
+                <Button Content="" Height="22" Width="66" Margin="90, 0, 0, 0" FontWeight="Normal" BorderBrush="#FF8B8B8B">
                     <Button.Background>
-                        <ImageBrush ImageSource="/direction.png"/>
+                        <ImageBrush ImageSource="/Directions.png"/>
                     </Button.Background>
                 </Button>
-                <Button Content="" BorderThickness="0" Height="28" Width="28"  FontWeight="Normal">
+                <Button Content="" BorderThickness="0" Height="25" Width="25" FontWeight="Normal">
                     <Button.Background>
                         <ImageBrush ImageSource="/add.png"/>
                     </Button.Background>
@@ -296,7 +298,7 @@
             </StackPanel>
 
         </StackPanel>
-        <Rectangle HorizontalAlignment="Center" Width="200" Height="300" Margin="0,96,0,0" Stroke="Black" VerticalAlignment="Top"/>
+
 
 
 
