@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:trvlApp"
         mc:Ignorable="d"
-        Title="ViewReviews" Height="480" Width="233">
+        Title="ViewReviews" Height="500" Width="250">
     <Window.Resources>
         <!-- scrollbar style: https://stackoverflow.com/questions/37095415/wpf-scrollbar-styles-->
         <SolidColorBrush x:Key="StandardBorderBrush" Color="#888" />
@@ -211,7 +211,7 @@
         </Button>
         <TextBlock HorizontalAlignment="Left" Height="14" Margin="22,5,0,0" Text="16°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="31" FontFamily="Global User Interface"/>
         <Ellipse HorizontalAlignment="Left" Height="143" Margin="210,0,0,0" Stroke="#FF686868" VerticalAlignment="Center" Width="51" Fill="#FF686868" Opacity="0.5"/>
-        <TextBlock HorizontalAlignment="Left" Height="27" Margin="168,194,0,0" Text="ITINERARY" TextWrapping="Wrap" VerticalAlignment="Top" Width="118" RenderTransformOrigin="0.5,0.5" FontFamily="Global User Interface" Foreground="White">
+        <TextBlock HorizontalAlignment="Left" Height="27" Margin="173,199,0,0" Text="ITINERARY" TextWrapping="Wrap" VerticalAlignment="Top" Width="118" RenderTransformOrigin="0.5,0.5" FontFamily="Global User Interface" Foreground="White">
             <TextBlock.RenderTransform>
                 <TransformGroup x:Name="ViewReviews1">
                     <ScaleTransform/>
@@ -238,25 +238,67 @@
                 </Button.Background>
             </Button>
         </StackPanel>
-        <Frame Background="White" Content="Restaurant A&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;    Reviews" HorizontalAlignment="Left" Height="365" Margin="22,71,0,0" VerticalAlignment="Top" Width="183" BorderBrush="Black" BorderThickness="2" Navigated="Frame_Navigated" FontFamily="Global User Interface"/>
-        <Image Source="/restau_example.png" Stretch="UniformToFill" HorizontalAlignment="Left" Height="87" Margin="32,98,0,0" VerticalAlignment="Top" Width="162"/>
-        <Frame Content="Hours :&#xD;&#xA;Mon-Fri&#x9;      12-10" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="130" Navigated="Frame_Navigated_1" FontFamily="Global User Interface" Margin="48,217,0,0"/>
-        <Image Source="add.png" HorizontalAlignment="Left" Height="29" Margin="167,399,0,0" VerticalAlignment="Top" Width="29" RenderTransformOrigin="0.049,0.474"/>
-        <Image Source="left_arrow.png.png" Stretch="UniformToFill" HorizontalAlignment="Left" Height="34" Margin="24,394,0,0" VerticalAlignment="Top" Width="24" RenderTransformOrigin="0.937,0.615"/>
-        <ListBox HorizontalAlignment="Left" Height="82" Margin="36,307,0,0" VerticalAlignment="Top" Width="155" Background="Gray">
-            <TextBlock Text="       Scam, not coming back again" TextWrapping="Wrap" FontFamily="Global User Interface" FontSize="10" Foreground="White" Width="116" Height="34"/>
-            <TextBlock Text="       Great Place, would recommond" TextWrapping="Wrap" FontFamily="Global User Interface" FontSize="9" Foreground="White" Width="116" Height="34"/>
-            <TextBlock Text="       Love the waitress, shes nice" TextWrapping="Wrap" FontFamily="Global User Interface" FontSize="9" Foreground="White" Width="116" Height="34"/>
-            <TextBlock Text="       Just a other ok restaurant" TextWrapping="Wrap" FontFamily="Global User Interface" FontSize="9" Foreground="White" Width="116" Height="34"/>
-            <Image Source="/user profile.png" Height="20" Width="18" RenderTransformOrigin="0.431,0.485"/>
-        </ListBox>
-        <Image Source="/star.png" HorizontalAlignment="Left" Height="21" Margin="49,196,0,0" VerticalAlignment="Top" Width="26"/>
-        <Image Source="/star.png" HorizontalAlignment="Left" Height="21" Margin="74,196,0,0" VerticalAlignment="Top" Width="27"/>
-        <Image Source="/star.png" HorizontalAlignment="Left" Height="21" Margin="99,196,0,0" VerticalAlignment="Top" Width="26"/>
-        <Image Source="/empty star.png" HorizontalAlignment="Left" Height="21" Margin="124,196,0,0" VerticalAlignment="Top" Width="26"/>
-        <Image Source="/empty star.png" HorizontalAlignment="Left" Height="21" Margin="149,196,0,0" VerticalAlignment="Top" Width="26"/>
-        <Image Source="/user profile.png" HorizontalAlignment="Left" Height="20" Margin="42,307,0,0" VerticalAlignment="Top" Width="18" RenderTransformOrigin="0.431,0.485"/>
-        <Image Source="/user profile.png" HorizontalAlignment="Left" Height="20" Margin="41,339,0,0" VerticalAlignment="Top" Width="18" RenderTransformOrigin="0.431,0.485"/>
+
+        <StackPanel Width="200" Height="300" Margin="16,96,17,84" Orientation="Vertical" Background="White">
+            <TextBlock Text=" Restaurant A" FontFamily="Global User Interface" FontSize="15" FontWeight="Bold"></TextBlock>
+            <Image Source="/restau_example.png" Stretch="Fill" HorizontalAlignment="Center" Height="89" Width="156"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Image Source="/star.png" Height="21" Width="26"/>
+                <Image Source="/star.png" Height="21" Width="27"/>
+                <Image Source="/star.png" Height="21" Width="26"/>
+                <Image Source="/empty star.png" Height="21"  Width="26"/>
+                <Image Source="/empty star.png" Height="21" Width="26"/>
+            </StackPanel>
+
+            <TextBlock Text="Hours" FontFamily="Global User Interface" FontWeight="Bold" HorizontalAlignment="Center"/>
+            <TextBlock Text="Mon-Fri 12pm-10pm" FontFamily="Global User Interface" FontSize="10" Height="13" HorizontalAlignment="Center"></TextBlock>
+            <TextBlock Text="Reviews" FontFamily="Global User Interface" Height="16" HorizontalAlignment="Center" FontWeight="Bold"/>
+            <ListBox HorizontalAlignment="Center" Height="89" Width="156" Background="Gray">
+                <StackPanel Orientation="Horizontal" Height="24" Width="122">
+                    <Image Source="/user profile.png" Height="20" VerticalAlignment="Center" Width="22"/>
+                    <TextBlock Text=" John" Foreground="White" VerticalAlignment="Center" Width="52" FontFamily="Global User Interface"></TextBlock>
+                    <Image Source="/star.png" VerticalAlignment="Center" Height="9" Width="9"/>
+                    <Image Source="/empty star.png" VerticalAlignment="Center" Height="9" Width="9"/>
+                    <Image Source="/empty star.png" VerticalAlignment="Center" Height="9" Width="9"/>
+                    <Image Source="/empty star.png" VerticalAlignment="Center" Height="9" Width="9"/>
+                    <Image Source="/empty star.png" VerticalAlignment="Center" Height="9" Width="9"/>
+                </StackPanel>
+                <TextBlock Text="Scam, not coming back again" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="White" Width="116" Height="26" FontSize="10"/>
+                <StackPanel Orientation="Horizontal" Height="24" Width="122">
+                    <Image Source="/user profile.png" Height="20" VerticalAlignment="Center" Width="22"/>
+                    <TextBlock Text=" Jane" Foreground="White" VerticalAlignment="Center" Width="52" FontFamily="Global User Interface"></TextBlock>
+                    <Image Source="/star.png" VerticalAlignment="Center" Height="9" Width="9"/>
+                    <Image Source="/star.png" VerticalAlignment="Center" Height="9" Width="9"/>
+                    <Image Source="/star.png" VerticalAlignment="Center" Height="9" Width="9"/>
+                    <Image Source="/star.png" VerticalAlignment="Center" Height="9" Width="9"/>
+                    <Image Source="/empty star.png" VerticalAlignment="Center" Height="9" Width="9"/>
+                </StackPanel>
+                <TextBlock Text="Great Place, would recommond" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="White" Width="116" Height="34" FontSize="10"/>
+                <TextBlock Text="Love the waitress, shes nice" TextWrapping="Wrap" FontFamily="Global User Interface" FontSize="9" Foreground="White" Width="116" Height="34"/>
+                <TextBlock Text="Just a other ok restaurant" TextWrapping="Wrap" FontFamily="Global User Interface" FontSize="9" Foreground="White" Width="116" Height="34"/>
+            </ListBox>
+            <StackPanel Orientation="Horizontal" Height="35" Margin="0, 5, 0, 0" Width="198">
+                <Button Content="" BorderThickness="0" Height="20" Width="20" FontWeight="Normal">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/left_arrow.png"/>
+                    </Button.Background>
+                </Button>
+                <Button Content="" BorderThickness="0" Height="28" Width="28" Margin="120, 0, 0, 0" FontWeight="Normal">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/direction.png"/>
+                    </Button.Background>
+                </Button>
+                <Button Content="" BorderThickness="0" Height="28" Width="28"  FontWeight="Normal">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/add.png"/>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+
+        </StackPanel>
+        <Rectangle HorizontalAlignment="Center" Width="200" Height="300" Margin="0,96,0,0" Stroke="Black" VerticalAlignment="Top"/>
+
+
 
 
     </Grid>

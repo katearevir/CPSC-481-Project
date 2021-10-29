@@ -247,7 +247,7 @@
         </Button>
         <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="14" Margin="10,45,0,0" VerticalAlignment="Top" Width="14" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
             <Button.Background>
-                <ImageBrush ImageSource="/left_arrow.png.png"/>
+                <ImageBrush ImageSource="/left_arrow.png"/>
             </Button.Background>
         </Button>
         <Rectangle HorizontalAlignment="Center" Height="24" Stroke="Black" VerticalAlignment="Top" Width="248" Fill="White" Margin="0,-1,0,0"/>
