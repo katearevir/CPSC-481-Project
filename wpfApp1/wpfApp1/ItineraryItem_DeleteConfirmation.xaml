@@ -1,0 +1,15 @@
+﻿<Window x:Class="trvlApp.ItineraryItem_DeleteConfirmation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:trvlApp"
+        mc:Ignorable="d"
+        Title="Delete Itinerary Item" Height="100" Width="200">
+    <Grid>
+        <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="76" Width="177" FontFamily="Global User Interface"><Run Language="en-ca" Text="Are you sure you want to delete this itinerary item?"/><LineBreak/><Run Language="en-ca"/></TextBlock>
+        <Button Content="Yes: Delete This Item" HorizontalAlignment="Left" Margin="11,54,0,0" VerticalAlignment="Top" FontFamily="Global User Interface" />
+        <Button Content="No" HorizontalAlignment="Left" Margin="168,54,0,0" VerticalAlignment="Top" FontFamily="Global User Interface"/>
+
+    </Grid>
+</Window>
