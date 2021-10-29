@@ -110,14 +110,16 @@
                 </Button.Background>
             </Button>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="0,428,0,10" Width="174" HorizontalAlignment="Center">
-            <TextBox Height="23" Text="Search" TextWrapping="Wrap" Width="150" FontFamily="Global User Interface"/>
+        <StackPanel Orientation="Horizontal" Margin="0,438,0,0" Width="174" HorizontalAlignment="Center">
+            <TextBox Height="23" VerticalContentAlignment="Center" Text="Search" TextWrapping="Wrap" Width="150" FontFamily="Global User Interface"/>
             <Button Content="" BorderThickness="0" Height="24" Width="22" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
                 <Button.Background>
                     <ImageBrush ImageSource="/search.png"/>
                 </Button.Background>
             </Button>
         </StackPanel>
+
+        <Image Source="/here_icon.png" Height="28" Width="28" Stretch="UniformToFill" Margin="124,347,81,105"/>
         <TextBlock HorizontalAlignment="Center" Height="28" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Margin="0,-3,0,0">
             <TextBlock.Background>
                 <ImageBrush ImageSource="/TRVL-nobackground-cropped.png" Stretch="UniformToFill"/>
