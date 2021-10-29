@@ -13,6 +13,7 @@
     <None Remove="events.png" />
     <None Remove="events_filter.png" />
     <None Remove="events_pin.png" />
+    <None Remove="export.png" />
     <None Remove="gear.png" />
     <None Remove="Image1.png" />
     <None Remove="interest_filter.png" />
@@ -36,6 +37,7 @@
     <Resource Include="delete.png" />
     <Resource Include="events_filter.png" />
     <Resource Include="events_pin.png" />
+    <Resource Include="export.png" />
     <Resource Include="gear.png" />
     <Resource Include="Image1.png" />
     <Resource Include="interest_filter.png" />
