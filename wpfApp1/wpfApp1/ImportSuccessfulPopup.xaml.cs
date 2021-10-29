@@ -15,22 +15,18 @@ using System.Windows.Shapes;
 namespace trvlApp
 {
     /// <summary>
-    /// Interaction logic for settingsWindow.xaml
+    /// Interaction logic for ImportSuccessfulPopup.xaml
     /// </summary>
-    public partial class SettingsWindow : Window
+    public partial class ImportSuccessfulPopup : Window
     {
-        public SettingsWindow()
+        public ImportSuccessfulPopup()
         {
             InitializeComponent();
         }
 
-        private void BackToMainWindow(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            wpfApp1.MainWindow objSettingsWindow = new wpfApp1.MainWindow();
-            this.Visibility = Visibility.Hidden; // hiding current window 
-            objSettingsWindow.Show();
-        }
 
-        
+        }
     }
 }

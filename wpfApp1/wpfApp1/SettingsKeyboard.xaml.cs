@@ -15,22 +15,13 @@ using System.Windows.Shapes;
 namespace trvlApp
 {
     /// <summary>
-    /// Interaction logic for settingsWindow.xaml
+    /// Interaction logic for SettingsKeyboard.xaml
     /// </summary>
-    public partial class SettingsWindow : Window
+    public partial class SettingsKeyboard : Window
     {
-        public SettingsWindow()
+        public SettingsKeyboard()
         {
             InitializeComponent();
         }
-
-        private void BackToMainWindow(object sender, RoutedEventArgs e)
-        {
-            wpfApp1.MainWindow objSettingsWindow = new wpfApp1.MainWindow();
-            this.Visibility = Visibility.Hidden; // hiding current window 
-            objSettingsWindow.Show();
-        }
-
-        
     }
 }

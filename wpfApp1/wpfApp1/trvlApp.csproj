@@ -15,6 +15,7 @@
     <None Remove="events_filter.png" />
     <None Remove="events_filter_hidden.png" />
     <None Remove="events_pin.png" />
+    <None Remove="export.png" />
     <None Remove="gear.png" />
 <<<<<<< HEAD
     <None Remove="images\events_filter.png" />
@@ -51,6 +52,7 @@
     <Resource Include="events_filter.png" />
     <Resource Include="events_filter_hidden.png" />
     <Resource Include="events_pin.png" />
+    <Resource Include="export.png" />
     <Resource Include="gear.png" />
 <<<<<<< HEAD
     <Resource Include="images\events_filter.png" />
