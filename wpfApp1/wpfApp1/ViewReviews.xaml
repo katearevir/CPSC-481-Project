@@ -242,8 +242,9 @@
         <Rectangle HorizontalAlignment="Center" Width="200" Height="300" Margin="0,96,0,0" Stroke="Black" Fill="White" VerticalAlignment="Top"/>
 
         <StackPanel Width="200" Height="300" Margin="16,96,17,84" Orientation="Vertical">
-            <TextBlock Text=" Restaurant A" FontFamily="Global User Interface" FontSize="15" FontWeight="Bold"></TextBlock>
-            <Image Source="/restau_example.png" Stretch="Fill" HorizontalAlignment="Center" Height="89" Width="156"/>
+            <TextBlock Text=" " FontFamily="Global User Interface" FontSize="15" FontWeight="Bold" Height="10"></TextBlock>
+            <TextBlock Text=" Restaurant A" FontFamily="Global User Interface" FontSize="15" FontWeight="Bold" Height="18"></TextBlock>
+            <Image Source="/restau_example.png" Stretch="Fill" HorizontalAlignment="Center" Height="79" Width="137"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Image Source="/star.png" Height="21" Width="26"/>
                 <Image Source="/star.png" Height="21" Width="27"/>
