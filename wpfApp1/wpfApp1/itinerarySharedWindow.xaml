@@ -288,6 +288,23 @@
                 </Button.Resources>
             </Button>
         </StackPanel>
+        <Rectangle HorizontalAlignment="Center" Height="25" Stroke="Black" VerticalAlignment="Top" Width="247" Fill="White"/>
+        <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="24" Margin="211,0,0,0" VerticalAlignment="Top" Width="22" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+            <Button.Background>
+                <ImageBrush ImageSource="/gear.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" BorderThickness="0" HorizontalAlignment="Right" Margin="0,2,165,456" Width="22" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+            <Button.Background>
+                <ImageBrush ImageSource="/sunshine.png"/>
+            </Button.Background>
+        </Button>
+        <TextBlock HorizontalAlignment="Right" Height="14" Margin="0,7,180,0" Text="4:00 PM" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" FontFamily="Global User Interface" FontSize="10"/>
+        <TextBlock HorizontalAlignment="Center" Height="28" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="88">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="/TRVL-nobackground-cropped.png" Stretch="UniformToFill"/>
+            </TextBlock.Background>
+        </TextBlock>
 
     </Grid>
 </Window>
