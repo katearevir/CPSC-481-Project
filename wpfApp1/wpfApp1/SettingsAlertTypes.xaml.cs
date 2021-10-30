@@ -15,23 +15,16 @@ using System.Windows.Shapes;
 namespace trvlApp
 {
     /// <summary>
-    /// Interaction logic for settingsWindow.xaml
+    /// Interaction logic for SettingsAlertTypes.xaml
     /// </summary>
-    public partial class SettingsWindow : Window
+    public partial class SettingsAlertTypes : Window
     {
-        public SettingsWindow()
+        public SettingsAlertTypes()
         {
             InitializeComponent();
         }
 
-        private void BackToMainWindow(object sender, RoutedEventArgs e)
-        {
-            wpfApp1.MainWindow objSettingsWindow = new wpfApp1.MainWindow();
-            this.Visibility = Visibility.Hidden; // hiding current window 
-            objSettingsWindow.Show();
-        }
-
-        private void Toggle1_Loaded(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
 
         }
