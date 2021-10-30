@@ -188,7 +188,7 @@
     </Window.Resources>
 
     <Grid Width="233" Height="480">
-        <Image Source="/map.png" Stretch="UniformToFill">
+        <Image Source="/map1.png" Stretch="UniformToFill">
             <Image.Effect>
                 <BlurEffect Radius="20"/>
             </Image.Effect>

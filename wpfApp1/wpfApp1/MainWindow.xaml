@@ -8,9 +8,9 @@
         Title="MainWindow" Height="480" Width="233">
     <Grid Width="233" Height="480">
         <Grid.Background>
-            <ImageBrush ImageSource="/map.png" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="/map1.png" Stretch="UniformToFill"/>
         </Grid.Background>
-        <Button x:Name="food_3" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="88,174,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+        <Button x:Name="food_3" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="88,155,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
             <Button.Background>
                 <ImageBrush ImageSource="/restau_pin.png"/>
             </Button.Background>
@@ -26,7 +26,7 @@
                 <ImageBrush ImageSource="/restau_pin.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="food_4" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="109,0,0,0" VerticalAlignment="Center" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+        <Button x:Name="food_4" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="88,204,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
             <Button.Background>
                 <ImageBrush ImageSource="/restau_pin.png"/>
             </Button.Background>
@@ -41,17 +41,17 @@
                 <ImageBrush ImageSource="/events_pin.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="130,288,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+        <Button x:Name="event_3" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="145,270,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
             <Button.Background>
                 <ImageBrush ImageSource="/events_pin.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="130,380,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+        <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="85,326,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
             <Button.Background>
                 <ImageBrush ImageSource="/itinerary_pin.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="130,154,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+        <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="145,135,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
             <Button.Background>
                 <ImageBrush ImageSource="/itinerary_pin.png"/>
             </Button.Background>
@@ -67,12 +67,12 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <Button x:Name="attraction_1" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="189,36,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+        <Button x:Name="attraction_1" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="160,46,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
             <Button.Background>
                 <ImageBrush ImageSource="/interest_pin.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="attraction_2" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="60,97,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+        <Button x:Name="attraction_2" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="73,82,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
             <Button.Background>
                 <ImageBrush ImageSource="/interest_pin.png"/>
             </Button.Background>
@@ -102,7 +102,7 @@
                 </Button.Background>
             </Button>
         </StackPanel>
-        <Button Content="" HorizontalAlignment="Left" Margin="124,233,0,0" VerticalAlignment="Top" Width="42" Height="45" BorderBrush="{x:Null}">
+        <Button Content="" HorizontalAlignment="Left" Margin="103,245,0,0" VerticalAlignment="Top" Width="42" Height="45" BorderBrush="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="/here_icon.png" Stretch="Uniform"/>
             </Button.Background>

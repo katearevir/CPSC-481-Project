@@ -1,4 +1,4 @@
-﻿<Window x:Class="wpfApp1.ShowWeatherMainWindow"
+﻿<Window x:Class="trvlApp.ShowWeatherMainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -81,17 +81,17 @@
             </Button.Background>
         </Button>
         <StackPanel Orientation="Horizontal" Margin="0,24,118,414" Grid.RowSpan="2">
-            <Button x:Name="food_filter" Content="" BorderThickness="0" Height="34" Width="34" FontWeight="Normal" Click="Button_Click_Foods">
+            <Button x:Name="food_filter" Content="" BorderThickness="0" Height="34" Width="34" FontWeight="Normal">
                 <Button.Background>
                     <ImageBrush ImageSource="/restau_filter.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="event_filter" Content="" BorderThickness="0" Height="35" Width="35" FontWeight="Normal" Click="Button_Click_Events">
+            <Button x:Name="event_filter" Content="" BorderThickness="0" Height="35" Width="35" FontWeight="Normal">
                 <Button.Background>
                     <ImageBrush ImageSource="/events_filter.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="attraction_filter" Content="" BorderThickness="0" Height="34" Width="35" FontWeight="Normal" Click="Button_Click_Attractions" Visibility="Visible">
+            <Button x:Name="attraction_filter" Content="" BorderThickness="0" Height="34" Width="35" FontWeight="Normal" Visibility="Visible">
                 <Button.Background>
                     <ImageBrush ImageSource="/interest_filter.png"/>
                 </Button.Background>

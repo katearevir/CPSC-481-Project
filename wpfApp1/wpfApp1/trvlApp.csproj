@@ -17,10 +17,12 @@
     <None Remove="events_pin.png" />
     <None Remove="export.png" />
     <None Remove="gear.png" />
+    <None Remove="here_icon.png" />
     <None Remove="images\events_filter.png" />
     <None Remove="images\events_filter_hidden.png" />
     <None Remove="images\interest_filter.png" />
     <None Remove="images\interest_filter_hidden.png" />
+    <None Remove="images\map2.png" />
     <None Remove="images\restau_filter.png" />
     <None Remove="images\restau_filter_hidden.png" />
     <None Remove="import-failed.PNG" />
@@ -31,6 +33,7 @@
     <None Remove="itinerary_pin.png" />
     <None Remove="left_arrow.png" />
     <None Remove="map.png" />
+    <None Remove="map1.png" />
     <None Remove="restau_filter.png" />
     <None Remove="restau_filter_hidden.png" />
     <None Remove="restau_pin.png" />
@@ -52,10 +55,12 @@
     <Resource Include="events_pin.png" />
     <Resource Include="export.png" />
     <Resource Include="gear.png" />
+    <Resource Include="here_icon.png" />
     <Resource Include="images\events_filter.png" />
     <Resource Include="images\events_filter_hidden.png" />
     <Resource Include="images\interest_filter.png" />
     <Resource Include="images\interest_filter_hidden.png" />
+    <Resource Include="images\map2.png" />
     <Resource Include="images\restau_filter.png" />
     <Resource Include="images\restau_filter_hidden.png" />
     <Resource Include="import-failed.PNG" />
@@ -66,6 +71,7 @@
     <Resource Include="itinerary_pin.png" />
     <Resource Include="left_arrow.png" />
     <Resource Include="map.png" />
+    <Resource Include="map1.png" />
     <Resource Include="restau_filter.png" />
     <Resource Include="restau_filter_hidden.png" />
     <Resource Include="restau_pin.png" />

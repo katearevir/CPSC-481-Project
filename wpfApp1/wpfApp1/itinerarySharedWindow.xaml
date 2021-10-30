@@ -198,7 +198,7 @@
                 </Style>
             </ListBox.ItemContainerStyle>
             <TextBlock Text="9:00am" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
-            <Button Content="Calgary Tower" BorderThickness="0" Height="23" Width="172" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Background="#FF215261" Foreground="White" FontFamily="Global User Interface" Click="Button_Click"/>
+            <Button Content="Calgary Tower" BorderThickness="0" Height="23" Width="172" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Background="#FF215261" Foreground="White" FontFamily="Global User Interface"/>
 
             <TextBlock Text="10:00am" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E" Height="10"/>
             <Button Content="Prince's Island Park" BorderThickness="0" Height="62" Width="173" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Background="#FF70BEE2" Foreground="White" FontFamily="Global User Interface"/>
