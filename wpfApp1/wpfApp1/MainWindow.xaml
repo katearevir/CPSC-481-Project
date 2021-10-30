@@ -15,6 +15,7 @@
                 <ImageBrush ImageSource="/restau_pin.png"/>
             </Button.Background>
         </Button>
+        <Rectangle HorizontalAlignment="Center" Height="24" Stroke="Black" VerticalAlignment="Top" Width="234" Fill="White" Margin="0,-1,0,0"/>
         <Button x:Name="food_1" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="100,130,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
             <Button.Background>
                 <ImageBrush ImageSource="/restau_pin.png"/>
@@ -60,11 +61,7 @@
                 <ImageBrush ImageSource="/itinerary_pin.png"/>
             </Button.Background>
         </Button>
-        <TextBlock HorizontalAlignment="Center" Height="24" TextWrapping="Wrap" VerticalAlignment="Top" Width="260">
-            <TextBlock.Background>
-                <ImageBrush ImageSource="/trvl_logo.jpg"/>
-            </TextBlock.Background>
-        </TextBlock>
+        <Rectangle HorizontalAlignment="Center" Height="24" Stroke="Black" VerticalAlignment="Top" Width="234" Fill="White" Margin="0,-1,0,0"/>
         <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="24" Margin="211,0,0,0" VerticalAlignment="Top" Width="22" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
             <Button.Background>
                 <ImageBrush ImageSource="/gear.png"/>
@@ -122,6 +119,13 @@
                 </Button.Background>
             </Button>
         </StackPanel>
+        <TextBlock HorizontalAlignment="Center" Height="28" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Margin="0,-1,0,0">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="/TRVL-nobackground-cropped.png" Stretch="UniformToFill"/>
+            </TextBlock.Background>
+        </TextBlock>
+
+
 
 
     </Grid>
