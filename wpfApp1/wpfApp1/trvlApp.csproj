@@ -23,6 +23,8 @@
     <None Remove="images\interest_filter_hidden.png" />
     <None Remove="images\restau_filter.png" />
     <None Remove="images\restau_filter_hidden.png" />
+    <None Remove="import-failed.PNG" />
+    <None Remove="import-success.PNG" />
     <None Remove="interest_filter.png" />
     <None Remove="interest_filter_hidden.png" />
     <None Remove="interest_pin.png" />
@@ -56,6 +58,8 @@
     <Resource Include="images\interest_filter_hidden.png" />
     <Resource Include="images\restau_filter.png" />
     <Resource Include="images\restau_filter_hidden.png" />
+    <Resource Include="import-failed.PNG" />
+    <Resource Include="import-success.PNG" />
     <Resource Include="interest_filter.png" />
     <Resource Include="interest_filter_hidden.png" />
     <Resource Include="interest_pin.png" />

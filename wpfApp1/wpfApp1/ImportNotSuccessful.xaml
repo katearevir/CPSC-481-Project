@@ -7,8 +7,9 @@
         mc:Ignorable="d"
         Title="Import Failed!" Height="100" Width="200">
     <Grid>
-        <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="176" FontFamily="Global User Interface" Text="The code does not exist, please double check and try again!"/>
+        <TextBlock HorizontalAlignment="Left" Margin="8,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="188" FontFamily="Global User Interface" Text="The code does not exist, please double check and try again!"/>
         <Button Content="Try Again" HorizontalAlignment="Center" Margin="0,51,0,0" VerticalAlignment="Top" FontFamily="Global User Interface" Click="Button_Click" />
+        <TextBlock HorizontalAlignment="Left" Margin="8,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="9" Width="180" FontFamily="Global User Interface" Text="Reminder: share codes expire after 15 minutes" FontSize="8"/>
 
     </Grid>
 </Window>

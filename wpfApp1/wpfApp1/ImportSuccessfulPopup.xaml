@@ -7,7 +7,11 @@
         mc:Ignorable="d"
         Title="Import Successful" Height="100" Width="200">
     <Grid>
-        <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="176" FontFamily="Global User Interface" Text="Your friend's itinerary has been successfully imported!"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="187*"/>
+            <ColumnDefinition Width="13*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock HorizontalAlignment="Left" Margin="12,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="176" FontFamily="Global User Interface" Text="Your friend's itinerary has been successfully imported!" Grid.ColumnSpan="2"/>
         <Button Content="OK" HorizontalAlignment="Left" Margin="80,51,0,0" VerticalAlignment="Top" FontFamily="Global User Interface" Click="Button_Click" />
 
     </Grid>

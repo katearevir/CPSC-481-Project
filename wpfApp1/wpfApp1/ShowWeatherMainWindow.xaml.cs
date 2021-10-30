@@ -15,16 +15,13 @@ using System.Windows.Shapes;
 namespace trvlApp
 {
     /// <summary>
-    /// Interaction logic for itinerarySharedWindow.xaml
+    /// Interaction logic for ShowWeatherMainWindow.xaml
     /// </summary>
-    public partial class itinerarySharedWindow : Window
+    public partial class ShowWeatherMainWindow : Window
     {
-        public itinerarySharedWindow()
+        public ShowWeatherMainWindow()
         {
             InitializeComponent();
         }
-
-       
-       
     }
 }
