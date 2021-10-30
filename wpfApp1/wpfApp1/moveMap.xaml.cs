@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace trvlApp.images
+namespace trvlApp
 {
     /// <summary>
     /// Interaction logic for moveMap.xaml
@@ -23,7 +23,7 @@ namespace trvlApp.images
         {
             InitializeComponent();
         }
-
+        
         Boolean _is_filtered_attraction = false;
         Boolean _is_filtered_event = false;
         Boolean _is_filtered_food = false;
