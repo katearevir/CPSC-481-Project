@@ -5,88 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:trvlApp"
         mc:Ignorable="d"
-        Title="SearchLocation" Height="500" Width="250">
-    <Grid>
-        <Grid Width="233" Height="480" Margin="10,2,8,2">
-            <Grid.Background>
-                <ImageBrush ImageSource="/map.png" Stretch="UniformToFill"/>
-            </Grid.Background>
-            <Rectangle HorizontalAlignment="Center" Height="24" Stroke="Black" VerticalAlignment="Top" Width="234" Fill="White" Margin="0,-1,0,0"/>
-            <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="88,174,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
-                <Button.Background>
-                    <ImageBrush ImageSource="/restau_pin.png"/>
-                </Button.Background>
-            </Button>
-            <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="109,0,0,0" VerticalAlignment="Center" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
-                <Button.Background>
-                    <ImageBrush ImageSource="/restau_pin.png"/>
-                </Button.Background>
-            </Button>
-            <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="24" Margin="211,0,0,0" VerticalAlignment="Top" Width="22" FontWeight="Normal" RenderTransformOrigin="0.5,0.517" Click="OpenSettingsWindow">
-                <Button.Background>
-                    <ImageBrush ImageSource="/gear.png"/>
-                </Button.Background>
-            </Button>
-            <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="22" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
-                <Button.Background>
-                    <ImageBrush ImageSource="/sunshine.png"/>
-                </Button.Background>
-            </Button>
-            <TextBlock HorizontalAlignment="Left" Height="14" Margin="22,5,0,0" Text="16°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="31" FontFamily="Global User Interface"/>
-            <StackPanel Orientation="Horizontal" Margin="0,24,118,414">
-                <Button Content="" BorderThickness="0" Height="34" Width="34" FontWeight="Normal">
-                    <Button.Background>
-                        <ImageBrush ImageSource="/restau_filter.png"/>
-                    </Button.Background>
-                </Button>
-                <Button Content="" BorderThickness="0" Height="35" Width="35" FontWeight="Normal">
-                    <Button.Background>
-                        <ImageBrush ImageSource="/events_filter.png"/>
-                    </Button.Background>
-                </Button>
-                <Button Content="" BorderThickness="0" Height="35" Width="35" FontWeight="Normal">
-                    <Button.Background>
-                        <ImageBrush ImageSource="/interest_filter.png"/>
-                    </Button.Background>
-                </Button>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0,438,0,0" Width="174" HorizontalAlignment="Center">
-                <TextBox Height="23" Text="Bubble Tea" VerticalContentAlignment="Center" TextWrapping="Wrap" Width="150" FontFamily="Global User Interface"/>
-                <Button Content="" BorderThickness="0" Height="24" Width="22" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
-                    <Button.Background>
-                        <ImageBrush ImageSource="/search.png"/>
-                    </Button.Background>
-                </Button>
-            </StackPanel>
-
-            <Image Source="/here_icon.png" Height="28" Width="28" Stretch="UniformToFill" Margin="124,347,81,105"/>
-            <TextBlock HorizontalAlignment="Center" Height="28" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Margin="0,-3,0,0">
-                <TextBlock.Background>
-                    <ImageBrush ImageSource="/TRVL-nobackground-cropped.png" Stretch="UniformToFill"/>
-                </TextBlock.Background>
-            </TextBlock>
-            <Rectangle HorizontalAlignment="Center" Height="28" Stroke="Black" VerticalAlignment="Top" Width="247" Fill="White" Margin="0,-3,0,0"/>
-            <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="24" Margin="211,0,0,0" VerticalAlignment="Top" Width="22" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
-                <Button.Background>
-                    <ImageBrush ImageSource="/gear.png"/>
-                </Button.Background>
-            </Button>
-            <Button Content="" BorderThickness="0" HorizontalAlignment="Right" Margin="0,2,165,456" Width="22" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
-                <Button.Background>
-                    <ImageBrush ImageSource="/sunshine.png"/>
-                </Button.Background>
-            </Button>
-            <TextBlock HorizontalAlignment="Right" Height="14" Margin="0,7,180,0" Text="4:00 PM" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" FontFamily="Global User Interface" FontSize="10"/>
-            <TextBlock HorizontalAlignment="Center" Height="28" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="88">
-                <TextBlock.Background>
-                    <ImageBrush ImageSource="/TRVL-nobackground-cropped.png" Stretch="UniformToFill"/>
-                </TextBlock.Background>
-            </TextBlock>
-
-
-        </Grid>
-        <Ellipse HorizontalAlignment="Left" Height="156" Margin="214,181,0,0" Stroke="#FF686868" VerticalAlignment="Top" Width="57" Fill="#FF686868" Opacity="0.6"/>
-        <TextBlock HorizontalAlignment="Left" Height="21" Margin="163,214,0,0" Text="ITINERARY" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" RenderTransformOrigin="0.5,0.5" FontFamily="Global User Interface" Foreground="White" FontSize="16" FontWeight="Normal">
+        Title="SearchLocation" Height="480" Width="233">
+    <Grid Width="233" Height="480">
+        <Grid.Background>
+            <ImageBrush ImageSource="/map1.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Button x:Name="food_3" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="88,155,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+            <Button.Background>
+                <ImageBrush ImageSource="/restau_pin.png"/>
+            </Button.Background>
+        </Button>
+        <Rectangle HorizontalAlignment="Center" Height="24" Stroke="Black" VerticalAlignment="Top" Width="234" Fill="White" Margin="0,-1,0,0"/>
+        <Button x:Name="food_4" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="88,204,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+            <Button.Background>
+                <ImageBrush ImageSource="/restau_pin.png"/>
+            </Button.Background>
+        </Button>
+        <Ellipse HorizontalAlignment="Left" Height="156" Margin="204,0,0,0" Stroke="#FF686868" VerticalAlignment="Center" Width="57" Fill="#FF686868" Opacity="0.6"/>
+        <TextBlock HorizontalAlignment="Left" Height="21" Margin="153,195,0,0" Text="ITINERARY" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" RenderTransformOrigin="0.5,0.5" FontFamily="Global User Interface" Foreground="White" FontSize="16" FontWeight="Normal">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -96,6 +32,56 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
+        <StackPanel Orientation="Horizontal" Margin="0,24,118,414">
+            <Button x:Name="food_filter" Content="" BorderThickness="0" Height="34" Width="34" FontWeight="Normal" >
+                <Button.Background>
+                    <ImageBrush ImageSource="/restau_filter.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="event_filter" Content="" BorderThickness="0" Height="35" Width="35" FontWeight="Normal" >
+                <Button.Background>
+                    <ImageBrush ImageSource="/events_filter.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="attraction_filter" Content="" BorderThickness="0" Height="34" Width="35" FontWeight="Normal" Visibility="Visible">
+                <Button.Background>
+                    <ImageBrush ImageSource="/interest_filter.png"/>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,428,0,10" Width="174" HorizontalAlignment="Center">
+            <TextBox Height="23" Text="Bubble Tea" VerticalContentAlignment="Center" TextWrapping="Wrap" Width="150" FontFamily="Global User Interface"/>
+            <Button Content="" BorderThickness="0" Height="24" Width="22" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+                <Button.Background>
+                    <ImageBrush ImageSource="/search.png"/>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+        <Button Content="" HorizontalAlignment="Left" Margin="103,245,0,0" VerticalAlignment="Top" Width="42" Height="45" BorderBrush="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="/here_icon.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <Rectangle HorizontalAlignment="Center" Height="26" Stroke="Black" VerticalAlignment="Top" Width="247" Fill="White"/>
+        <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="24" Margin="211,0,0,0" VerticalAlignment="Top" Width="22" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+            <Button.Background>
+                <ImageBrush ImageSource="/gear.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" BorderThickness="0" HorizontalAlignment="Right" Height="22" Margin="0,2,165,0" VerticalAlignment="Top" Width="22" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+            <Button.Background>
+                <ImageBrush ImageSource="/sunshine.png"/>
+            </Button.Background>
+        </Button>
+        <TextBlock HorizontalAlignment="Right" Height="14" Margin="0,7,180,0" Text="4:00 PM" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" FontFamily="Global User Interface" FontSize="10"/>
+        <TextBlock HorizontalAlignment="Center" Height="28" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="88">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="/TRVL-nobackground-cropped.png" Stretch="UniformToFill"/>
+            </TextBlock.Background>
+        </TextBlock>
+
+
+
 
     </Grid>
 </Window>

@@ -95,7 +95,7 @@
             </Button>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="0,428,0,10" Width="174" HorizontalAlignment="Center">
-            <TextBox Height="23" Text="Search" TextWrapping="Wrap" Width="150" FontFamily="Century Gothic"/>
+            <TextBox Height="23" Text="Search" VerticalContentAlignment="Center" TextWrapping="Wrap" Width="150" FontFamily="Global User Interface"/>
             <Button Content="" BorderThickness="0" Height="24" Width="22" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
                 <Button.Background>
                     <ImageBrush ImageSource="/search.png"/>
