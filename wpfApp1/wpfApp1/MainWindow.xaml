@@ -118,8 +118,8 @@
 				<ImageBrush ImageSource="/TRVL-nobackground-cropped.png" Stretch="UniformToFill"/>
 			</TextBlock.Background>
 		</TextBlock>
-		<Menu Margin="0,2,157,456" Background="White">
-			<MenuItem  Height="22" Width="76">
+		<Menu Margin="0,1,157,456" Background="White">
+			<MenuItem  Height="23" Width="76" BorderBrush="#FFBBBBBB" Background="{x:Null}">
 				<MenuItem.Header>
 					<TextBlock VerticalAlignment="CENTER" HorizontalAlignment="Center">4:00 PM</TextBlock>
 				</MenuItem.Header>
