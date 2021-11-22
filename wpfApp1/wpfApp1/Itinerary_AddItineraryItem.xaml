@@ -9,40 +9,41 @@
       Title="">
 
     <Grid Background="Azure">
-        <TextBox HorizontalAlignment="Left" Margin="10,17,0,0" Foreground="gainsboro" Text="&lt;Name&gt;" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="10,51,0,0" Foreground="gainsboro" Text="&lt;Location&gt;" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="13,88,0,0" Foreground="gainsboro" Text="Time Start" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="42" Height="35"/>
-        <ComboBox HorizontalAlignment="Left" Margin="60,88,0,0" VerticalAlignment="Top" Width="35" SelectedItem="AM" RenderTransformOrigin="0.452,-0.516" Height="35">
+        <TextBox HorizontalAlignment="Left" x:Name="NameTextBox" PreviewMouseDown="NameTextBox_PreviewMouseDown" PreviewKeyDown="NameTextBox_PreviewKeyDown" Margin="10,16,0,0" Foreground="gainsboro" Text="&lt;Name&gt;" TextAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Global User Interface"/>
+        <TextBox HorizontalAlignment="Left" x:Name="LocationTextBox" PreviewMouseDown="LocationTextBox_PreviewMouseDown"  PreviewKeyDown="LocationTextBox_PreviewKeyDown" Margin="10,40,0,0" Foreground="gainsboro" Text="&lt;Location&gt;" TextAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Global User Interface"/>
+        <TextBox HorizontalAlignment="Left" x:Name="TimeStartTextBox" PreviewMouseDown="TimeStartTextBox_PreviewMouseDown"  PreviewKeyDown="TimeStartTextBox_PreviewKeyDown" Margin="10,100,0,0" Foreground="gainsboro" Text="hr:mn" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="42" Height="18" FontFamily="Global User Interface"/>
+        <ComboBox HorizontalAlignment="Left" x:Name="TimeStartDropdown" Margin="53,100,0,0" VerticalAlignment="Top" Width="46" SelectedItem="AM" RenderTransformOrigin="0.452,-0.516" Height="18" FontFamily="Global User Interface">
             <ComboBoxItem Content="AM"/>
             <ComboBoxItem Content="PM"/>
         </ComboBox>
-        <TextBox HorizontalAlignment="Left" Margin="103,88,0,0" Foreground="gainsboro" Text="Time End" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="44" Height="35"/>
-        <ComboBox HorizontalAlignment="Left" Margin="155,88,0,0" VerticalAlignment="Top" Width="35" SelectedItem="AM" RenderTransformOrigin="0.452,-0.516" Height="35">
+        <TextBox HorizontalAlignment="Left" x:Name="TimeEndTextBox" PreviewMouseDown="TimeEndTextBox_PreviewMouseDown"  PreviewKeyDown="TimeEndTextBox_PreviewKeyDown" Margin="100,100,0,0" Foreground="gainsboro" Text="hr:mn" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="44" Height="18" FontFamily="Global User Interface"/>
+        <ComboBox HorizontalAlignment="Left" x:Name="TimeEndDropdown" Margin="145,100,0,0" VerticalAlignment="Top" Width="46" SelectedItem="AM" RenderTransformOrigin="0.452,-0.516" Height="18" FontFamily="Global User Interface">
             <ComboBoxItem Content="AM"/>
             <ComboBoxItem Content="PM"/>
         </ComboBox>
-        <Label Content="Type:" HorizontalAlignment="Left" Margin="13,150,0,0" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" Margin="55,150,0,0" VerticalAlignment="Top" Width="135" SelectedItem="AM" RenderTransformOrigin="0.452,-0.516" Height="26">
+        <Label Content="Type:" HorizontalAlignment="Left" Margin="13,139,0,0" VerticalAlignment="Top" FontFamily="Global User Interface"/>
+        <ComboBox HorizontalAlignment="Left" x:Name="LocationTypeDropDown" Margin="55,139,0,0" VerticalAlignment="Top" Width="135" SelectedItem="AM" RenderTransformOrigin="0.452,-0.516" Height="26" FontFamily="Global User Interface">
             <ComboBoxItem Content="Restaurant"/>
             <ComboBoxItem Content="Event"/>
             <ComboBoxItem Content="Place of Interest"/>
         </ComboBox>
-        <Label Content="Notes:" HorizontalAlignment="Left" Margin="12,187,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="61,191,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" Height="64"/>
-        <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="27" Margin="10,255,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+        <Label Content="Notes:" HorizontalAlignment="Left" Margin="12,172,0,0" VerticalAlignment="Top" FontFamily="Global User Interface"/>
+        <TextBox HorizontalAlignment="Left" x:Name="NotesTextBox" Margin="61,176,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" Height="64" FontFamily="Global User Interface"/>
+        <Button Content="" x:Name="DeleteButton" Click="DeleteButton_Click" BorderThickness="0" HorizontalAlignment="Left" Height="28" Margin="160,244,0,0" VerticalAlignment="Top" Width="29" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+            <Button.Background>
+                <ImageBrush ImageSource="/Trash.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" x:Name="BackButton" Click="BackButton_Click" BorderThickness="0" HorizontalAlignment="Left" Height="27" Margin="10,244,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
             <Button.Background>
                 <ImageBrush ImageSource="/left_arrow.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="40" Margin="149,17,10,224" VerticalAlignment="Top" Width="40" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+        <Button Content="" Name="SaveButton" Click="SaveButton_Click" BorderThickness="0" HorizontalAlignment="Left" Height="40" Margin="149,16,0,0" VerticalAlignment="Top" Width="40" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
             <Button.Background>
                 <ImageBrush ImageSource="/save.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="28" Margin="160,255,0,0" VerticalAlignment="Top" Width="29" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
-            <Button.Background>
-                <ImageBrush ImageSource="/trash.png"/>
-            </Button.Background>
-        </Button>
+        <Label Content="Time start and end:" HorizontalAlignment="Left" Margin="7,76,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

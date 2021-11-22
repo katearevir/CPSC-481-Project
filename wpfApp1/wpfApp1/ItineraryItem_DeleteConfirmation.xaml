@@ -8,8 +8,8 @@
         Title="Delete Itinerary Item" Height="100" Width="200">
     <Grid>
         <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="76" Width="177" FontFamily="Global User Interface"><Run Language="en-ca" Text="Are you sure you want to delete this itinerary item?"/><LineBreak/><Run Language="en-ca"/></TextBlock>
-        <Button Content="Yes: Delete This Item" HorizontalAlignment="Left" Margin="11,54,0,0" VerticalAlignment="Top" FontFamily="Global User Interface" />
-        <Button Content="No" HorizontalAlignment="Left" Margin="168,54,0,0" VerticalAlignment="Top" FontFamily="Global User Interface"/>
+        <Button Content="Yes: Delete This Item" x:Name="Confirm" Click="Confirm_Click" HorizontalAlignment="Left" Margin="11,54,0,0" VerticalAlignment="Top" FontFamily="Global User Interface" />
+        <Button Content="No" x:Name="Deny" Click="Deny_Click" HorizontalAlignment="Left" Margin="168,54,0,0" VerticalAlignment="Top" FontFamily="Global User Interface"/>
 
     </Grid>
 </Window>

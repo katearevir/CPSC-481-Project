@@ -19,9 +19,26 @@ namespace trvlApp
     /// </summary>
     public partial class ItineraryItem_DeleteConfirmation : Window
     {
-        public ItineraryItem_DeleteConfirmation()
+        private Itinerary_AddItineraryItem itinerary_AddItineraryItem;
+        private string itineraryName;
+
+        public ItineraryItem_DeleteConfirmation(Itinerary_AddItineraryItem itinerary_AddItineraryItem, string itineraryName)
         {
             InitializeComponent();
+            this.itinerary_AddItineraryItem = itinerary_AddItineraryItem;
+            this.itineraryName = itineraryName;
+        }
+
+        private void Confirm_Click(object sender, RoutedEventArgs e)
+        {
+            itinerary_AddItineraryItem.DeleteItineraryItem(itineraryName);
+            itinerary_AddItineraryItem.Close();
+            this.Close();
+        }
+
+        private void Deny_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
