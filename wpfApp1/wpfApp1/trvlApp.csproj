@@ -12,6 +12,8 @@
     <None Remove="cloudy-day.png" />
     <None Remove="delete.png" />
     <None Remove="direction.png" />
+    <None Remove="Directions.png" />
+    <None Remove="empty star.png" />
     <None Remove="events.png" />
     <None Remove="events_filter.png" />
     <None Remove="events_filter_hidden.png" />
@@ -35,17 +37,20 @@
     <None Remove="left_arrow.png" />
     <None Remove="map.png" />
     <None Remove="map1.png" />
+    <None Remove="restau_example.png" />
     <None Remove="restau_filter.png" />
     <None Remove="restau_filter_hidden.png" />
     <None Remove="restau_pin.png" />
     <None Remove="right_arrow.png" />
     <None Remove="save.png" />
     <None Remove="search.png" />
+    <None Remove="star.png" />
     <None Remove="storm.png" />
     <None Remove="sunshine.png" />
     <None Remove="trash.png" />
     <None Remove="trvl_logo.jpg" />
 	<None Remove="TRVL-nobackground-cropped.png" />
+	<None Remove="user profile.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -53,6 +58,8 @@
     <Resource Include="cloudy-day.png" />
     <Resource Include="delete.png" />
     <Resource Include="direction.png" />
+    <Resource Include="Directions.png" />
+    <Resource Include="empty star.png" />
     <Resource Include="events_filter.png" />
     <Resource Include="events_filter_hidden.png" />
     <Resource Include="events_pin.png" />
@@ -75,17 +82,20 @@
     <Resource Include="left_arrow.png" />
     <Resource Include="map.png" />
     <Resource Include="map1.png" />
+    <Resource Include="restau_example.png" />
     <Resource Include="restau_filter.png" />
     <Resource Include="restau_filter_hidden.png" />
     <Resource Include="restau_pin.png" />
     <Resource Include="right_arrow.png" />
     <Resource Include="save.png" />
     <Resource Include="search.png" />
+    <Resource Include="star.png" />
     <Resource Include="storm.png" />
     <Resource Include="sunshine.png" />
     <Resource Include="trash.png" />
     <Resource Include="trvl_logo.jpg" />
 	<Resource Include="TRVL-nobackground-cropped.png" />
+	<Resource Include="user profile.png" />
   </ItemGroup>
 
 </Project>

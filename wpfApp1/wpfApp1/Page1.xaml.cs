@@ -34,6 +34,11 @@ namespace trvlApp
         {
             this.NavigationService.Navigate(new Uri("/Page2.xaml", UriKind.RelativeOrAbsolute));
         }
+        
+        public void Button_Click_RestPin(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/RestaurantPin.xaml", UriKind.RelativeOrAbsolute));
+        }
 
         private void Button_Click_Attractions(object sender, RoutedEventArgs e)
         {

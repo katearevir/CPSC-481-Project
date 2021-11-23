@@ -22,7 +22,7 @@
                 <ImageBrush ImageSource="/restau_pin.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="food_2" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="165,160,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+        <Button x:Name="food_2" Click="Button_Click_RestPin" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="165,160,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
             <Button.Background>
                 <ImageBrush ImageSource="/restau_pin.png"/>
             </Button.Background>
