@@ -49,6 +49,13 @@ namespace wpfApp1
             }
         }
 
+        private void Button_Click_Itinerary(object sender, RoutedEventArgs e)
+        {
+            trvlApp.itineraryWindow iti = new trvlApp.itineraryWindow();
+            iti.Show();
+            this.Close();
+        }
+
         private void Button_Click_Events(object sender, RoutedEventArgs e)
         {
             if (_is_filtered_event == true)
