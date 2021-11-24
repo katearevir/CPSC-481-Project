@@ -22,10 +22,11 @@ namespace wpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+        Uri page1 = new Uri("/Page1.xaml", UriKind.Relative);
         public MainWindow()
         {
             InitializeComponent();
-            _NavigationFrame.Navigate(new trvlApp.Page1());
+            _NavigationFrame.NavigationService.Navigate(page1);
         }
     }
 }

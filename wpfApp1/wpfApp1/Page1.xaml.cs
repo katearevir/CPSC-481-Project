@@ -20,10 +20,18 @@ namespace trvlApp
     /// </summary>
     public partial class Page1 : Page
     {
+        private Page2 _page2;
 
         public Page1()
         {
             InitializeComponent();
+            _page2 = new Page2(this);
+        }
+
+        public Page1(trvlApp.Page2 page2)
+        {
+            InitializeComponent();
+            _page2 = page2;
         }
 
         Boolean _is_filtered_attraction = false;
@@ -32,9 +40,9 @@ namespace trvlApp
 
         public void NavigatePage(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/Page2.xaml", UriKind.RelativeOrAbsolute));
+            NavigationService.Navigate(_page2);
         }
-        
+
         public void Button_Click_RestPin(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("/RestaurantPin.xaml", UriKind.RelativeOrAbsolute));

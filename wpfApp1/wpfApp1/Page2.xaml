@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:trvlApp"
       mc:Ignorable="d" 
+      KeepAlive="True"
       d:DesignHeight="480" d:DesignWidth="233"
       Title="Page2">
 

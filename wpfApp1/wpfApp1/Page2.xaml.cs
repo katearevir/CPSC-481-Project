@@ -20,15 +20,17 @@ namespace trvlApp
     /// </summary>
     public partial class Page2 : Page
     {
+        private trvlApp.Page1 _page1;
 
-        public Page2()
+        public Page2(trvlApp.Page1 page1)
         {
             InitializeComponent();
+            _page1 = page1;
         }
 
         public void NavigatePage(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/Page1.xaml", UriKind.RelativeOrAbsolute));
+            NavigationService.Navigate(_page1);
         }
 
 
