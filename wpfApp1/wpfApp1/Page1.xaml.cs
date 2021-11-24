@@ -20,6 +20,7 @@ namespace trvlApp
     /// </summary>
     public partial class Page1 : Page
     {
+        private Page1 _page1;
         private Page2 _page2;
         private SettingsPage _settingsPage;
         private RestaurantPin _restPin;
@@ -27,6 +28,7 @@ namespace trvlApp
         public Page1()
         {
             InitializeComponent();
+            _page1 = this;
             _settingsPage = new SettingsPage();
             _page2 = new Page2(this, _settingsPage);
             _restPin = new RestaurantPin(_settingsPage);

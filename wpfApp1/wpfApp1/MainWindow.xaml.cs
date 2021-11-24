@@ -22,7 +22,8 @@ namespace wpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-        Uri page1 = new Uri("/Page1.xaml", UriKind.Relative);
+        trvlApp.Page1 page1 = new trvlApp.Page1();
+
         public MainWindow()
         {
             InitializeComponent();
