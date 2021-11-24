@@ -20,8 +20,7 @@ namespace trvlApp
     /// </summary>
     public partial class SettingsPage : Page
     {
-        private trvlApp.Page1 _page1;
-        public SettingsPage(trvlApp.Page1 page1)
+        public SettingsPage()
         {
             InitializeComponent();
             _page1 = page1;

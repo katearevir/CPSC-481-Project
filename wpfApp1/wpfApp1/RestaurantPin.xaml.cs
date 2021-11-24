@@ -20,21 +20,25 @@ namespace trvlApp
     /// </summary>
     public partial class RestaurantPin : Page
     {
-        public RestaurantPin()
+        private SettingsPage _settingsPage;
+
+        public RestaurantPin(SettingsPage settingsPage)
         {
             InitializeComponent();
+            _settingsPage = settingsPage;
         }
 
         public void BackButton(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/Page1.xaml", UriKind.RelativeOrAbsolute));
+            if (this.NavigationService.CanGoBack)
+            {
+                this.NavigationService.GoBack();
+            }
         }
 
-        public void OpenSettingsWindow(object sender, RoutedEventArgs e)
+        public void settingsNav(object sender, RoutedEventArgs e)
         {
-            trvlApp.SettingsWindow objSettingsWindow = new trvlApp.SettingsWindow();
-            this.Visibility = Visibility.Hidden; // hiding current window 
-            objSettingsWindow.Show();
+            NavigationService.Navigate(_settingsPage);
         }
 
 

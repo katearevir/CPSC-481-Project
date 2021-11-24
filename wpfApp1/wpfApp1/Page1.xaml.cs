@@ -20,14 +20,18 @@ namespace trvlApp
     /// </summary>
     public partial class Page1 : Page
     {
+        private Page1 _page1;
         private Page2 _page2;
         private SettingsPage _settingsPage;
+        private RestaurantPin _restPin;
 
         public Page1()
         {
             InitializeComponent();
-            _settingsPage = new SettingsPage(this);
+            _page1 = this;
+            _settingsPage = new SettingsPage();
             _page2 = new Page2(this, _settingsPage);
+            _restPin = new RestaurantPin(_settingsPage);
         }
 
         public Page1(trvlApp.Page2 page2)
@@ -58,7 +62,9 @@ namespace trvlApp
 
         public void Button_Click_RestPin(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/RestaurantPin.xaml", UriKind.RelativeOrAbsolute));
+            
+            NavigationService.Navigate(_restPin);
+
         }
 
         private void Button_Click_Attractions(object sender, RoutedEventArgs e)
