@@ -21,6 +21,7 @@
     <None Remove="export.png" />
     <None Remove="gear.png" />
     <None Remove="here_icon.png" />
+    <None Remove="Image1.png" />
     <None Remove="images\events_filter.png" />
     <None Remove="images\events_filter_hidden.png" />
     <None Remove="images\interest_filter.png" />
@@ -35,6 +36,7 @@
     <None Remove="interest_filter_hidden.png" />
     <None Remove="interest_pin.png" />
     <None Remove="itinerary_pin.png" />
+    <None Remove="keyboard.png" />
     <None Remove="left_arrow.png" />
     <None Remove="map.png" />
     <None Remove="map1.png" />
@@ -67,6 +69,7 @@
     <Resource Include="export.png" />
     <Resource Include="gear.png" />
     <Resource Include="here_icon.png" />
+    <Resource Include="Image1.png" />
     <Resource Include="images\events_filter.png" />
     <Resource Include="images\events_filter_hidden.png" />
     <Resource Include="images\interest_filter.png" />
@@ -81,6 +84,7 @@
     <Resource Include="interest_filter_hidden.png" />
     <Resource Include="interest_pin.png" />
     <Resource Include="itinerary_pin.png" />
+    <Resource Include="keyboard.png" />
     <Resource Include="left_arrow.png" />
     <Resource Include="map.png" />
     <Resource Include="map1.png" />

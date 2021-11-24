@@ -30,8 +30,8 @@
         <StackPanel Margin="0,25,0,30" Orientation="Vertical">
 
             <StackPanel Width="231" Orientation="Horizontal" Height="37">
-                <Label Content="Alerts" Height="25" Width="178" FontWeight="Bold" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface"/>
-                <local:ToggleButton x:Name="AlertsToggleButton" Width="40" Height="40" RenderTransformOrigin="0.578,0.54" Loaded="Alerts_Toggle" VerticalAlignment="Bottom"/>
+                <Label Content="Alerts" Height="25" Width="177" FontWeight="Bold" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface"/>
+                <local:ToggleButton x:Name="AlertsToggleButton" Width="41" Height="40" RenderTransformOrigin="0.578,0.54" Loaded="Alerts_Toggle" VerticalAlignment="Bottom"/>
 
             </StackPanel>
 
@@ -70,30 +70,10 @@
                 <Label Content="Notifications" Height="20" VerticalAlignment="Center" Width="178" FontSize="10" FontFamily="Century Gothic" Foreground="#FF646464" TextBlock.FontFamily="Global User Interface"/>
                 <local:ToggleButton x:Name="Toggle3" Width="38" Height="34" VerticalAlignment="Center"/>
             </StackPanel>
-
-            <StackPanel Width="231" Orientation="Horizontal" Height="28">
-                <Label Content="Lefthand/Inverted Mode" Height="28" Width="178" FontWeight="Bold" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface"/>
-                <local:ToggleButton x:Name="Toggle4" Width="39" Height="24" VerticalAlignment="Center" HorizontalAlignment="Stretch">
-                    <local:ToggleButton.Background>
-                        <ImageBrush/>
-                    </local:ToggleButton.Background>
-                </local:ToggleButton>
-            </StackPanel>
-
-            <StackPanel Width="231" Orientation="Horizontal" Height="29">
-                <Label Content="Dark Mode" Height="26" Width="178" FontWeight="Bold" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface"/>
-                <local:ToggleButton x:Name="Toggle5" Width="40" Height="29" VerticalAlignment="Center">
-                    <local:ToggleButton.Background>
-                        <ImageBrush/>
-                    </local:ToggleButton.Background>
-                </local:ToggleButton>
-            </StackPanel>
-
-            <StackPanel Height="35" Width="231" Orientation="Horizontal">
+            <StackPanel Height="26" Width="231" Orientation="Horizontal">
                 <Label Content="Itinerary Sharing Code:" Height="25" Width="152" FontWeight="Bold" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface"/>
             </StackPanel>
-
-            <StackPanel Height="27" Width="218" Orientation="Horizontal">
+            <StackPanel Height="34" Width="220" Orientation="Horizontal">
                 <Label Content="12345XD" Width="66" FontWeight="Bold" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface" Background="#FF87D9E6" BorderBrush="#FF60636C" Height="25"/>
                 <Label Content="" Width="17" FontWeight="Bold" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface" Height="24"/>
                 <Button Content="" Height="25" Width="26" BorderBrush="{x:Null}">
@@ -102,12 +82,10 @@
                     </Button.Background>
                 </Button>
             </StackPanel>
-
-            <StackPanel Height="35" Width="231" Orientation="Horizontal">
+            <StackPanel Height="27" Width="231" Orientation="Horizontal">
                 <Label Content="Import Share Code:" Height="25" Width="152" FontWeight="Bold" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface"/>
             </StackPanel>
-
-            <StackPanel Height="27" Width="218" Orientation="Horizontal">
+            <StackPanel Height="29" Width="218" Orientation="Horizontal">
                 <Label Content="11111A" Width="66" FontWeight="Bold" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface" Background="#FFA0A2DC" BorderBrush="#FF60636C" Height="25"/>
                 <Label Content="" Width="17" FontWeight="Bold" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface" Height="24"/>
                 <Button Content="" Height="25" Width="26" BorderBrush="{x:Null}">
@@ -115,6 +93,24 @@
                         <ImageBrush ImageSource="/import.png"/>
                     </Button.Background>
                 </Button>
+            </StackPanel>
+
+            <StackPanel Width="231" Orientation="Horizontal" Height="38">
+                <Label Content="Lefthand/Inverted Mode" Height="25" Width="178" FontWeight="Bold" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface"/>
+                <local:ToggleButton x:Name="Toggle4" Width="39" Height="24" VerticalAlignment="Center" HorizontalAlignment="Stretch">
+                    <local:ToggleButton.Background>
+                        <ImageBrush/>
+                    </local:ToggleButton.Background>
+                </local:ToggleButton>
+            </StackPanel>
+
+            <StackPanel Width="231" Orientation="Horizontal" Height="33">
+                <Label Content="Dark Mode" Height="26" Width="178" FontWeight="Bold" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface"/>
+                <local:ToggleButton x:Name="Toggle5" Width="40" Height="29" VerticalAlignment="Center">
+                    <local:ToggleButton.Background>
+                        <ImageBrush/>
+                    </local:ToggleButton.Background>
+                </local:ToggleButton>
             </StackPanel>
 
 

@@ -25,6 +25,8 @@ namespace trvlApp
         {
             InitializeComponent();
             _page1 = page1;
+            KeyboardButton.Visibility = Visibility.Collapsed;
+
         }
 
         private void BackToMainWindow(object sender, RoutedEventArgs e)
@@ -33,6 +35,41 @@ namespace trvlApp
             {
                 this.NavigationService.GoBack();
             }
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void InvertedToggled(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DarkModeLoaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AlertsLoaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Label_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void ItineraryInputMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            KeyboardButton.Visibility = Visibility.Visible;
         }
     }
 }
