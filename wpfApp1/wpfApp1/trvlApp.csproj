@@ -30,6 +30,7 @@
     <None Remove="images\restau_filter_hidden.png" />
     <None Remove="import-failed.PNG" />
     <None Remove="import-success.PNG" />
+    <None Remove="import.png" />
     <None Remove="interest_filter.png" />
     <None Remove="interest_filter_hidden.png" />
     <None Remove="interest_pin.png" />
@@ -75,6 +76,7 @@
     <Resource Include="images\restau_filter_hidden.png" />
     <Resource Include="import-failed.PNG" />
     <Resource Include="import-success.PNG" />
+    <Resource Include="import.png" />
     <Resource Include="interest_filter.png" />
     <Resource Include="interest_filter_hidden.png" />
     <Resource Include="interest_pin.png" />

@@ -21,17 +21,25 @@ namespace trvlApp
     public partial class Page1 : Page
     {
         private Page2 _page2;
+        private SettingsPage _settingsPage;
 
         public Page1()
         {
             InitializeComponent();
-            _page2 = new Page2(this);
+            _settingsPage = new SettingsPage(this);
+            _page2 = new Page2(this, _settingsPage);
         }
 
         public Page1(trvlApp.Page2 page2)
         {
             InitializeComponent();
             _page2 = page2;
+        }
+
+        public Page1(trvlApp.SettingsPage settingsPage)
+        {
+            InitializeComponent();
+            _settingsPage = settingsPage;
         }
 
         Boolean _is_filtered_attraction = false;
@@ -41,6 +49,11 @@ namespace trvlApp
         public void NavigatePage(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(_page2);
+        }
+
+        public void settingsNav(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(_settingsPage);
         }
 
         public void Button_Click_RestPin(object sender, RoutedEventArgs e)

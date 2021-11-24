@@ -16,30 +16,23 @@ using System.Windows.Shapes;
 namespace trvlApp
 {
     /// <summary>
-    /// Interaction logic for Page2.xaml
+    /// Interaction logic for SettingsPage.xaml
     /// </summary>
-    public partial class Page2 : Page
+    public partial class SettingsPage : Page
     {
         private trvlApp.Page1 _page1;
-        private SettingsPage _settingsPage;
-
-        public Page2(trvlApp.Page1 page1, SettingsPage settingsPage)
+        public SettingsPage(trvlApp.Page1 page1)
         {
             InitializeComponent();
             _page1 = page1;
-            _settingsPage = settingsPage;
         }
 
-        public void NavigatePage(object sender, RoutedEventArgs e)
+        private void BackToMainWindow(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(_page1);
+            if (this.NavigationService.CanGoBack)
+            {
+                this.NavigationService.GoBack();
+            }
         }
-
-        public void settingsNav(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(_settingsPage);
-        }
-
-
     }
 }
