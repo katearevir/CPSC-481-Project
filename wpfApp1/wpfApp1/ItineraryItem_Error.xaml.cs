@@ -19,9 +19,11 @@ namespace trvlApp
     /// </summary>
     public partial class ItineraryItem_Error : Window
     {
-        public ItineraryItem_Error()
+        public ItineraryItem_Error(string errorText)
         {
             InitializeComponent();
+            TextBlock text = (TextBlock)this.FindName("ErrorText");
+            text.Text = errorText;
         }
     }
 }

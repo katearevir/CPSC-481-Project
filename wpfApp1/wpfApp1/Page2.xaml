@@ -215,8 +215,8 @@
             <!-- Empty textblock, placeholder-->
             <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="39"/>
             <TextBlock Text="2:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
-            <Button   Content="Mcdonalds" BorderThickness="0" Height="42" Width="173" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Background="#FF67CD00" Foreground="White" FontFamily="Global User Interface"/>
-            <TextBlock  Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+            <Button x:Name="AdditionalCustomEvent1" Click="AdditionalCustomEvent1_Click" Content="Mcdonalds" BorderThickness="0" Height="42" Width="173" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Background="#FF67CD00" Foreground="White" FontFamily="Global User Interface"/>
+            <TextBlock x:Name="AdditionalCustomEven1_TextBlockBelow" Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
             <TextBlock Text="3:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
             <!-- Empty textblock, placeholder-->
             <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="37"/>
@@ -233,6 +233,16 @@
         </ListBox>
         <Button Content="    Monday&#xA;Sept 27, 2021" BorderThickness="0" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" Width="119" Height="53" FontFamily="Global User Interface" FontWeight="Bold" Background="{x:Null}" FontStretch="Normal" TextBlock.FontFamily="Global User Interface"/>
         <Ellipse HorizontalAlignment="Left" Height="142" Margin="-27,0,0,0" Stroke="#FF686868" VerticalAlignment="Center" Width="51" Fill="#FF686868" Opacity="0.8"/>
+        <TextBlock HorizontalAlignment="Left" Height="27" Margin="-58,268,0,0" Text="MAP" TextWrapping="Wrap" VerticalAlignment="Top" Width="118" RenderTransformOrigin="0.5,0.5" FontFamily="Global User Interface" Foreground="White" FontSize="14">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
         <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="14" Margin="209,45,0,0" VerticalAlignment="Top" Width="14" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
             <Button.Background>
                 <ImageBrush ImageSource="/right_arrow.png"/>
@@ -255,7 +265,7 @@
             </Button.Background>
         </Button>
         <TextBlock HorizontalAlignment="Left" Height="14" Margin="22,5,0,0" Text="16°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="31" FontFamily="Global User Interface"/>
-        <Button Content=""  BorderThickness="0" HorizontalAlignment="Left" Height="31" Margin="191,387,0,0" VerticalAlignment="Top" Width="32" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+        <Button Content="" Click="AddItineraryItem_ButtonClick" BorderThickness="0" HorizontalAlignment="Left" Height="31" Margin="191,387,0,0" VerticalAlignment="Top" Width="32" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
             <Button.Background>
                 <ImageBrush ImageSource="/add.png"/>
             </Button.Background>
@@ -281,8 +291,8 @@
                 </Button.Resources>
             </Button>
         </StackPanel>
-        <Rectangle HorizontalAlignment="Center" Height="26" Stroke="Black" VerticalAlignment="Top" Width="247" Fill="White"/>
-        <Button Content="" Click="settingsNav" BorderThickness="0" HorizontalAlignment="Left" Height="24" Margin="211,0,0,0" VerticalAlignment="Top" Width="22" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+        <Rectangle HorizontalAlignment="Center" Height="26" Stroke="Black" VerticalAlignment="Top" Width="247" Fill="White" Margin="0,-1,0,0"/>
+        <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="24" Margin="211,0,0,0" VerticalAlignment="Top" Width="22" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
             <Button.Background>
                 <ImageBrush ImageSource="/gear.png"/>
             </Button.Background>
@@ -299,41 +309,5 @@
             </TextBlock.Background>
         </TextBlock>
 
-        <Menu Margin="0,1,157,456" Background="White">
-            <MenuItem  Height="23" Width="76" BorderBrush="#FFBBBBBB" Background="{x:Null}">
-                <MenuItem.Header>
-                    <TextBlock VerticalAlignment="CENTER" HorizontalAlignment="Center">4:00 PM</TextBlock>
-                </MenuItem.Header>
-                <MenuItem.Icon>
-                    <Image Source="sunshine.png" Height="17" Width="17"></Image>
-                </MenuItem.Icon>
-                <MenuItem Header="6:00 PM" IsHitTestVisible="False" BorderBrush="Black" Background="White">
-                    <MenuItem.Icon >
-                        <Image Source="cloudy-day.png" Height="17" Width="17"></Image>
-                    </MenuItem.Icon>
-                </MenuItem>
-                <MenuItem Header="8:00 PM" IsHitTestVisible="False" BorderBrush="Black" Background="White">
-                    <MenuItem.Icon >
-                        <Image Source="cloudy-day.png" Height="17" Width="17"></Image>
-                    </MenuItem.Icon>
-                </MenuItem>
-                <MenuItem Header="11:00 PM" IsHitTestVisible="False" BorderBrush="Black" Background="White">
-                    <MenuItem.Icon>
-                        <Image Source="storm.png" Height="17" Width="17"></Image>
-                    </MenuItem.Icon>
-                </MenuItem>
-            </MenuItem>
-        </Menu>
-
-        <Button Content="MAP" Click="NavigatePage" BorderThickness="0" Height="22" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" FontFamily="Global User Interface" Foreground="White" FontSize="16" FontWeight="Normal" Background="{x:Null}" BorderBrush="{x:Null}" Margin="-63,0,156,0">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
     </Grid>
 </Page>

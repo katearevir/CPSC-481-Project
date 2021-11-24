@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -33,14 +34,14 @@ namespace trvlApp
             PlaceOfInterest
         }
 
-        public itineraryWindow parentWindow;
+        public Page2 parentWindow;
 
         public Itinerary_AddItineraryItem()
         {
             InitializeComponent();
         }
 
-        public Itinerary_AddItineraryItem(itineraryWindow itineraryWindow)
+        public Itinerary_AddItineraryItem(Page2 itineraryWindow)
         {
             InitializeComponent();
             parentWindow = itineraryWindow;
@@ -151,10 +152,153 @@ namespace trvlApp
             }
         }
 
+        private bool NoErrors()
+        {
+            bool noError = true;
+            string message = "";
+            var nameTextbox = (TextBox)this.FindName("NameTextBox");
+            if (nameTextbox.Text == "<Name>")
+            {
+                message += "Please name the itinerary item. ";
+                noError = false;
+            }
+            var locationTextbox = (TextBox)this.FindName("LocationTextBox");
+            if (locationTextbox.Text == "<Location>")
+            {
+                message += "Please enter any location. A pin will appear on the map if it is a valid map location. ";
+                noError = false;
+            }
+            var timeStartTextbox = (TextBox)this.FindName("TimeStartTextBox");
+            string[] timeStartArray = Regex.Split(timeStartTextbox.Text, ":");
+            int startHours = 0;
+            int startMinutes = 0;
+            bool startTimeFieldIsValid = true;
+            bool endTimeFieldIsValid = true;
+            if (timeStartArray.Length != 2)
+            {
+                startTimeFieldIsValid = false;
+            }
+            else
+            {
+                bool successfulhours = int.TryParse(timeStartArray[0], out startHours);
+                bool successfulminutes = int.TryParse(timeStartArray[1], out startMinutes);
+                if (!successfulhours)
+                {
+                    startTimeFieldIsValid = false;
+                }
+                else if (!successfulminutes)
+                {
+                    startTimeFieldIsValid = false;
+                }
+                else if (startHours < 1 || startHours > 12 || startMinutes < 0 || startMinutes > 59)
+                {
+                    startTimeFieldIsValid = false;
+                }
+            }
+            var timeEndTextbox = (TextBox)this.FindName("TimeEndTextBox");
+            string[] timeEndArray = Regex.Split(timeEndTextbox.Text, ":");
+            int endHours = 0;
+            int endMinutes = 0;
+            if (timeEndArray.Length != 2)
+            {
+                endTimeFieldIsValid = false;
+            }
+            else
+            {
+                bool successfulhours = int.TryParse(timeEndArray[0], out endHours);
+                bool successfulminutes = int.TryParse(timeEndArray[1], out endMinutes);
+                if (!successfulhours)
+                {
+                    endTimeFieldIsValid = false;
+                }
+                else if (!successfulminutes)
+                {
+                    endTimeFieldIsValid = false;
+                }
+                else if (endHours < 1 || endHours > 12 || endMinutes < 0 || endMinutes > 59)
+                {
+                    endTimeFieldIsValid = false;
+                }
+            }
+
+            if (!startTimeFieldIsValid && !endTimeFieldIsValid)
+            {
+                message += "Please enter the ending time of the itinerary item, from 1:00 to 12:59. ";
+                noError = false;
+            }
+            else if (!startTimeFieldIsValid && endTimeFieldIsValid)
+            {
+                message += "Please enter the starting time of the itinerary item, from 1:00 to 12:59. ";
+                noError = false;
+            }
+            else if (startTimeFieldIsValid && !endTimeFieldIsValid)
+            {
+                message += "Please enter the ending time of the itinerary item, from 1:00 to 12:59. ";
+                noError = false;
+            }
+
+            var timeStartDD = (ComboBox)this.FindName("TimeStartDropdown");
+            if(timeStartDD.SelectedIndex == -1)
+            {
+                message += "Please select AM or PM for the starting time of the itinerary item. ";
+                noError = false;
+            }
+            var timeEndDD = (ComboBox)this.FindName("TimeEndDropdown");
+            if(timeEndDD.SelectedIndex == -1)
+            {
+                message += "Please select AM or PM for the ending time of the itinerary item. ";
+                noError = false;
+            }
+            // Code to make the time make sense:
+            if(startTimeFieldIsValid && endTimeFieldIsValid && timeStartDD.SelectedIndex!=-1 && timeEndDD.SelectedIndex!=-1 && timeStartDD.SelectedIndex == timeEndDD.SelectedIndex)
+            {
+                // if both are AM or PM:
+                if(startHours!=12 && startHours>endHours)
+                {
+                    message += "The starting time should be earlier than the ending time. ";
+                    noError = false;
+                }
+                else if (startHours == endHours && startMinutes>endMinutes)
+                {
+                    message += "The starting time should be earlier than the ending time. ";
+                    noError = false;
+                }
+                else if (startHours == endHours && startMinutes == endMinutes)
+                {
+                    message += "You cannot schedule an itinerary item for zero minutes. ";
+                    noError = false;
+                }
+            }
+            else if (startTimeFieldIsValid && endTimeFieldIsValid && timeStartDD.SelectedIndex == 1 && timeEndDD.SelectedIndex == 0)
+            {
+                //what if 10pm -> 1am? Not allowed since it goes into another itinerary time :P
+                message += "The starting time should be earlier than the ending time. You may only plan for one day's itinerary, from 12:00 AM to 11:59 PM. ";
+                noError = false;
+            }
+            var locationTypeDD = (ComboBox)this.FindName("LocationTypeDropDown");
+            if(locationTypeDD.SelectedIndex == -1)
+            {
+                message += "Please specify the type of location; Restaurant, Event, or Place of Interest.";
+                noError = false;
+            }
+
+            if(!noError)
+            {
+                ItineraryItem_Error errorWindow = new ItineraryItem_Error(message);
+                errorWindow.Show();
+            }
+
+            return noError;
+        }
+
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             //Only make custom event 1 visible if name is exactly equal to Mcdonalds
-            //TODO: Also add in the code for an error popup here :)
+            if(!NoErrors())
+            {
+                return;
+            }
+
             var SelectedTextbox = (TextBox)this.FindName("NameTextBox");
             bool[] events = new bool[] { false }; //list of events
             int[] heights = new int[] { 21 };

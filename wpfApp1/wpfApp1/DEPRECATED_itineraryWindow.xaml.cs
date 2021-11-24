@@ -57,13 +57,15 @@ namespace trvlApp
 
         private void AddItineraryItem_ButtonClick(object sender, RoutedEventArgs e)
         {
-            AddItineraryItem_Window = new Itinerary_AddItineraryItem(this);
+            //does not work anymore
+            //AddItineraryItem_Window = new Itinerary_AddItineraryItem(this);
             AddItineraryItem_Window.Show();
         }
 
         private void AdditionalCustomEvent1_Click(object sender, RoutedEventArgs e)
         {
-            AddItineraryItem_Window = new Itinerary_AddItineraryItem(this);
+            //does not work anymore
+            //AddItineraryItem_Window = new Itinerary_AddItineraryItem(this);
             AddItineraryItem_Window.Show();
             //if we were to do stuff with this we should make an object with this info and use that instead, but this is just to show that it works in the meantime.
             AddItineraryItem_Window.Set_All_Fields("Mcdonalds", "1422 17 Ave SW, Calgary, AB T2T 0C3", "2:00", "2:50", Itinerary_AddItineraryItem.TimeEnum.PM,
