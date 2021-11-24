@@ -31,7 +31,19 @@ namespace trvlApp
             objSettingsWindow.Show();
         }
 
-        private void Toggle1_Loaded(object sender, RoutedEventArgs e)
+        private void Alerts_Toggle(object sender, RoutedEventArgs e)
+        {
+            if(AlertsToggleButton.Toggled1 == true) {
+                
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }

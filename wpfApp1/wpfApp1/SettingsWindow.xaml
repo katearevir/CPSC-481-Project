@@ -31,31 +31,48 @@
 
             <StackPanel Width="231" Orientation="Horizontal" Height="37">
                 <Label Content="Alerts" Height="25" Width="178" FontWeight="Bold" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface"/>
-                <local:ToggleButton x:Name="Toggle1" Width="40" Height="19" RenderTransformOrigin="0.578,0.54" Loaded="Toggle1_Loaded" VerticalAlignment="Bottom"/>
+                <local:ToggleButton x:Name="AlertsToggleButton" Width="40" Height="40" RenderTransformOrigin="0.578,0.54" Loaded="Alerts_Toggle" VerticalAlignment="Bottom"/>
 
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
-                <Label Content="Alert me" Height="26" Width="55" FontSize="10" Foreground="#FF646464" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface"/>
-                <Button Content="___________" Width="46" Height="19" FontSize="10"/>
-                <Button Content="▼" Height="19" Width="17"/>
-                <Label Content="before event starts" HorizontalAlignment="Left" Height="26" Width="96" FontSize="10" Foreground="#FF646464" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface"/>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Alert me" Height="26" Width="48" FontSize="10" Foreground="#FF646464" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface"/>
+                </StackPanel>
+
+                <StackPanel Width="86">
+                    <ComboBox FontSize="9" Width="87">
+                        <ComboBoxItem>15 mins before</ComboBoxItem>
+                        <ComboBoxItem IsSelected="True">30 mins before</ComboBoxItem>
+                        <ComboBoxItem>1 hr before</ComboBoxItem>
+                        <ComboBoxItem>2 hr before</ComboBoxItem>
+                        <ComboBoxItem>1 day before</ComboBoxItem>
+                        <ComboBoxItem>2 days before</ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="before event starts" Height="26" Width="93" FontSize="10" Foreground="#FF646464" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface"/>
+                </StackPanel>
+
+
             </StackPanel>
 
-            <Label Content="Alert Type" Height="32" Width="230" VerticalContentAlignment="Center" FontWeight="Bold" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface"/>
 
-            <StackPanel Orientation="Horizontal" Height="28">
-                <Label Content="Alarm (sound)" Height="26" VerticalAlignment="Center" Width="178" FontSize="10" FontFamily="Century Gothic" Foreground="#FF646464" TextBlock.FontFamily="Global User Interface"/>
-                <local:ToggleButton x:Name="Toggle2" Width="40" Height="36"/>
+            <Label Content="Alert Type" Height="32" Width="236" VerticalContentAlignment="Center" FontWeight="Bold" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface"/>
+
+            <StackPanel Orientation="Horizontal" Height="26">
+                <Label Content="Alarm (sound)" Height="26" Width="178" FontSize="10" FontFamily="Century Gothic" Foreground="#FF646464" TextBlock.FontFamily="Global User Interface"/>
+                <local:ToggleButton x:Name="Toggle2" Width="40" Height="25"/>
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal" Height="36">
-                <Label Content="Notifications" Height="26" VerticalAlignment="Center" Width="178" FontSize="10" FontFamily="Century Gothic" Foreground="#FF646464" TextBlock.FontFamily="Global User Interface"/>
-                <local:ToggleButton x:Name="Toggle3" Width="38" Height="27" VerticalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" Height="26">
+                <Label Content="Notifications" Height="20" VerticalAlignment="Center" Width="178" FontSize="10" FontFamily="Century Gothic" Foreground="#FF646464" TextBlock.FontFamily="Global User Interface"/>
+                <local:ToggleButton x:Name="Toggle3" Width="38" Height="34" VerticalAlignment="Center"/>
             </StackPanel>
 
             <StackPanel Width="231" Orientation="Horizontal" Height="28">
-                <Label Content="Lefthand/Inverted Mode" Height="26" Width="178" FontWeight="Bold" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface"/>
+                <Label Content="Lefthand/Inverted Mode" Height="28" Width="178" FontWeight="Bold" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface"/>
                 <local:ToggleButton x:Name="Toggle4" Width="39" Height="24" VerticalAlignment="Center" HorizontalAlignment="Stretch">
                     <local:ToggleButton.Background>
                         <ImageBrush/>
