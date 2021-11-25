@@ -233,16 +233,16 @@
         </ListBox>
         <Button Content="    Monday&#xA;Sept 27, 2021" BorderThickness="0" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" Width="119" Height="53" FontFamily="Global User Interface" FontWeight="Bold" Background="{x:Null}" FontStretch="Normal" TextBlock.FontFamily="Global User Interface"/>
         <Ellipse HorizontalAlignment="Left" Height="142" Margin="-27,0,0,0" Stroke="#FF686868" VerticalAlignment="Center" Width="51" Fill="#FF686868" Opacity="0.8"/>
-        <TextBlock HorizontalAlignment="Left" Height="27" Margin="-58,268,0,0" Text="MAP" TextWrapping="Wrap" VerticalAlignment="Top" Width="118" RenderTransformOrigin="0.5,0.5" FontFamily="Global User Interface" Foreground="White" FontSize="14">
-            <TextBlock.RenderTransform>
+        <Button HorizontalAlignment="Left" Click="NavigatePage" Height="26" Margin="-47,0,0,0" Content="MAP" BorderThickness="0" VerticalAlignment="Center" Width="118" RenderTransformOrigin="0.5,0.5" FontFamily="Global User Interface" Foreground="White" FontSize="14" Background="{x:Null}">
+            <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
                     <RotateTransform Angle="90"/>
                     <TranslateTransform/>
                 </TransformGroup>
-            </TextBlock.RenderTransform>
-        </TextBlock>
+            </Button.RenderTransform>
+        </Button>
         <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="14" Margin="209,45,0,0" VerticalAlignment="Top" Width="14" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
             <Button.Background>
                 <ImageBrush ImageSource="/right_arrow.png"/>
@@ -291,18 +291,38 @@
                 </Button.Resources>
             </Button>
         </StackPanel>
-        <Rectangle HorizontalAlignment="Center" Height="26" Stroke="Black" VerticalAlignment="Top" Width="247" Fill="White" Margin="0,-1,0,0"/>
-        <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="24" Margin="211,0,0,0" VerticalAlignment="Top" Width="22" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+        <Rectangle HorizontalAlignment="Center" Height="26" Stroke="Black" VerticalAlignment="Top" Width="247" Fill="White"/>
+        <Button Content="" Click="settingsNav" BorderThickness="0" HorizontalAlignment="Left" Height="24" Margin="211,0,0,0" VerticalAlignment="Top" Width="22" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
             <Button.Background>
                 <ImageBrush ImageSource="/gear.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" BorderThickness="0" HorizontalAlignment="Right" Margin="0,2,165,456" Width="22" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
-            <Button.Background>
-                <ImageBrush ImageSource="/sunshine.png"/>
-            </Button.Background>
-        </Button>
-        <TextBlock HorizontalAlignment="Right" Height="14" Margin="0,7,180,0" Text="4:00 PM" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" FontFamily="Global User Interface" FontSize="10"/>
+        <Menu Margin="0,1,157,456" Background="White">
+            <MenuItem  Height="23" Width="76" BorderBrush="#FFBBBBBB" Background="{x:Null}">
+                <MenuItem.Header>
+                    <TextBlock VerticalAlignment="CENTER" HorizontalAlignment="Center">4:00 PM</TextBlock>
+                </MenuItem.Header>
+                <MenuItem.Icon>
+                    <Image Source="sunshine.png" Height="17" Width="17"></Image>
+                </MenuItem.Icon>
+                <MenuItem Header="6:00 PM" IsHitTestVisible="False" BorderBrush="Black" Background="White">
+                    <MenuItem.Icon >
+                        <Image Source="cloudy-day.png" Height="17" Width="17"></Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="8:00 PM" IsHitTestVisible="False" BorderBrush="Black" Background="White">
+                    <MenuItem.Icon >
+                        <Image Source="cloudy-day.png" Height="17" Width="17"></Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="11:00 PM" IsHitTestVisible="False" BorderBrush="Black" Background="White">
+                    <MenuItem.Icon>
+                        <Image Source="storm.png" Height="17" Width="17"></Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        
         <TextBlock HorizontalAlignment="Center" Height="28" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="88">
             <TextBlock.Background>
                 <ImageBrush ImageSource="/TRVL-nobackground-cropped.png" Stretch="UniformToFill"/>
