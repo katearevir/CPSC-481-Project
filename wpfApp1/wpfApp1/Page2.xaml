@@ -189,49 +189,182 @@
             </Setter>
         </Style>
     </Page.Resources>
+    
     <Grid Background="White" Width="233" Height="480">
 
-        <ListBox Margin="29,82,0,39" Background="White" BorderThickness="2, 2, 0, 2" BorderBrush="Black">
-            <ListBox.ItemContainerStyle>
-                <Style TargetType="{x:Type ListBoxItem}">
-                    <Setter Property="Margin" Value="0"/>
-                    <Setter Property="Padding" Value="0"/>
+        <StackPanel x:Name="ItineraryStackPanel_Empty" Visibility="Collapsed" Margin="29,83,0,23" Orientation="Horizontal">
+            <TabControl x:Name="TabControl_Empty" TabStripPlacement="Bottom" Height="368">
+                <TabItem Header="Personal" IsEnabled="True" PreviewMouseDown="PersonalTab_Empty_PreviewMouseLeftButtonDown" Width="103" VerticalContentAlignment="Top" Background="#FF515151" Foreground="Gray" >
+                    <!--This is the personal itinerary-->
+                    <ListBox Background="White" BorderThickness="2, 2, 0, 2" BorderBrush="Black">
+                        <ListBox.ItemContainerStyle>
+                            <Style TargetType="{x:Type ListBoxItem}">
+                                <Setter Property="Margin" Value="0"/>
+                                <Setter Property="Padding" Value="0"/>
 
-                    <!-- For setting height of control-->
-                </Style>
-            </ListBox.ItemContainerStyle>
-            <TextBlock Text="9:00am " TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
-            <Button Content="Calgary Tower" BorderThickness="0" Height="23" Width="172" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Background="#FF246400" Foreground="White" FontFamily="Global User Interface"/>
+                                <!-- For setting height of control-->
+                            </Style>
+                        </ListBox.ItemContainerStyle>
+                        <TextBlock Text="9:00am " TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+                        <TextBlock Text="10:00am " TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+                        <TextBlock Text="11:00am" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+                        <TextBlock Text="12:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+                        <TextBlock Text="1:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+                        <TextBlock Text="2:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+                        <TextBlock Text="3:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <!-- Empty textblock, placeholder-->
+                        <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+                        <TextBlock Text="4:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <!-- Empty textblock, placeholder-->
+                        <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+                        <TextBlock Text="5:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <!-- Empty textblock, placeholder-->
+                        <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+                        <TextBlock Text="6:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <!-- Empty textblock, placeholder-->
+                        <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
 
-            <TextBlock Text="10:00am " TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
-            <Button Content="Prince's Island Park" BorderThickness="0" Height="62" Width="173" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Background="#FF67CD00" Foreground="White" FontFamily="Global User Interface"/>
-            <TextBlock Text="11:00am" TextWrapping="Wrap" FontFamily="Global User Interface" Margin="0, -40, 0, 0" Opacity="0.5" Foreground="#FF686868"/>
+                    </ListBox>
+                </TabItem>
+                <TabItem Header="Shared" x:Name="SharedTab_Empty" PreviewMouseDown="SharedTab_Empty_PreviewMouseLeftButtonDown" IsEnabled="True" Width="103" VerticalContentAlignment="Top" Background="#FF515151" Foreground="Gray">
+                    <!-- This is the shared itinerary, only enabled when ^ IsEnabled is true, and a function on Page2 is called from settings page-->
+                    <ListBox Background="White" BorderThickness="2, 2, 0, 2" BorderBrush="Black">
+                        <ListBox.ItemContainerStyle>
+                            <Style TargetType="{x:Type ListBoxItem}">
+                                <Setter Property="Margin" Value="0"/>
+                                <Setter Property="Padding" Value="0"/>
 
-            <TextBlock Text="12:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
-            <!-- Empty textblock, placeholder-->
-            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+                                <!-- For setting height of control-->
+                            </Style>
+                        </ListBox.ItemContainerStyle>
+                        <TextBlock Text="9:00am " TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+                        <TextBlock Text="10:00am " TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+                        <TextBlock Text="11:00am" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+                        <TextBlock Text="12:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+                        <TextBlock Text="1:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+                        <TextBlock Text="2:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+                        <TextBlock Text="3:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <!-- Empty textblock, placeholder-->
+                        <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+                        <TextBlock Text="4:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <!-- Empty textblock, placeholder-->
+                        <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+                        <TextBlock Text="5:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <!-- Empty textblock, placeholder-->
+                        <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+                        <TextBlock Text="6:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <!-- Empty textblock, placeholder-->
+                        <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
 
-            <TextBlock Text="1:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
-            <!-- Empty textblock, placeholder-->
-            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="39"/>
-            <TextBlock Text="2:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
-            <Button x:Name="AdditionalCustomEvent1" Click="AdditionalCustomEvent1_Click" Content="Mcdonalds" BorderThickness="0" Height="42" Width="173" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Background="#FF67CD00" Foreground="White" FontFamily="Global User Interface"/>
-            <TextBlock x:Name="AdditionalCustomEven1_TextBlockBelow" Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
-            <TextBlock Text="3:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
-            <!-- Empty textblock, placeholder-->
-            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="37"/>
-            <TextBlock Text="4:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
-            <!-- Empty textblock, placeholder-->
-            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="20"/>
-            <TextBlock Text="5:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
-            <!-- Empty textblock, placeholder-->
-            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="62"/>
-            <TextBlock Text="6:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
-            <!-- Empty textblock, placeholder-->
-            <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="62"/>
+                    </ListBox>
+                </TabItem>
+            </TabControl>
 
-        </ListBox>
-        <Button Content="    Monday&#xA;Sept 27, 2021" BorderThickness="0" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" Width="119" Height="53" FontFamily="Global User Interface" FontWeight="Bold" Background="{x:Null}" FontStretch="Normal" TextBlock.FontFamily="Global User Interface"/>
+        </StackPanel>
+
+        <StackPanel x:Name="ItineraryStackPanel_CurrentDay" Visibility="Visible" Margin="29,83,0,23" Orientation="Horizontal">
+            <TabControl x:Name="TabControl" TabStripPlacement="Bottom" Height="368">
+                <TabItem Header="Personal" x:Name="PersonalTab" PreviewMouseLeftButtonDown="PersonalTab_PreviewMouseLeftButtonDown" IsEnabled="True" Width="103" VerticalContentAlignment="Top" Background="#FF515151" Foreground="Gray" >
+                    <!--This is the personal itinerary-->
+                    <ListBox Background="White" BorderThickness="2, 2, 0, 2" BorderBrush="Black">
+                        <ListBox.ItemContainerStyle>
+                            <Style TargetType="{x:Type ListBoxItem}">
+                                <Setter Property="Margin" Value="0"/>
+                                <Setter Property="Padding" Value="0"/>
+
+                                <!-- For setting height of control-->
+                            </Style>
+                        </ListBox.ItemContainerStyle>
+                        <TextBlock Text="9:00am " TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <Button Content="Calgary Tower" BorderThickness="0" Height="23" Width="172" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Background="#FF246400" Foreground="White" FontFamily="Global User Interface"/>
+
+                        <TextBlock Text="10:00am " TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <Button Content="Prince's Island Park" BorderThickness="0" Height="62" Width="173" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Background="#FF67CD00" Foreground="White" FontFamily="Global User Interface"/>
+                        <TextBlock Text="11:00am" TextWrapping="Wrap" FontFamily="Global User Interface" Margin="0, -40, 0, 0" Opacity="0.5" Foreground="#FF686868"/>
+
+                        <TextBlock Text="12:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <!-- Empty textblock, placeholder-->
+                        <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+
+                        <TextBlock Text="1:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <!-- Empty textblock, placeholder-->
+                        <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+                        <TextBlock Text="2:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <Button x:Name="AdditionalCustomEvent1" Click="AdditionalCustomEvent1_Click" Content="Mcdonalds" BorderThickness="0" Height="42" Width="173" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Background="#FF67CD00" Foreground="White" FontFamily="Global User Interface"/>
+                        <TextBlock x:Name="AdditionalCustomEven1_TextBlockBelow" Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+                        <TextBlock Text="3:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <!-- Empty textblock, placeholder-->
+                        <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+                        <TextBlock Text="4:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <!-- Empty textblock, placeholder-->
+                        <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+                        <TextBlock Text="5:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <!-- Empty textblock, placeholder-->
+                        <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+                        <TextBlock Text="6:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <!-- Empty textblock, placeholder-->
+                        <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+
+                    </ListBox>
+                </TabItem>
+                <TabItem Header="Shared" x:Name="SharedTab" PreviewMouseLeftButtonDown="SharedTab_PreviewMouseLeftButtonDown" IsEnabled="True" Width="103" VerticalContentAlignment="Top" Background="#FF515151" Foreground="Gray">
+                    <!-- This is the shared itinerary, only enabled when ^ IsEnabled is true, and a function on Page2 is called from settings page-->
+                    <ListBox Background="White" BorderThickness="2, 2, 0, 2" BorderBrush="Black">
+                        <ListBox.ItemContainerStyle>
+                            <Style TargetType="{x:Type ListBoxItem}">
+                                <Setter Property="Margin" Value="0"/>
+                                <Setter Property="Padding" Value="0"/>
+
+                                <!-- For setting height of control-->
+                            </Style>
+                        </ListBox.ItemContainerStyle>
+                        <TextBlock Text="9:00am " TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <Button Content="Calgary Tower" BorderThickness="0" Height="23" Width="172" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Background="RoyalBlue" Foreground="White" FontFamily="Global User Interface"/>
+
+                        <TextBlock Text="10:00am " TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <Button Content="Prince's Island Park" BorderThickness="0" Height="62" Width="172" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Background="CornflowerBlue" Foreground="White" FontFamily="Global User Interface"/>
+                        <TextBlock Text="11:00am" TextWrapping="Wrap" FontFamily="Global User Interface" Margin="0, -40, 0, 0" Opacity="0.5" Foreground="#FF686868"/>
+
+                        <TextBlock Text="12:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <!-- Empty textblock, placeholder-->
+                        <Button Content="Chinatown Food" x:Name="CustomEvent2" Click="CustomEvent2_Click"  BorderThickness="0" Height="42" Width="172" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Background="CornflowerBlue" Foreground="White" FontFamily="Global User Interface"/>
+
+                        <TextBlock Text="1:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <!-- Empty textblock, placeholder-->
+                        <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+                        <TextBlock Text="2:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <TextBlock  Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+                        <TextBlock Text="3:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <!-- Empty textblock, placeholder-->
+                        <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+                        <TextBlock Text="4:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <!-- Empty textblock, placeholder-->
+                        <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+                        <TextBlock Text="5:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <!-- Empty textblock, placeholder-->
+                        <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+                        <TextBlock Text="6:00pm" TextWrapping="Wrap" FontFamily="Global User Interface" Foreground="#FF9E9E9E"/>
+                        <!-- Empty textblock, placeholder-->
+                        <TextBlock Text="   " TextWrapping="Wrap" FontFamily="Calibri" Foreground="White" Width="171" Height="42"/>
+
+                    </ListBox>
+                </TabItem>
+            </TabControl>
+        </StackPanel>
+
+        <Button Content="    Monday&#xA;Sept 27, 2021" x:Name="CalendarButton" Click="CalendarButton_Click" BorderThickness="0" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" Width="119" Height="53" FontFamily="Global User Interface" FontWeight="Bold" Background="{x:Null}" FontStretch="Normal" TextBlock.FontFamily="Global User Interface"/>
         <Ellipse HorizontalAlignment="Left" Height="142" Margin="-27,0,0,0" Stroke="#FF686868" VerticalAlignment="Center" Width="51" Fill="#FF686868" Opacity="0.8"/>
         <Button HorizontalAlignment="Left" Click="NavigatePage" Height="26" Margin="-47,0,0,0" Content="MAP" BorderThickness="0" VerticalAlignment="Center" Width="118" RenderTransformOrigin="0.5,0.5" FontFamily="Global User Interface" Foreground="White" FontSize="14" Background="{x:Null}">
             <Button.RenderTransform>
@@ -243,12 +376,12 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="14" Margin="209,45,0,0" VerticalAlignment="Top" Width="14" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+        <Button Content="" x:Name="NextDateButton" Click="NextDateButton_Click" BorderThickness="0" HorizontalAlignment="Left" Height="14" Margin="209,45,0,0" VerticalAlignment="Top" Width="14" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
             <Button.Background>
                 <ImageBrush ImageSource="/right_arrow.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="14" Margin="10,45,0,0" VerticalAlignment="Top" Width="14" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+        <Button Content="" x:Name="PreviousDateButton" Click="PreviousDateButton_Click" BorderThickness="0" HorizontalAlignment="Left" Height="14" Margin="10,45,0,0" VerticalAlignment="Top" Width="14" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
             <Button.Background>
                 <ImageBrush ImageSource="/left_arrow.png"/>
             </Button.Background>
@@ -265,7 +398,12 @@
             </Button.Background>
         </Button>
         <TextBlock HorizontalAlignment="Left" Height="14" Margin="22,5,0,0" Text="16°C" TextWrapping="Wrap" VerticalAlignment="Top" Width="31" FontFamily="Global User Interface"/>
-        <Button Content="" Click="AddItineraryItem_ButtonClick" BorderThickness="0" HorizontalAlignment="Left" Height="31" Margin="191,387,0,0" VerticalAlignment="Top" Width="32" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+        <Button Content="" x:Name="AddItineraryItem_Button" Click="AddItineraryItem_ButtonClick" BorderThickness="0" HorizontalAlignment="Left" Height="31" Margin="191,387,0,0" VerticalAlignment="Top" Width="32" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+            <Button.Background>
+                <ImageBrush ImageSource="/add.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" x:Name="AddItineraryItem_Button_Empty" Click="AddItineraryItem_ButtonClick" Visibility="Collapsed" BorderThickness="0" HorizontalAlignment="Left" Height="31" Margin="191,387,0,0" VerticalAlignment="Top" Width="32" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
             <Button.Background>
                 <ImageBrush ImageSource="/add.png"/>
             </Button.Background>
@@ -275,22 +413,7 @@
                 <ImageBrush ImageSource="/TRVL-nobackground-cropped.png" Stretch="UniformToFill"/>
             </TextBlock.Background>
         </TextBlock>
-        <StackPanel Margin="29,423,0,39" Orientation="Horizontal">
-            <Button Content="Personal" Width="103" VerticalContentAlignment="Top" Background="#FF515151" Foreground="White">
-                <Button.Resources>
-                    <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="5"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
-            <Button Content="Shared" Width="101" Foreground="White" Background="#FF515151" Opacity="0.5">
-                <Button.Resources>
-                    <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="5"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
-        </StackPanel>
+        
         <Rectangle HorizontalAlignment="Center" Height="26" Stroke="Black" VerticalAlignment="Top" Width="247" Fill="White"/>
         <Button Content="" Click="settingsNav" BorderThickness="0" HorizontalAlignment="Left" Height="24" Margin="211,0,0,0" VerticalAlignment="Top" Width="22" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
             <Button.Background>
@@ -328,6 +451,14 @@
                 <ImageBrush ImageSource="/TRVL-nobackground-cropped.png" Stretch="UniformToFill"/>
             </TextBlock.Background>
         </TextBlock>
-
+        <Button Content="" x:Name="ExitCalendar" Click="ExitCalendar_Click" Visibility="Collapsed" BorderThickness="0" Width="233" Margin="0,24,0,0" BorderBrush="White" Background="#FF838383" Foreground="Black" Opacity="0.3"/>
+        <Rectangle HorizontalAlignment="Center" x:Name="CalendarRectangle" Visibility="Collapsed" Width="200" Height="300" Margin="0,96,0,0" Stroke="Black" Fill="White" VerticalAlignment="Top"/>
+        <Grid x:Name="CalendarGrid" Visibility="Collapsed" Background="White" Height="290" Width="190" Margin="0,20,0,0">
+            <Viewbox Stretch= "Fill" Height="290" Width="190">
+                <Calendar x:Name="Calendar" HorizontalAlignment="Center" VerticalAlignment="Center" DisplayDate="9/27/2021" Height="178" Width="200"
+                      IsTodayHighlighted="True" SelectedDatesChanged="Calendar_SelectedDatesChanged" SelectedDate="9/27" SelectionMode="SingleDate"
+                      Background="BlanchedAlmond" FontFamily="Global User Interface"/>
+            </Viewbox>
+        </Grid>
     </Grid>
 </Page>
