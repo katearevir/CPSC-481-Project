@@ -8,7 +8,7 @@
       d:DesignHeight="480" d:DesignWidth="233"
       Title="SettingsPage">
 
-    <Grid Background="#FFCBC5C5" Width="233" Height="480">
+    <Grid x:Name="BlurredBackground" Background="#FFCBC5C5" Width="233" Height="480">
         <Rectangle HorizontalAlignment="Center" Height="24" Stroke="Black" VerticalAlignment="Top" Width="247" Fill="White" Margin="0,1,0,0"/>
         <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="24" Margin="211,0,0,0" VerticalAlignment="Top" Width="22" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
             <Button.Background>
@@ -41,7 +41,7 @@
 
             <StackPanel Width="231" Orientation="Horizontal" Height="36">
                 <Label Content="Alerts" Height="23" Width="178" FontWeight="Bold" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface"/>
-                <local:ToggleButton x:Name="Toggle1" Width="40" Height="28" RenderTransformOrigin="0.578,0.54" Loaded="AlertsLoaded"/>
+                <local:ToggleButton x:Name="AlertsToggleButton" Width="40" Height="28" RenderTransformOrigin="0.578,0.54" MouseLeftButtonDown="AlertsToggle"/>
 
             </StackPanel>
 
@@ -51,13 +51,13 @@
                 </StackPanel>
 
                 <StackPanel Width="87" Height="21">
-                    <ComboBox FontSize="9" Width="87" SelectionChanged="ComboBox_SelectionChanged">
-                        <ComboBoxItem>15 mins before</ComboBoxItem>
-                        <ComboBoxItem IsSelected="True">30 mins before</ComboBoxItem>
-                        <ComboBoxItem>1 hr before</ComboBoxItem>
-                        <ComboBoxItem>2 hr before</ComboBoxItem>
-                        <ComboBoxItem>1 day before</ComboBoxItem>
-                        <ComboBoxItem>2 days before</ComboBoxItem>
+                    <ComboBox x:Name="AlertTimingComboBox" FontSize="9" Width="87" SelectionChanged="ComboBox_SelectionChanged">
+                        <ComboBoxItem x:Name="FifteenAlert" Selected="FifteenMinSelected">15 mins before</ComboBoxItem>
+                        <ComboBoxItem x:Name="ThirtyAlert" Selected="ThirtyMinSelected">30 mins before</ComboBoxItem>
+                        <ComboBoxItem x:Name="OneHourAlert" Selected="OneHourSelected">1 hr before</ComboBoxItem>
+                        <ComboBoxItem x:Name="TwoHoursAlert" Selected="TwoHoursSelected">2 hr before</ComboBoxItem>
+                        <ComboBoxItem x:Name="OneDayAlert" Selected="OneDaySelected">1 day before</ComboBoxItem>
+                        <ComboBoxItem x:Name="TwoDaysAlert" Selected="TwoDaysSelected">2 days before</ComboBoxItem>
                     </ComboBox>
                 </StackPanel>
 
@@ -72,38 +72,38 @@
 
             <StackPanel Orientation="Horizontal" Height="22" Width="224">
                 <Label Content="Alarm (sound)" Height="22" VerticalAlignment="Center" Width="176" FontSize="10" FontFamily="Century Gothic" Foreground="#FF646464" TextBlock.FontFamily="Global User Interface"/>
-                <local:ToggleButton x:Name="Toggle2" Width="40" Height="20"/>
+                <local:ToggleButton x:Name="AlarmSoundToggle" Width="40" Height="20"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Height="23" Width="226">
-                <Label Content="Notifications" Height="22" VerticalAlignment="Center" Width="178" FontSize="10" FontFamily="Century Gothic" Foreground="#FF646464" TextBlock.FontFamily="Global User Interface"/>
+                <Label x:Name="AlertNotificationsToggle" Content="Notifications" Height="22" VerticalAlignment="Center" Width="178" FontSize="10" FontFamily="Century Gothic" Foreground="#FF646464" TextBlock.FontFamily="Global User Interface"/>
                 <local:ToggleButton x:Name="Toggle3" Width="38" Height="26" VerticalAlignment="Center"/>
             </StackPanel>
             <StackPanel Height="26" Width="228" Orientation="Horizontal">
                 <Label Content="Itinerary Sharing Code:" Height="25" Width="152" FontWeight="Bold" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface"/>
             </StackPanel>
             <StackPanel Height="27" Width="218" Orientation="Horizontal">
-                <TextBox Width="67" TextChanged="TextBox_TextChanged" Background="#FF95DEDE" Text="123747" MouseDoubleClick="ItineraryInputMouseDoubleClick" />
+                <TextBox Width="67" Background="#FF95DEDE" Text="123747" />
                 <Label Content="" Width="17" FontWeight="Bold" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface" Height="24"/>
-                <Button Content="" Height="25" Width="26" BorderBrush="{x:Null}">
+                <Button x:Name="CopyCodeButton" Content="" Height="25" Width="26" BorderBrush="{x:Null}" Click="CodeCopied">
                     <Button.Background>
                         <ImageBrush ImageSource="/export.png"/>
                     </Button.Background>
                 </Button>
-                <Label Content="Copy to Clipboard" Height="20" FontSize="8" Width="74"/>
+                <Label x:Name="ClipboardLabel" Content="Copy to Clipboard" Height="20" FontSize="8" Width="105"/>
             </StackPanel>
             <StackPanel Height="28" Width="231" Orientation="Horizontal">
                 <Label Content="Import Share Code:" Height="22" Width="152" FontWeight="Bold" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface"/>
             </StackPanel>
             <StackPanel Height="30" Width="218" Orientation="Horizontal">
-                <TextBox Width="67" TextChanged="TextBox_TextChanged" Background="#FFC4ABDE" />
+                <TextBox x:Name="ShareCodeInputBox" Width="67" TextChanged="TextBox_TextChanged" Background="#FFC4ABDE" MouseDoubleClick="ItineraryShareInput" />
                 <Label Content="" Width="17" FontWeight="Bold" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface" Height="24"/>
-                <Button Content="" Height="25" Width="26" BorderBrush="{x:Null}">
+                <Button x:Name="ImportCodeButton" Content="" Height="25" Width="26" BorderBrush="{x:Null}" Click="ImportCodeButtonClick">
                     <Button.Background>
                         <ImageBrush ImageSource="/import.png"/>
                     </Button.Background>
                 </Button>
-                <Label Content="Enter Code" Height="20" FontSize="8"/>
+                <Label x:Name="EnterCodeLabel" Content="Enter Code" Height="20" FontSize="8"/>
             </StackPanel>
 
             <StackPanel Width="226" Orientation="Horizontal" Height="31">
@@ -117,7 +117,7 @@
 
             <StackPanel Width="226" Orientation="Horizontal" Height="25">
                 <Label Content="Dark Mode" Height="23" Width="179" FontWeight="Bold" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface"/>
-                <local:ToggleButton x:Name="Toggle5" Width="40" Height="29" VerticalAlignment="Center" Loaded="DarkModeLoaded">
+                <local:ToggleButton x:Name="DarkModeToggle" Width="40" Height="29" VerticalAlignment="Center">
                     <local:ToggleButton.Background>
                         <ImageBrush/>
                     </local:ToggleButton.Background>
@@ -127,7 +127,7 @@
 
         </StackPanel>
         <Rectangle HorizontalAlignment="Center" Height="24" Stroke="Black" VerticalAlignment="Top" Width="247" Fill="White"/>
-        <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="24" Margin="211,0,0,0" VerticalAlignment="Top" Width="22" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+        <Button x:Name="SettingsButton" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="24" Margin="211,0,0,0" VerticalAlignment="Top" Width="22" FontWeight="Normal" RenderTransformOrigin="0.5,0.517" Click="SettingsButtonClick">
             <Button.Background>
                 <ImageBrush ImageSource="/gear.png"/>
             </Button.Background>
@@ -143,11 +143,49 @@
                 <ImageBrush ImageSource="/TRVL-nobackground-cropped.png" Stretch="UniformToFill"/>
             </TextBlock.Background>
         </TextBlock>
-        <Button x:Name="KeyboardButton" Content="" HorizontalAlignment="Center" Margin="0,321,0,0" VerticalAlignment="Top" Width="233" Height="159">
+        <Button x:Name="KeyboardButton" Content="" HorizontalAlignment="Center" Margin="0,321,0,0" VerticalAlignment="Top" Width="233" Height="159" Click="KeyboardButton_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/keyboard.png" Stretch="Fill"/>
             </Button.Background>
         </Button>
+
+        <Button x:Name="BlurredPopUpBackground" Content="" HorizontalAlignment="Center" Height="480" VerticalAlignment="Center" Width="247" Click="BlurredPopUpClick" Opacity="0.5" Visibility="Hidden"/>
+
+        <StackPanel x:Name="EventAlarmStack" HorizontalAlignment="Center" Height="100" Margin="0,163,0,0" VerticalAlignment="Top" Width="200" Visibility="Hidden">
+            <StackPanel Height="20" Background="#FF4F4F4F">
+                <Label x:Name="PopUpBoxTitle" Content="Alarm" FontFamily="Global User Interface" FontWeight="Bold" FontSize="10" Foreground="White" BorderBrush="Black" Width="190"/>
+            </StackPanel>
+            <StackPanel Height="76" Background="White">
+                <StackPanel Height="5" Orientation="Horizontal"/>
+                <StackPanel Height="21" Width="198" HorizontalAlignment="Stretch" Orientation="Horizontal">
+                    <StackPanel Height="29" Orientation="Horizontal" Width="89">
+                        <Label Name="AlertNotificationLabel" Content="Your next event is in" FontSize="9" Height="28" Width="89"/>
+                    </StackPanel>
+                    <StackPanel Height="23" Orientation="Horizontal" Width="109">
+                        <Label Name="AlertTimingLabel" Content="sometime" FontSize="9" Width="110" Height="25"/>
+                    </StackPanel>
+                </StackPanel>
+                <Button x:Name="AlarmNotificationButton" Content="OK" Width="54" Click="AlarmPopUpOK"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel x:Name="CodeImportStack" HorizontalAlignment="Center" Height="100" Margin="0,163,0,0" VerticalAlignment="Top" Width="200" Visibility="Hidden">
+            <StackPanel Height="20" Background="#FF4F4F4F">
+                <Label x:Name="ImportBoxTitle" Content="" FontFamily="Global User Interface" FontWeight="Bold" FontSize="10" Foreground="White" BorderBrush="Black" Width="190"/>
+            </StackPanel>
+
+            <StackPanel Height="80" Background="White">
+                <StackPanel Height="49">
+                    <Label x:Name="ImportPopUpLabel" Content="" FontFamily="Global User Interface" FontSize="9"/>
+                    <Label x:Name="ReminderLabel" FontSize="7" FontFamily="Global User Interface"  Content="" Height="22"/>
+                </StackPanel>
+                <Button x:Name="ImportOKButton" Content="OK" Width="54" Click="ImportPopUpOK"/>
+            </StackPanel>
+
+
+
+
+        </StackPanel>
 
 
     </Grid>
