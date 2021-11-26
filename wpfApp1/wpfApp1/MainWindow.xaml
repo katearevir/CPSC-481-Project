@@ -9,5 +9,5 @@
     <DockPanel>
         <Frame x:Name="_NavigationFrame" NavigationUIVisibility="Hidden" />
     </DockPanel>
-    
+
 </Window>

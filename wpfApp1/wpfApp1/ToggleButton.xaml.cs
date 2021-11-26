@@ -24,7 +24,7 @@ namespace trvlApp
         Thickness RightSide = new Thickness(0, 0, -150, 0);
         SolidColorBrush ButtonOff = new SolidColorBrush(Color.FromRgb(160,160,160));
         SolidColorBrush ButtonOn = new SolidColorBrush(Color.FromRgb(130,190,125));
-        private bool Toggled = false; 
+        public bool Toggled = false; 
 
         public ToggleButton()
         {
@@ -39,7 +39,7 @@ namespace trvlApp
             get => Toggled;
             set => Toggled = value;
         }
-        private void toggleCircleButtonDown(object sender, MouseButtonEventArgs e)
+        public void toggleCircleButtonDown(object sender, MouseButtonEventArgs e)
         {
             if (!Toggled)
             {
@@ -57,7 +57,7 @@ namespace trvlApp
             }
         }
 
-        private void toggleBackgroundDown(object sender, MouseButtonEventArgs e)
+        public void toggleBackgroundDown(object sender, MouseButtonEventArgs e)
         {
             if (!Toggled)
             {
