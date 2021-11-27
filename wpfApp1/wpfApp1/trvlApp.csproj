@@ -14,6 +14,7 @@
     <None Remove="direction.png" />
     <None Remove="Directions.png" />
     <None Remove="empty star.png" />
+    <None Remove="Event1.jpg" />
     <None Remove="events.png" />
     <None Remove="events_filter.png" />
     <None Remove="events_filter_hidden.png" />
@@ -63,6 +64,7 @@
     <Resource Include="direction.png" />
     <Resource Include="Directions.png" />
     <Resource Include="empty star.png" />
+    <Resource Include="Event1.jpg" />
     <Resource Include="events_filter.png" />
     <Resource Include="events_filter_hidden.png" />
     <Resource Include="events_pin.png" />
