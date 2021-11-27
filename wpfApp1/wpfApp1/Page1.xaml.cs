@@ -86,6 +86,46 @@ namespace trvlApp
             if (SelectedTextbox.Text == "")
             {
                 SelectedTextbox.Text = "Search";
+                
+                if (_is_filtered_attraction == false)
+                {
+                    attraction_1.Visibility = Visibility.Visible;
+                    attraction_2.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    attraction_1.Visibility = Visibility.Hidden;
+                    attraction_2.Visibility = Visibility.Hidden;
+                }
+                
+                if (_is_filtered_event == false)
+                {
+
+                    event_1.Visibility = Visibility.Visible;
+                    event_2.Visibility = Visibility.Visible;
+                    event_3.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    event_1.Visibility = Visibility.Hidden;
+                    event_2.Visibility = Visibility.Hidden;
+                    event_3.Visibility = Visibility.Hidden;
+                }
+
+                if (_is_filtered_food == false)
+                {
+                    food_1.Visibility = Visibility.Visible;
+                    food_2.Visibility = Visibility.Visible;
+                    food_3.Visibility = Visibility.Visible;
+                    food_4.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    food_1.Visibility = Visibility.Hidden;
+                    food_2.Visibility = Visibility.Hidden;
+                    food_3.Visibility = Visibility.Hidden;
+                    food_4.Visibility = Visibility.Hidden;
+                }
             }
         }
         public void settingsNav(object sender, RoutedEventArgs e)
