@@ -22,7 +22,6 @@ namespace trvlApp
     {
 
         bool keyboardVisible;
-        string code;
         private Page2 ItineraryPage;
 
         public SettingsPage()
@@ -94,7 +93,6 @@ namespace trvlApp
         {
             //this.toggleKeyboardVisibility();
             KeyboardButton.Visibility = Visibility.Visible;
-            code = ShareCodeInputBox.Text; 
         }
 
         private void AlarmPopUpOK(object sender, RoutedEventArgs e)
@@ -235,7 +233,7 @@ namespace trvlApp
         private void ImportCodeButtonClick(object sender, RoutedEventArgs e)
         {
             EnterCodeLabel.Content = "Code Entered!";
-            if (code == "12345") 
+            if (ShareCodeInputBox.Text == "12345") 
             {
                 ImportBoxTitle.Content = "Code Success!";
                 ImportPopUpLabel.Content = "Code Success, Press OK to go to Itinerary.";
