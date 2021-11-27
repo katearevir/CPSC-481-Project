@@ -25,6 +25,7 @@ namespace trvlApp
         private SettingsPage _settingsPage;
         private RestaurantPin _restPin;
         private EventPin _eventPin;
+        private AttractionsPin _attractionsPin;
 
         public Page1()
         {
@@ -35,6 +36,7 @@ namespace trvlApp
             _settingsPage.AddItineraryPage(_page2);
             _restPin = new RestaurantPin(_settingsPage);
             _eventPin = new EventPin(_settingsPage);
+            _attractionsPin = new AttractionsPin(_settingsPage);
         }
 
         public Page1(trvlApp.Page2 page2)
@@ -74,6 +76,13 @@ namespace trvlApp
         {
 
             NavigationService.Navigate(_eventPin);
+
+        }
+
+        public void Button_Click_AttractionPin(object sender, RoutedEventArgs e)
+        {
+
+            NavigationService.Navigate(_attractionsPin);
 
         }
 
