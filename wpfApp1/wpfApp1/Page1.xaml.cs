@@ -30,6 +30,9 @@ namespace trvlApp
         public Page1()
         {
             InitializeComponent();
+
+            background.PreviewMouseDown += MapImage_PreviewMouseDown;
+
             _page1 = this;
             _settingsPage = new SettingsPage();
             _page2 = new Page2(this, _settingsPage);
@@ -60,7 +63,32 @@ namespace trvlApp
             NavigationService.Navigate(_page2);
         }
 
-        private void Search_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        UIElement dragObject = null;
+        Point offset;
+        private void MapImage_PreviewMouseDown(object sender, MouseEventArgs e)
+        {
+            this.dragObject = sender as UIElement;
+            this.offset = e.GetPosition(this.canvas);
+            this.offset.Y -= Canvas.GetTop(this.dragObject);
+            this.offset.X -= Canvas.GetLeft(this.dragObject);
+            this.canvas.CaptureMouse();
+        }
+        private void CanvasMain_PreviewMouseMove(object sender, MouseEventArgs e)
+        {
+            if (this.dragObject == null)
+                return;
+            var position = e.GetPosition(sender as IInputElement);
+            Canvas.SetTop(this.dragObject, position.Y - this.offset.Y);
+            Canvas.SetLeft(this.dragObject, position.X - this.offset.X);
+        }
+
+        private void CanvasMain_PreviewMouseUp(object sender, MouseButtonEventArgs e)
+        {
+            this.dragObject = null;
+            this.canvas.ReleaseMouseCapture();
+        }
+
+            private void Search_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
             var SelectedTextbox = (TextBox)this.FindName("Search");
             if (SelectedTextbox.Text == "Search")
