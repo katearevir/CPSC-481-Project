@@ -26,7 +26,6 @@ namespace trvlApp
         private RestaurantPin _restPin;
         private EventPin _eventPin;
         private AttractionsPin _attractionsPin;
-        private searchBubbleTea _searchBubbleTea;
 
         public Page1()
         {
@@ -74,13 +73,19 @@ namespace trvlApp
         private void Button_Click_Search(object sender, RoutedEventArgs e)
         {
             var SelectedTextbox = (TextBox)this.FindName("Search");
-            String input = SelectedTextbox.Text;
-            _searchBubbleTea = new searchBubbleTea(input, _page1, _page2, _settingsPage);
             if (SelectedTextbox.Text.ToLower() == "bubble tea")
             {
-                SelectedTextbox.Foreground = new SolidColorBrush(Color.FromRgb(100, 100, 100));
+                attraction_1.Visibility = Visibility.Hidden;
+                attraction_2.Visibility = Visibility.Hidden;
+                event_1.Visibility = Visibility.Hidden;
+                event_2.Visibility = Visibility.Hidden;
+                event_3.Visibility = Visibility.Hidden;
+                food_1.Visibility = Visibility.Hidden;
+                food_2.Visibility = Visibility.Hidden;
+            }
+            if (SelectedTextbox.Text == "")
+            {
                 SelectedTextbox.Text = "Search";
-                NavigationService.Navigate(_searchBubbleTea);
             }
         }
         public void settingsNav(object sender, RoutedEventArgs e)
