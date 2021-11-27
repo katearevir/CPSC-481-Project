@@ -24,6 +24,7 @@ namespace trvlApp
         private SettingsPage _settingsPage;
         private Itinerary_AddItineraryItem AddItineraryItem_Window;
         public bool customEvent1_isVisible;
+        public String searchInput;
 
         public Page2(trvlApp.Page1 page1, SettingsPage settingsPage)
         {

@@ -8,28 +8,31 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Navigation;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace trvlApp
 {
     /// <summary>
-    /// Interaction logic for SearchLocation.xaml
+    /// Interaction logic for searchBubbleTea.xaml
     /// </summary>
-    public partial class SearchLocation : Window
+    public partial class searchBubbleTea : Page
     {
         private Page1 _page1;
         private Page2 _page2;
         private SettingsPage _settingsPage;
 
-        public SearchLocation(Page1 page1, Page2 page2, SettingsPage settingsPage)
+        public searchBubbleTea(String input, Page1 page1, Page2 page2, SettingsPage settingsPage)
         {
             InitializeComponent();
             _page1 = page1;
             _page2 = page2;
             _settingsPage = settingsPage;
+
+            var SelectedTextbox = (TextBox)this.FindName("Search");
+            SelectedTextbox.Text = input;
         }
 
         Boolean _is_filtered_food = false;
@@ -49,6 +52,25 @@ namespace trvlApp
                 _is_filtered_food = true;
                 food_3.Visibility = Visibility.Hidden;
                 food_4.Visibility = Visibility.Hidden;
+            }
+        }
+
+        private void NavigatePage(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(_page2);
+        }
+
+        public void settingsNav(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(_settingsPage);
+        }
+
+        private void Button_Click_Search(object sender, RoutedEventArgs e)
+        {
+            var SelectedTextbox = (TextBox)this.FindName("Search");
+            if (SelectedTextbox.Text == "")
+            {
+                NavigationService.Navigate(_page1);
             }
         }
 
