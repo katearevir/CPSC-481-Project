@@ -13,6 +13,6 @@
             </TextBlock>
         </ScrollViewer>
         <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="404,7,0,0" VerticalAlignment="Top"/>
-        <Button Content="OK" HorizontalAlignment="Center" Margin="0,104,0,0" VerticalAlignment="Top" Width="90" FontFamily="Global User Interface"/>
+        <Button Content="OK" Click="Button_Click" HorizontalAlignment="Center" Margin="0,104,0,0" VerticalAlignment="Top" Width="90" FontFamily="Global User Interface"/>
     </Grid>
 </Window>

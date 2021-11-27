@@ -25,5 +25,10 @@ namespace trvlApp
             TextBlock text = (TextBlock)this.FindName("ErrorText");
             text.Text = errorText;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

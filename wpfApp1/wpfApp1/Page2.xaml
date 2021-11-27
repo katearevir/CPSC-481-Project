@@ -232,7 +232,7 @@
 
                     </ListBox>
                 </TabItem>
-                <TabItem Header="Shared" x:Name="SharedTab_Empty" PreviewMouseDown="SharedTab_Empty_PreviewMouseLeftButtonDown" IsEnabled="True" Width="103" VerticalContentAlignment="Top" Background="#FF515151" Foreground="Gray">
+                <TabItem Header="Shared" x:Name="SharedTab_Empty" PreviewMouseDown="SharedTab_Empty_PreviewMouseLeftButtonDown" IsEnabled="False" Width="103" VerticalContentAlignment="Top" Background="#FF515151" Foreground="Gray">
                     <!-- This is the shared itinerary, only enabled when ^ IsEnabled is true, and a function on Page2 is called from settings page-->
                     <ListBox Background="White" BorderThickness="2, 2, 0, 2" BorderBrush="Black">
                         <ListBox.ItemContainerStyle>
@@ -319,7 +319,7 @@
 
                     </ListBox>
                 </TabItem>
-                <TabItem Header="Shared" x:Name="SharedTab" PreviewMouseLeftButtonDown="SharedTab_PreviewMouseLeftButtonDown" IsEnabled="True" Width="103" VerticalContentAlignment="Top" Background="#FF515151" Foreground="Gray">
+                <TabItem Header="Shared" x:Name="SharedTab" PreviewMouseLeftButtonDown="SharedTab_PreviewMouseLeftButtonDown" IsEnabled="False" Width="103" VerticalContentAlignment="Top" Background="#FF515151" Foreground="Gray">
                     <!-- This is the shared itinerary, only enabled when ^ IsEnabled is true, and a function on Page2 is called from settings page-->
                     <ListBox Background="White" BorderThickness="2, 2, 0, 2" BorderBrush="Black">
                         <ListBox.ItemContainerStyle>

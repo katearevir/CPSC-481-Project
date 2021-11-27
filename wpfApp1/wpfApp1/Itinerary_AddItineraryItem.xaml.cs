@@ -74,6 +74,9 @@ namespace trvlApp
 
         private void NameTextBox_PreviewKeyDown(object sender, KeyEventArgs e)
         {
+            var savedLabel = (Label)this.FindName("SavedLabel");
+            savedLabel.Visibility = Visibility.Collapsed;
+
             var SelectedTextbox = (TextBox)this.FindName("NameTextBox");
             if (SelectedTextbox.Text == "<Name>")
             {
@@ -84,6 +87,9 @@ namespace trvlApp
 
         private void LocationTextBox_PreviewKeyDown(object sender, KeyEventArgs e)
         {
+            var savedLabel = (Label)this.FindName("SavedLabel");
+            savedLabel.Visibility = Visibility.Collapsed;
+
             var SelectedTextbox = (TextBox)this.FindName("LocationTextBox");
             if (SelectedTextbox.Text == "<Location>")
             {
@@ -92,9 +98,38 @@ namespace trvlApp
             }
         }
 
+        // WARNING: Bug if you type in 1:23, then select between the digits 2 & 3 and add another number 
+        // WARNING: Bug if you type in "a" "c" or "v" -> will be visible. can use ctrl+c/ctrl+v/ctrl+a but make sure ctrl is pressed first!!!!
         private void TimeStartTextBox_PreviewKeyDown(object sender, KeyEventArgs e)
         {
+            var savedLabel = (Label)this.FindName("SavedLabel");
+            savedLabel.Visibility = Visibility.Collapsed;
+
             var SelectedTextbox = (TextBox)this.FindName("TimeStartTextBox");
+            if (e.Key >= Key.D0 && e.Key <= Key.D9 && (SelectedTextbox.Text.Length < 5 || SelectedTextbox.Text == "hr:mn")) ; // it`s number
+            else if (e.Key >= Key.NumPad0 && e.Key <= Key.NumPad9 && (SelectedTextbox.Text.Length < 5 || SelectedTextbox.Text == "hr:mn")) ; // it`s number
+            else if (e.Key == Key.OemSemicolon) // it's a semicolon
+            {
+                if (SelectedTextbox.Text == "1" || SelectedTextbox.Text == "2" || SelectedTextbox.Text == "3" || SelectedTextbox.Text == "4" ||
+                    SelectedTextbox.Text == "5" || SelectedTextbox.Text == "6" || SelectedTextbox.Text == "7" || SelectedTextbox.Text == "8" ||
+                    SelectedTextbox.Text == "9" || SelectedTextbox.Text == "10" || SelectedTextbox.Text == "11" || SelectedTextbox.Text == "12")
+                {
+
+                    SelectedTextbox.AppendText(":");
+                    SelectedTextbox.CaretIndex += 1;
+                }
+                e.Handled = true;
+                return;
+            }
+            else if (e.Key == Key.Escape || e.Key == Key.Tab || e.Key == Key.CapsLock || e.Key == Key.LeftShift || e.Key == Key.LeftCtrl ||
+                e.Key == Key.LWin || e.Key == Key.LeftAlt || e.Key == Key.RightAlt || e.Key == Key.RightCtrl || e.Key == Key.RightShift ||
+                e.Key == Key.Left || e.Key == Key.Up || e.Key == Key.Down || e.Key == Key.Right || e.Key == Key.Return || e.Key == Key.Delete ||
+                e.Key == Key.System || e.Key == Key.C || e.Key == Key.V || e.Key == Key.A || e.Key == Key.Back) ; // it`s a system key (add other key here if you want to allow)
+            else {
+                e.Handled = true; // the key will sappressed
+                return;
+            }
+
             if (SelectedTextbox.Text == "hr:mn")
             {
                 SelectedTextbox.Foreground = Brushes.Black;
@@ -104,7 +139,35 @@ namespace trvlApp
 
         private void TimeEndTextBox_PreviewKeyDown(object sender, KeyEventArgs e)
         {
+            var savedLabel = (Label)this.FindName("SavedLabel");
+            savedLabel.Visibility = Visibility.Collapsed;
+
             var SelectedTextbox = (TextBox)this.FindName("TimeEndTextBox");
+            if (e.Key >= Key.D0 && e.Key <= Key.D9 && (SelectedTextbox.Text.Length < 5 || SelectedTextbox.Text == "hr:mn")) ; // it`s number
+            else if (e.Key >= Key.NumPad0 && e.Key <= Key.NumPad9 && (SelectedTextbox.Text.Length < 5 || SelectedTextbox.Text == "hr:mn")) ; // it`s number
+            else if (e.Key == Key.OemSemicolon) // it's a semicolon
+            {
+                if (SelectedTextbox.Text == "1" || SelectedTextbox.Text == "2" || SelectedTextbox.Text == "3" || SelectedTextbox.Text == "4" ||
+                    SelectedTextbox.Text == "5" || SelectedTextbox.Text == "6" || SelectedTextbox.Text == "7" || SelectedTextbox.Text == "8" ||
+                    SelectedTextbox.Text == "9" || SelectedTextbox.Text == "10" || SelectedTextbox.Text == "11" || SelectedTextbox.Text == "12")
+                {
+
+                    SelectedTextbox.AppendText(":");
+                    SelectedTextbox.CaretIndex += 1;
+                }
+                e.Handled = true;
+                return;
+            }
+            else if (e.Key == Key.Escape || e.Key == Key.Tab || e.Key == Key.CapsLock || e.Key == Key.LeftShift || e.Key == Key.LeftCtrl ||
+                e.Key == Key.LWin || e.Key == Key.LeftAlt || e.Key == Key.RightAlt || e.Key == Key.RightCtrl || e.Key == Key.RightShift ||
+                e.Key == Key.Left || e.Key == Key.Up || e.Key == Key.Down || e.Key == Key.Right || e.Key == Key.Return || e.Key == Key.Delete ||
+                e.Key == Key.System || e.Key == Key.C || e.Key == Key.V || e.Key == Key.A || e.Key == Key.Back) ; // it`s a system key (add other key here if you want to allow)
+            else
+            {
+                e.Handled = true; // the key will sappressed
+                return;
+            }
+
             if (SelectedTextbox.Text == "hr:mn")
             {
                 SelectedTextbox.Foreground = Brushes.Black;
@@ -298,7 +361,8 @@ namespace trvlApp
             {
                 return;
             }
-
+            var savedLabel = (Label)this.FindName("SavedLabel");
+            savedLabel.Visibility = Visibility.Visible;
             var SelectedTextbox = (TextBox)this.FindName("NameTextBox");
             bool[] events = new bool[] { false }; //list of events
             int[] heights = new int[] { 21 };
@@ -339,6 +403,34 @@ namespace trvlApp
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void TimeStartDropdown_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var savedLabel = (Label)this.FindName("SavedLabel");
+            savedLabel.Visibility = Visibility.Collapsed;
+
+        }
+
+        private void TimeEndDropdown_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var savedLabel = (Label)this.FindName("SavedLabel");
+            savedLabel.Visibility = Visibility.Collapsed;
+
+        }
+
+        private void LocationTypeDropDown_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var savedLabel = (Label)this.FindName("SavedLabel");
+            savedLabel.Visibility = Visibility.Collapsed;
+
+        }
+
+        private void NotesTextBox_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            var savedLabel = (Label)this.FindName("SavedLabel");
+            savedLabel.Visibility = Visibility.Collapsed;
+
         }
     }
 }

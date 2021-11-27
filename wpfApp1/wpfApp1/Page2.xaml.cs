@@ -91,6 +91,26 @@ namespace trvlApp
             sharedTab_Empty.IsEnabled = false;
         }
 
+        public void ShowSharedTab()
+        {
+            if(day == 0)
+            {
+                TabControl tabControl = (TabControl)this.FindName("TabControl");
+                var sharedTab = (TabItem)this.FindName("SharedTab");
+                tabControl.SelectedItem = sharedTab;
+                var addItineraryItem_Button_Empty = (Button)this.FindName("AddItineraryItem_Button");
+                addItineraryItem_Button_Empty.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                TabControl tabControl = (TabControl)this.FindName("TabControl_Empty");
+                var sharedTab = (TabItem)this.FindName("SharedTab_Empty");
+                tabControl.SelectedItem = sharedTab;
+                var addItineraryItem_Button_Empty = (Button)this.FindName("AddItineraryItem_Button_Empty");
+                addItineraryItem_Button_Empty.Visibility = Visibility.Collapsed;
+            }
+        }
+
         private void AddItineraryItem_ButtonClick(object sender, RoutedEventArgs e)
         {
             AddItineraryItem_Window = new Itinerary_AddItineraryItem(this);

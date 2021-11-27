@@ -32,6 +32,7 @@ namespace trvlApp
             _page1 = this;
             _settingsPage = new SettingsPage();
             _page2 = new Page2(this, _settingsPage);
+            _settingsPage.AddItineraryPage(_page2);
             _restPin = new RestaurantPin(_settingsPage);
             _eventPin = new EventPin(_settingsPage);
         }

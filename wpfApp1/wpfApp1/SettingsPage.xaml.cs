@@ -23,6 +23,8 @@ namespace trvlApp
 
         bool keyboardVisible;
         string code;
+        private Page2 ItineraryPage;
+
         public SettingsPage()
         {
             InitializeComponent();
@@ -32,7 +34,12 @@ namespace trvlApp
             CodeImportStack.Visibility = Visibility.Collapsed;
             keyboardVisible = false;
             AlertTimingLabel.Content = "sometime";
-            
+
+        }
+
+        public void AddItineraryPage(Page2 page)
+        {
+            ItineraryPage = page;
         }
 
         private void BackToMainWindow(object sender, RoutedEventArgs e)
@@ -250,6 +257,10 @@ namespace trvlApp
             BlurredPopUpBackground.Visibility = Visibility.Hidden;
             CodeImportStack.Visibility = Visibility.Hidden;
             KeyboardButton.Visibility = Visibility.Hidden;
+
+            ItineraryPage.EnableSharedTab();
+            ItineraryPage.ShowSharedTab();
+            this.NavigationService.Navigate(ItineraryPage);
         }
     }
 }
