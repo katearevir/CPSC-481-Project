@@ -114,6 +114,8 @@ namespace trvlApp
         {
             if (AlertsToggleButton.Toggled1)
             {
+                alertText1.Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
+                alertText2.Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
                 if (FifteenAlert.IsSelected) {
                     AlertTimingLabel.Content = "15 minutes.";
                     BlurredPopUpBackground.Visibility = Visibility.Visible;
@@ -159,6 +161,8 @@ namespace trvlApp
 
             } else
             {
+                alertText1.Foreground = new SolidColorBrush(Color.FromRgb(100, 100, 100));
+                alertText2.Foreground = new SolidColorBrush(Color.FromRgb(100, 100, 100));
                 //AlertsToggleButton.Toggled1 = false;\
                 AlertsToggleButton.Toggled = false; 
                 BlurredPopUpBackground.Visibility = Visibility.Collapsed;

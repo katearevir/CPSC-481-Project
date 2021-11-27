@@ -47,7 +47,7 @@
 
             <StackPanel Orientation="Horizontal" Width="226">
                 <StackPanel Orientation="Horizontal">
-                    <Label Content="Alert me" Height="26" Width="48" FontSize="10" Foreground="#FF646464" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface"/>
+                    <Label x:Name="alertText1" Content="Alert me" Height="26" Width="48" FontSize="10" Foreground="#FF646464" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface"/>
                 </StackPanel>
 
                 <StackPanel Width="87" Height="21">
@@ -62,7 +62,7 @@
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
-                    <Label Content="before event starts" Height="26" Width="93" FontSize="10" Foreground="#FF646464" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface"/>
+                    <Label x:Name="alertText2" Content="before event starts" Height="26" Width="93" FontSize="10" Foreground="#FF646464" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface"/>
                 </StackPanel>
 
 
