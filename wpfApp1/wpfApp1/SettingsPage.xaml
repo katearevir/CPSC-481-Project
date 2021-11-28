@@ -80,17 +80,17 @@
                 <local:ToggleButton x:Name="Toggle3" Width="38" Height="26" VerticalAlignment="Center"/>
             </StackPanel>
             <StackPanel Height="26" Width="228" Orientation="Horizontal">
-                <Label Content="Itinerary Sharing Code:" Height="25" Width="152" FontWeight="Bold" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface"/>
+                <Label Content="Generate Sharing Code:" Height="25" Width="152" FontWeight="Bold" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface"/>
             </StackPanel>
             <StackPanel Height="27" Width="218" Orientation="Horizontal">
-                <TextBox Width="67" Background="#FF95DEDE" Text="123747" />
+                <TextBox Width="67" Background="#FF95DEDE" x:Name="SharingCode" Text=""  IsReadOnly="True"/>
                 <Label Content="" Width="17" FontWeight="Bold" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface" Height="24"/>
                 <Button x:Name="CopyCodeButton" Content="" Height="25" Width="26" BorderBrush="{x:Null}" Click="CodeCopied">
                     <Button.Background>
                         <ImageBrush ImageSource="/export.png"/>
                     </Button.Background>
                 </Button>
-                <Label x:Name="ClipboardLabel" Content="Copy to Clipboard" Height="20" FontSize="8" Width="105"/>
+                <Label x:Name="ClipboardLabel" Content="Generate Code" Height="32" FontSize="8" Width="62"/>
             </StackPanel>
             <StackPanel Height="28" Width="231" Orientation="Horizontal">
                 <Label Content="Import Share Code:" Height="22" Width="152" FontWeight="Bold" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface"/>
@@ -148,8 +148,14 @@
                 <ImageBrush ImageSource="/keyboard.png" Stretch="Fill"/>
             </Button.Background>
         </Button>
+        <Button x:Name="StopExportingItinerary" Visibility="Collapsed" Click="StopExportingItinerary_Click" Margin="182,179,13,265">
+            <TextBlock TextWrapping="Wrap" TextBlock.FontFamily="Global User Interface" FontSize="9" >Stop Sharing Itinerary</TextBlock>
+        </Button>
 
-        <Button x:Name="BlurredPopUpBackground" Content="" HorizontalAlignment="Center" Height="480" VerticalAlignment="Center" Width="247" Click="BlurredPopUpClick" Opacity="0.5" Visibility="Hidden"/>
+        <Button x:Name="RemoveSharedItinerary" Visibility="Collapsed" Click="RemoveSharedItinerary_Click" Margin="182,231,13,213">
+            <TextBlock TextWrapping="Wrap" TextBlock.FontFamily="Global User Interface" FontSize="9" >Remove Shared Itinerary</TextBlock>
+        </Button>
+        <Button x:Name="BlurredPopUpBackground" Click="BlurredPopUpBackground_Click" Content="" HorizontalAlignment="Center" Height="480" VerticalAlignment="Center" Width="247" Opacity="0.5" Visibility="Hidden"/>
 
         <StackPanel x:Name="EventAlarmStack" HorizontalAlignment="Center" Height="100" Margin="0,163,0,0" VerticalAlignment="Top" Width="200" Visibility="Hidden">
             <StackPanel Height="20" Background="#FF4F4F4F">
@@ -169,24 +175,26 @@
             </StackPanel>
         </StackPanel>
 
-        <StackPanel x:Name="CodeImportStack" HorizontalAlignment="Center" Height="100" Margin="0,163,0,0" VerticalAlignment="Top" Width="200" Visibility="Hidden">
+
+        
+        <StackPanel x:Name="CodeImportStack" HorizontalAlignment="Center" Height="100" Margin="0,163,0,0" VerticalAlignment="Top" Width="200" Visibility="Collapsed">
             <StackPanel Height="20" Background="#FF4F4F4F">
                 <Label x:Name="ImportBoxTitle" Content="" FontFamily="Global User Interface" FontWeight="Bold" FontSize="10" Foreground="White" BorderBrush="Black" Width="190"/>
             </StackPanel>
 
             <StackPanel Height="80" Background="White">
                 <StackPanel Height="49">
-                    <Label x:Name="ImportPopUpLabel" Content="" FontFamily="Global User Interface" FontSize="9"/>
+                    <Label x:Name="ImportPopUpLabel" FontFamily="Global User Interface" FontSize="9">
+                    </Label>
                     <Label x:Name="ReminderLabel" FontSize="7" FontFamily="Global User Interface"  Content="" Height="22"/>
                 </StackPanel>
-                <Button x:Name="ImportOKButton" Content="OK" Width="54" Click="ImportPopUpOK"/>
             </StackPanel>
-
-
-
-
         </StackPanel>
 
 
+        <Button x:Name="PopupCancelSharingButton" Visibility="Collapsed" Content="Yes, Stop Sharing Itinerary" Click="PopupCancelSharingButton_Click"  Margin="23,235,63,224"/>
+        <Button x:Name="PopupRemoveSharedItineraryButton" Visibility="Collapsed" Content="Yes, Remove Shared Itinerary" Click="PopupRemoveSharedItineraryButton_Click" Margin="23,235,50,224"/>
+        <Button x:Name="PopupNoButton" Visibility="Collapsed" Content="No" Click="PopupNoButton_Click" Margin="184,235,22,224"/>
+        <Button x:Name="ImportOKButton" Visibility="Collapsed" Content="OK" Width="54" Click="ImportPopUpOK" Margin="91,235,88,224" RenderTransformOrigin="0.586,-0.188"/>
     </Grid>
 </Page>

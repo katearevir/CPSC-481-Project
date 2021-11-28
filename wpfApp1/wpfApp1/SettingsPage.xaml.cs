@@ -79,7 +79,16 @@ namespace trvlApp
 
         private void CodeCopied(object sender, RoutedEventArgs e)
         {
-            ClipboardLabel.Content = "Copied to Clipboard!";
+            ClipboardLabel.Content = "Generated!";
+            if (SharingCode.Text == "")
+                SharingCode.Text = "123747";
+            else if (SharingCode.Text == "123747")
+                SharingCode.Text = "542904";
+            else if (SharingCode.Text == "542904")
+                SharingCode.Text = "102394";
+            else if (SharingCode.Text == "102394")
+                SharingCode.Text = "123747";
+            StopExportingItinerary.Visibility = Visibility.Visible;
             KeyboardButton.Visibility = Visibility.Hidden;
             keyboardVisible = false; 
         }
@@ -230,35 +239,134 @@ namespace trvlApp
 
         }
 
+        private bool CodeEnteredCorrectly = false;
         private void ImportCodeButtonClick(object sender, RoutedEventArgs e)
         {
             EnterCodeLabel.Content = "Code Entered!";
-            if (ShareCodeInputBox.Text == "12345") 
+            if (ShareCodeInputBox.Text == "123456") 
             {
                 ImportBoxTitle.Content = "Code Success!";
-                ImportPopUpLabel.Content = "Code Success, Press OK to go to Itinerary.";
+                ImportPopUpLabel.Content = new TextBlock
+                {
+                    Text = "Code Success, Press OK to go to Itinerary.",
+                    TextWrapping = TextWrapping.Wrap
+                };
                 BlurredPopUpBackground.Visibility = Visibility.Visible;
+                ImportOKButton.Visibility = Visibility.Visible;
                 CodeImportStack.Visibility = Visibility.Visible;
-
+                CodeEnteredCorrectly = true;
+                RemoveSharedItinerary.Visibility = Visibility.Visible;
             } else
             {
                 ImportBoxTitle.Content = "Code Failed!";
-                ImportPopUpLabel.Content = "The code does not exist, please double check and try again!";
+                ImportPopUpLabel.Content = new TextBlock
+                {
+                    Text = "The code does not exist, please double check and try again!",
+                    TextWrapping = TextWrapping.Wrap
+                };
                 ReminderLabel.Content = "Reminder: share codes expire after 15 minutes.";
                 BlurredPopUpBackground.Visibility = Visibility.Visible;
+                ImportOKButton.Visibility = Visibility.Visible;
                 CodeImportStack.Visibility = Visibility.Visible;
+                CodeEnteredCorrectly = false;
             }
         }
 
         private void ImportPopUpOK(object sender, RoutedEventArgs e)
         {
             BlurredPopUpBackground.Visibility = Visibility.Hidden;
-            CodeImportStack.Visibility = Visibility.Hidden;
+            ImportOKButton.Visibility = Visibility.Collapsed;
             KeyboardButton.Visibility = Visibility.Hidden;
+            CodeImportStack.Visibility = Visibility.Collapsed;
 
-            ItineraryPage.EnableSharedTab();
-            ItineraryPage.ShowSharedTab();
+            if (CodeEnteredCorrectly)
+            {
+                ItineraryPage.EnableSharedTab();
+                ItineraryPage.ShowSharedTab();
+                this.NavigationService.Navigate(ItineraryPage);
+            }
+        }
+
+        private void PopupCancelSharingButton_Click(object sender, RoutedEventArgs e)
+        {
+            SharingCode.Text = "";
+            ClipboardLabel.Content = "Generate Code";
+            StopExportingItinerary.Visibility = Visibility.Collapsed;
+
+            BlurredPopUpBackground.Visibility = Visibility.Hidden;
+            ImportOKButton.Visibility = Visibility.Collapsed;
+            KeyboardButton.Visibility = Visibility.Hidden;
+            CodeImportStack.Visibility = Visibility.Collapsed;
+
+            PopupCancelSharingButton.Visibility = Visibility.Collapsed;
+            PopupNoButton.Visibility = Visibility.Collapsed;
+            PopupRemoveSharedItineraryButton.Visibility = Visibility.Collapsed;
+        }
+
+        private void PopupRemoveSharedItineraryButton_Click(object sender, RoutedEventArgs e)
+        {
+            RemoveSharedItinerary.Visibility = Visibility.Collapsed;
+            ItineraryPage.DisableSharedTab();
             this.NavigationService.Navigate(ItineraryPage);
+
+            BlurredPopUpBackground.Visibility = Visibility.Hidden;
+            ImportOKButton.Visibility = Visibility.Collapsed;
+            KeyboardButton.Visibility = Visibility.Hidden;
+            CodeImportStack.Visibility = Visibility.Collapsed;
+
+            PopupCancelSharingButton.Visibility = Visibility.Collapsed;
+            PopupNoButton.Visibility = Visibility.Collapsed;
+            PopupRemoveSharedItineraryButton.Visibility = Visibility.Collapsed;
+        }
+
+        private void PopupNoButton_Click(object sender, RoutedEventArgs e)
+        {
+            BlurredPopUpBackground.Visibility = Visibility.Hidden;
+            ImportOKButton.Visibility = Visibility.Collapsed;
+            KeyboardButton.Visibility = Visibility.Hidden;
+            CodeImportStack.Visibility = Visibility.Collapsed;
+
+            PopupCancelSharingButton.Visibility = Visibility.Collapsed;
+            PopupNoButton.Visibility = Visibility.Collapsed;
+            PopupRemoveSharedItineraryButton.Visibility = Visibility.Collapsed;
+        }
+
+        private void StopExportingItinerary_Click(object sender, RoutedEventArgs e)
+        {
+            ImportPopUpLabel.Content = new TextBlock
+            {
+                Text = "Are you sure you want to stop sharing your itinerary? This will remove your itinerary from the shared tab of anyone that can see your shared itinerary.",
+                TextWrapping = TextWrapping.Wrap
+            };
+            BlurredPopUpBackground.Visibility = Visibility.Visible;
+            CodeImportStack.Visibility = Visibility.Visible;
+            PopupCancelSharingButton.Visibility = Visibility.Visible;
+            PopupNoButton.Visibility = Visibility.Visible;
+        }
+
+        private void RemoveSharedItinerary_Click(object sender, RoutedEventArgs e)
+        {
+            ImportPopUpLabel.Content = new TextBlock
+            {
+                Text = "Are you sure you want to remove the shared itinerary? You will not be able to see the previously shared itinerary without another code.",
+                TextWrapping = TextWrapping.Wrap
+            };
+            BlurredPopUpBackground.Visibility = Visibility.Visible;
+            CodeImportStack.Visibility = Visibility.Visible;
+            PopupRemoveSharedItineraryButton.Visibility = Visibility.Visible;
+            PopupNoButton.Visibility = Visibility.Visible;
+        }
+
+        private void BlurredPopUpBackground_Click(object sender, RoutedEventArgs e)
+        {
+            BlurredPopUpBackground.Visibility = Visibility.Hidden;
+            ImportOKButton.Visibility = Visibility.Collapsed;
+            KeyboardButton.Visibility = Visibility.Hidden;
+            CodeImportStack.Visibility = Visibility.Collapsed;
+
+            PopupCancelSharingButton.Visibility = Visibility.Collapsed;
+            PopupNoButton.Visibility = Visibility.Collapsed;
+            PopupRemoveSharedItineraryButton.Visibility = Visibility.Collapsed;
         }
     }
 }

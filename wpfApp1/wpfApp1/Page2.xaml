@@ -194,7 +194,7 @@
 
         <StackPanel x:Name="ItineraryStackPanel_Empty" Visibility="Collapsed" Margin="29,83,0,23" Orientation="Horizontal">
             <TabControl x:Name="TabControl_Empty" TabStripPlacement="Bottom" Height="368">
-                <TabItem Header="Personal" IsEnabled="True" PreviewMouseDown="PersonalTab_Empty_PreviewMouseLeftButtonDown" Width="103" VerticalContentAlignment="Top" Background="#FF515151" Foreground="Gray" >
+                <TabItem Header="Personal" x:Name="PersonalTab_Empty" IsEnabled="True" PreviewMouseDown="PersonalTab_Empty_PreviewMouseLeftButtonDown" Width="103" VerticalContentAlignment="Top" Background="#FF515151" Foreground="Gray" >
                     <!--This is the personal itinerary-->
                     <ListBox Background="White" BorderThickness="2, 2, 0, 2" BorderBrush="Black">
                         <ListBox.ItemContainerStyle>

@@ -90,6 +90,18 @@ namespace trvlApp
 
             var sharedTab_Empty = (TabItem)this.FindName("SharedTab_Empty");
             sharedTab_Empty.IsEnabled = false;
+
+            TabControl tabControl = (TabControl)this.FindName("TabControl");
+            var personalTab = (TabItem)this.FindName("PersonalTab");
+            tabControl.SelectedItem = personalTab;
+            var addItineraryItem_Button = (Button)this.FindName("AddItineraryItem_Button");
+            addItineraryItem_Button.Visibility = Visibility.Collapsed;
+
+            TabControl tabControl_Empty = (TabControl)this.FindName("TabControl_Empty");
+            var personalTab_Empty = (TabItem)this.FindName("PersonalTab_Empty");
+            tabControl_Empty.SelectedItem = personalTab_Empty;
+            var addItineraryItem_Button_Empty = (Button)this.FindName("AddItineraryItem_Button_Empty");
+            addItineraryItem_Button_Empty.Visibility = Visibility.Collapsed;
         }
 
         public void ShowSharedTab()
