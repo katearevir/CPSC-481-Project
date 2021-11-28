@@ -26,6 +26,7 @@ namespace trvlApp
         private RestaurantPin _restPin;
         private EventPin _eventPin;
         private AttractionsPin _attractionsPin;
+        private ItineraryPin _itinerariesPin;
 
         public Page1()
         {
@@ -40,6 +41,7 @@ namespace trvlApp
             _restPin = new RestaurantPin(_settingsPage);
             _eventPin = new EventPin(_settingsPage);
             _attractionsPin = new AttractionsPin(_settingsPage);
+            _itinerariesPin = new ItineraryPin(_settingsPage);
         }
 
         public Page1(trvlApp.Page2 page2)
@@ -245,6 +247,13 @@ namespace trvlApp
 
         }
 
+        public void Button_Click_ItineraryPin(object sender, RoutedEventArgs e)
+        {
+
+            NavigationService.Navigate(_itinerariesPin);
+
+        }
+
         private void Button_Click_Attractions(object sender, RoutedEventArgs e)
         {
             if (_is_filtered_attraction == true)
@@ -303,11 +312,6 @@ namespace trvlApp
                 food_3.Visibility = Visibility.Hidden;
                 food_4.Visibility = Visibility.Hidden;
             }
-        }
-
-        private void Button_Click_eve(object sender, RoutedEventArgs e)
-        {
-
         }
 
     }
