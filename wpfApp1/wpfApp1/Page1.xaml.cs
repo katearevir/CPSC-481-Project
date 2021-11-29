@@ -65,25 +65,67 @@ namespace trvlApp
 
         UIElement dragObject = null;
         Point offset;
-        private void MapImage_PreviewMouseDown(object sender, MouseEventArgs e)
+
+        private bool _isDragging;
+        private Point _clickPoint;
+        private void MapImage_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
-            this.dragObject = sender as UIElement;
-            this.offset = e.GetPosition(this.canvas);
-            this.offset.Y -= Canvas.GetTop(this.dragObject);
-            this.offset.X -= Canvas.GetLeft(this.dragObject);
-            this.canvas.CaptureMouse();
+            if (e.ChangedButton == MouseButton.Left && e.ClickCount == 2)
+            {
+                _isDragging = false;
+                //attraction_1.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+            }
+            else
+            {
+                this.dragObject = sender as UIElement;
+                this.offset = e.GetPosition(this.canvas);
+                this.offset.Y -= Canvas.GetTop(this.dragObject);
+                this.offset.X -= Canvas.GetLeft(this.dragObject);
+                this.canvas.CaptureMouse();
+            }
+            _clickPoint = e.GetPosition(this);
+            
         }
         private void CanvasMain_PreviewMouseMove(object sender, MouseEventArgs e)
         {
+
             if (this.dragObject == null)
                 return;
-            var position = e.GetPosition(sender as IInputElement);
-            Canvas.SetTop(this.dragObject, position.Y - this.offset.Y);
-            Canvas.SetLeft(this.dragObject, position.X - this.offset.X);
+
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                Point currentPosition = e.GetPosition(this);
+                double distanceX = Math.Abs(_clickPoint.X - currentPosition.X);
+                double distanceY = Math.Abs(_clickPoint.Y - currentPosition.Y);
+                if (distanceX > 10 || distanceY > 10)
+                {
+                    _isDragging = true;
+                    Console.WriteLine("Dragging");
+                    var position = e.GetPosition(sender as IInputElement);
+                    Canvas.SetTop(this.dragObject, position.Y - this.offset.Y);
+                    Canvas.SetLeft(this.dragObject, position.X - this.offset.X);
+                }
+            }
+            /*
+            // in order to prevent the object from leaving the window, set the bounds with this condition
+            // uses the canvas actual/current height and width to determine the bounds, even if the window will be resized
+            if (e.GetPosition(sender as IInputElement).X < canvas.ActualWidth - 50 && e.GetPosition(sender as IInputElement).Y < canvas.ActualHeight - 50 && e.GetPosition(sender as IInputElement).X > 50 && e.GetPosition(sender as IInputElement).Y > 50)
+            {
+                var position = e.GetPosition(sender as IInputElement);
+                Canvas.SetTop(this.dragObject, position.Y - this.offset.Y);
+                Canvas.SetLeft(this.dragObject, position.X - this.offset.X);
+            }
+            */
+            
+
         }
 
         private void CanvasMain_PreviewMouseUp(object sender, MouseButtonEventArgs e)
         {
+            if (_isDragging)
+            {
+                _isDragging = false;
+            }
             this.dragObject = null;
             this.canvas.ReleaseMouseCapture();
         }
