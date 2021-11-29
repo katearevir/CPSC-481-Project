@@ -130,6 +130,7 @@ namespace trvlApp
             {
                 alertText1.Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
                 alertText2.Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
+                AlertTimingComboBox.IsEnabled = true;
                 if (FifteenAlert.IsSelected) {
                     AlertTimingLabel.Content = "15 minutes.";
                     BlurredPopUpBackground.Visibility = Visibility.Visible;
@@ -177,6 +178,7 @@ namespace trvlApp
             {
                 alertText1.Foreground = new SolidColorBrush(Color.FromRgb(100, 100, 100));
                 alertText2.Foreground = new SolidColorBrush(Color.FromRgb(100, 100, 100));
+                AlertTimingComboBox.IsEnabled = false;
                 //AlertsToggleButton.Toggled1 = false;\
                 AlertsToggleButton.Toggled = false; 
                 BlurredPopUpBackground.Visibility = Visibility.Collapsed;
@@ -184,6 +186,19 @@ namespace trvlApp
             }
             
 
+        }
+
+        private void soundsToggle(object sender, MouseButtonEventArgs e)
+        {
+            if (AlarmSoundToggle.Toggled1)
+            {
+                alarmSoundLabel.Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
+            }
+            else
+            {
+                alarmSoundLabel.Foreground = new SolidColorBrush(Color.FromRgb(100, 100, 100));
+            }
+            
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

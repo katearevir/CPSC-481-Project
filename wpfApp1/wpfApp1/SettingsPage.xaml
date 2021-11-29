@@ -51,7 +51,7 @@
                 </StackPanel>
 
                 <StackPanel Width="87" Height="21">
-                    <ComboBox x:Name="AlertTimingComboBox" FontSize="9" Width="87" SelectionChanged="ComboBox_SelectionChanged">
+                    <ComboBox x:Name="AlertTimingComboBox" FontSize="9" Width="87" IsEnabled="False" SelectionChanged="ComboBox_SelectionChanged">
                         <ComboBoxItem x:Name="FifteenAlert" Selected="FifteenMinSelected">15 mins before</ComboBoxItem>
                         <ComboBoxItem x:Name="ThirtyAlert" Selected="ThirtyMinSelected">30 mins before</ComboBoxItem>
                         <ComboBoxItem x:Name="OneHourAlert" Selected="OneHourSelected">1 hr before</ComboBoxItem>
@@ -71,13 +71,13 @@
             <Label Content="Alert Type" Height="26" Width="230" VerticalContentAlignment="Center" FontWeight="Bold" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface"/>
 
             <StackPanel Orientation="Horizontal" Height="22" Width="224">
-                <Label Content="Alarm (sound)" Height="22" VerticalAlignment="Center" Width="176" FontSize="10" FontFamily="Century Gothic" Foreground="#FF646464" TextBlock.FontFamily="Global User Interface"/>
-                <local:ToggleButton x:Name="AlarmSoundToggle" Width="40" Height="20"/>
+                <Label x:Name="alarmSoundLabel" Content="Alarm (sound)" Height="22" VerticalAlignment="Center" Width="176" FontSize="10" FontFamily="Century Gothic" Foreground="#FF646464" TextBlock.FontFamily="Global User Interface"/>
+                <local:ToggleButton x:Name="AlarmSoundToggle" MouseLeftButtonDown="soundsToggle" Width="40" Height="20"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Height="23" Width="226">
                 <Label x:Name="AlertNotificationsToggle" Content="Notifications" Height="22" VerticalAlignment="Center" Width="178" FontSize="10" FontFamily="Century Gothic" Foreground="#FF646464" TextBlock.FontFamily="Global User Interface"/>
-                <local:ToggleButton x:Name="Toggle3" Width="38" Height="26" VerticalAlignment="Center"/>
+                <local:ToggleButton x:Name="Toggle3" Width="40" Height="20" VerticalAlignment="Center"/>
             </StackPanel>
             <StackPanel Height="26" Width="228" Orientation="Horizontal">
                 <Label Content="Generate Sharing Code:" Height="25" Width="152" FontWeight="Bold" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface"/>
@@ -126,18 +126,12 @@
 
 
         </StackPanel>
-        <Rectangle HorizontalAlignment="Center" Height="24" Stroke="Black" VerticalAlignment="Top" Width="247" Fill="White"/>
+        <Rectangle HorizontalAlignment="Center" Height="26" Stroke="Black" VerticalAlignment="Top" Width="247" Fill="White"/>
         <Button x:Name="SettingsButton" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="24" Margin="211,0,0,0" VerticalAlignment="Top" Width="22" FontWeight="Normal" RenderTransformOrigin="0.5,0.517" Click="SettingsButtonClick">
             <Button.Background>
                 <ImageBrush ImageSource="/gear.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" BorderThickness="0" HorizontalAlignment="Right" Margin="0,2,165,457" Width="22" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
-            <Button.Background>
-                <ImageBrush ImageSource="/sunshine.png"/>
-            </Button.Background>
-        </Button>
-        <TextBlock HorizontalAlignment="Right" Height="14" Margin="0,7,180,0" Text="4:00 PM" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" FontFamily="Global User Interface" FontSize="10"/>
         <TextBlock HorizontalAlignment="Center" Height="28" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="88">
             <TextBlock.Background>
                 <ImageBrush ImageSource="/TRVL-nobackground-cropped.png" Stretch="UniformToFill"/>
@@ -175,8 +169,34 @@
             </StackPanel>
         </StackPanel>
 
+        <Menu Margin="0,1,157,456" Background="White">
+            <MenuItem  Height="23" Width="76" BorderBrush="#FFBBBBBB" Background="{x:Null}">
+                <MenuItem.Header>
+                    <TextBlock VerticalAlignment="CENTER" HorizontalAlignment="Center">4:00 PM</TextBlock>
+                </MenuItem.Header>
+                <MenuItem.Icon>
+                    <Image Source="sunshine.png" Height="17" Width="17"></Image>
+                </MenuItem.Icon>
+                <MenuItem Header="6:00 PM" IsHitTestVisible="False" BorderBrush="Black" Background="White">
+                    <MenuItem.Icon >
+                        <Image Source="cloudy-day.png" Height="17" Width="17"></Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="8:00 PM" IsHitTestVisible="False" BorderBrush="Black" Background="White">
+                    <MenuItem.Icon >
+                        <Image Source="cloudy-day.png" Height="17" Width="17"></Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="11:00 PM" IsHitTestVisible="False" BorderBrush="Black" Background="White">
+                    <MenuItem.Icon>
+                        <Image Source="storm.png" Height="17" Width="17"></Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
 
-        
+
+
         <StackPanel x:Name="CodeImportStack" HorizontalAlignment="Center" Height="100" Margin="0,163,0,0" VerticalAlignment="Top" Width="200" Visibility="Collapsed">
             <StackPanel Height="20" Background="#FF4F4F4F">
                 <Label x:Name="ImportBoxTitle" Content="" FontFamily="Global User Interface" FontWeight="Bold" FontSize="10" Foreground="White" BorderBrush="Black" Width="190"/>
