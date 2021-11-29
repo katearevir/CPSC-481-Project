@@ -38,6 +38,7 @@
     <None Remove="interest_filter.png" />
     <None Remove="interest_filter_hidden.png" />
     <None Remove="interest_pin.png" />
+    <None Remove="Itinerary1.jpg" />
     <None Remove="itinerary_pin.png" />
     <None Remove="keyboard.png" />
     <None Remove="left_arrow.png" />
@@ -91,6 +92,7 @@
     <Resource Include="interest_filter.png" />
     <Resource Include="interest_filter_hidden.png" />
     <Resource Include="interest_pin.png" />
+    <Resource Include="Itinerary1.jpg" />
     <Resource Include="itinerary_pin.png" />
     <Resource Include="keyboard.png" />
     <Resource Include="left_arrow.png" />
