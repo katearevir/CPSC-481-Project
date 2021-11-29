@@ -144,8 +144,8 @@ namespace trvlApp
             AddItineraryItem_Window = new Itinerary_AddItineraryItem(this);
             AddItineraryItem_Window.Show();
             //if we were to do stuff with this we should make an object with this info and use that instead, but this is just to show that it works in the meantime.
-            AddItineraryItem_Window.Set_All_Fields("Chinatown Food", "Chinatown, Calgary, AB", "12:00", "12:50", Itinerary_AddItineraryItem.TimeEnum.PM,
-                Itinerary_AddItineraryItem.TimeEnum.PM, Itinerary_AddItineraryItem.LocationTypeEnum.Restaurant, "Explore & eat some food - Not a far walk from Prince's Island Park.");
+            AddItineraryItem_Window.Set_All_Fields("Chinatown Shopping", "Chinatown, Calgary, AB", "12:00", "12:50", Itinerary_AddItineraryItem.TimeEnum.PM,
+                Itinerary_AddItineraryItem.TimeEnum.PM, Itinerary_AddItineraryItem.LocationTypeEnum.PlaceOfInterest, "Meet up & explore mall for some quick shopping. Also restaurants in/nearby.");
         }
 
         private void SharedTab_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)

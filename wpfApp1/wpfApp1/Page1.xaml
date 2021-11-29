@@ -64,7 +64,7 @@
                 </Button.Background>
             </Button>
 
-            <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="1660,850,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+            <Button Content="" BorderThickness="0" x:Name="CustomEvent2Pin" Click="CustomEvent2Pin_Click" HorizontalAlignment="Left" Height="30" Margin="1660,850,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
                 <Button.Background>
                     <ImageBrush ImageSource="/itinerary_pin.png"/>
                 </Button.Background>

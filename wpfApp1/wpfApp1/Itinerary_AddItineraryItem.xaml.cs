@@ -70,6 +70,9 @@ namespace trvlApp
             timeEndDD.SelectedIndex = (int)timeEndDropdown;
             var locationTypeDD = (ComboBox)this.FindName("LocationTypeDropDown");
             locationTypeDD.SelectedIndex = (int)locationType;
+
+            var viewPinButton = (Button)this.FindName("ViewPinButton");
+            viewPinButton.IsEnabled = true;
         }
 
         private void NameTextBox_PreviewKeyDown(object sender, KeyEventArgs e)
@@ -95,6 +98,9 @@ namespace trvlApp
             {
                 SelectedTextbox.Foreground = Brushes.Black;
                 SelectedTextbox.Text = "";
+                var viewPinButton = (Button)this.FindName("ViewPinButton");
+                viewPinButton.IsEnabled = true;
+
             }
         }
 
@@ -192,6 +198,8 @@ namespace trvlApp
             {
                 SelectedTextbox.Text = "<Location>";
                 SelectedTextbox.Foreground = Brushes.Gainsboro;
+                var viewPinButton = (Button)this.FindName("ViewPinButton");
+                viewPinButton.IsEnabled = false;
             }
         }
 
@@ -431,6 +439,56 @@ namespace trvlApp
             var savedLabel = (Label)this.FindName("SavedLabel");
             savedLabel.Visibility = Visibility.Collapsed;
 
+        }
+
+
+        public bool MainWindowIsMapPage = false;
+        private void ViewPinButton_Click(object sender, RoutedEventArgs e)
+        {
+            var locationTextbox = (TextBox)this.FindName("LocationTextBox");
+
+            if (locationTextbox.Text.Contains(".")) ;
+            else if (!locationTextbox.Text.Contains("Calgary"))
+            {
+                ItineraryItem_Error errorWindow = new ItineraryItem_Error(
+                    $"The location '{locationTextbox.Text}' could not be found in Calgary.");
+                errorWindow.Show();
+            }
+            else if(locationTextbox.Text != "Chinatown, Calgary, AB")
+            {
+                ItineraryItem_Error errorWindow = new ItineraryItem_Error(
+                    $"Could not find pin on map. Please make sure {locationTextbox.Text} can be found on Google Maps.");
+                errorWindow.Show();
+            }
+
+            // Somehow navigate to page & center on green pin (Any green pin is fine)
+            if (!MainWindowIsMapPage)
+            {
+                parentWindow.NavigatePage(new object(), new RoutedEventArgs());
+            }
+            //somehow move map.
+        }
+
+        private void GetDirectionsButton_Click(object sender, RoutedEventArgs e)
+        {
+            var locationTextbox = (TextBox)this.FindName("LocationTextBox");
+
+            if (locationTextbox.Text == "<Location>")
+                return;
+
+            if (locationTextbox.Text.Contains(".")) ;
+            else if (!locationTextbox.Text.Contains("Calgary"))
+            {
+                ItineraryItem_Error errorWindow = new ItineraryItem_Error(
+                    $"The location '{locationTextbox.Text}' could not be found in Calgary.");
+                errorWindow.Show();
+            }
+            else if (locationTextbox.Text != "Chinatown, Calgary, AB")
+            {
+                ItineraryItem_Error errorWindow = new ItineraryItem_Error(
+                    $"Please make sure {locationTextbox.Text} can be found on Google Maps.");
+                errorWindow.Show();
+            }
         }
     }
 }

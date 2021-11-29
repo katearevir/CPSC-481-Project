@@ -39,12 +39,25 @@
                 <ImageBrush ImageSource="/left_arrow.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" Name="SaveButton" Click="SaveButton_Click" BorderThickness="0" HorizontalAlignment="Left" Height="40" Margin="149,16,0,0" VerticalAlignment="Top" Width="40" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+        <Button Content="" x:Name="SaveButton" Click="SaveButton_Click" BorderThickness="0" HorizontalAlignment="Left" Height="40" Margin="149,14,0,0" VerticalAlignment="Top" Width="40" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
             <Button.Background>
                 <ImageBrush ImageSource="/save.png"/>
             </Button.Background>
         </Button>
+        <!--<Button Content="" x:Name="GetDirectionsButton" Click="GetDirectionsButton_Click" BorderThickness="0" HorizontalAlignment="Left" Height="22" Width="66" Margin="124,74,0,188" FontWeight="Normal" RenderTransformOrigin="0.5,0.517" BorderBrush="#FFEAD9D9">
+            <Button.Background>
+                <ImageBrush ImageSource="/Directions.png"/>
+            </Button.Background>
+        </Button>-->
         <Label Content="Time start and end:" HorizontalAlignment="Left" Margin="7,76,0,0" VerticalAlignment="Top"/>
         <Label Content="Saved!" x:Name="SavedLabel" Visibility="Collapsed" FontFamily="Global User Interface" FontSize="10" HorizontalAlignment="Left" Margin="149,55,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.441,0.337"/>
+
+        <Button Content="" x:Name="GetDirectionsButton" Click="GetDirectionsButton_Click" BorderThickness="0" HorizontalAlignment="Left" Height="22" Width="66" Margin="127,76,0,0" VerticalAlignment="Top" FontWeight="Normal">
+            <Button.Background>
+                <ImageBrush ImageSource="/Directions.png"/>
+            </Button.Background>
+        </Button>
+
+        <Button Content="View Pin" x:Name="ViewPinButton" Click="ViewPinButton_Click" IsEnabled="False" HorizontalAlignment="Left" FontFamily="Global User Interface" FontSize="10" Margin="148,55,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
