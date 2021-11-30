@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:trvlApp"
         mc:Ignorable="d"
-        Title="Delete Itinerary Item" Height="100" Width="200">
+        Title="Delete Itinerary Item" Height="120" Width="220" ResizeMode="NoResize">
     <Grid>
         <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="76" Width="177" FontFamily="Global User Interface"><Run Language="en-ca" Text="Are you sure you want to delete this itinerary item?"/><LineBreak/><Run Language="en-ca"/></TextBlock>
         <Button Content="Yes: Delete This Item" x:Name="Confirm" Click="Confirm_Click" HorizontalAlignment="Left" Margin="11,54,0,0" VerticalAlignment="Top" FontFamily="Global User Interface" />

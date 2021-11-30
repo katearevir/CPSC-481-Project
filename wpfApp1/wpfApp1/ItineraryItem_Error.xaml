@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:trvlApp"
         mc:Ignorable="d"
-        Title="Itinerary Item Error" Height="150" Width="200">
+        Title="Itinerary Item Error" Height="165" Width="215" ResizeMode="NoResize">
     <Grid>
         <ScrollViewer Height="78" HorizontalAlignment="Center" Margin="0,15,0,0" VerticalAlignment="Top"  Width="180">
             <TextBlock x:Name="ErrorText" TextWrapping="WrapWithOverflow"  FontFamily="Global User Interface">
