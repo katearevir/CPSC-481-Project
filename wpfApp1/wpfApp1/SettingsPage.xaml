@@ -108,7 +108,7 @@
 
             <StackPanel Width="226" Orientation="Horizontal" Height="31">
                 <Label Content="Lefthand/Inverted Mode" Height="23" Width="178" FontWeight="Bold" FontFamily="Century Gothic" TextBlock.FontFamily="Global User Interface"/>
-                <local:ToggleButton x:Name="InvertedToggle" Width="39" Height="27" VerticalAlignment="Center" Loaded="InvertedToggled">
+                <local:ToggleButton x:Name="InvertedToggleButton" Width="39" Height="27" VerticalAlignment="Center" Loaded="InvertedToggled" MouseLeftButtonDown="InvertedToggle">
                     <local:ToggleButton.Background>
                         <ImageBrush/>
                     </local:ToggleButton.Background>

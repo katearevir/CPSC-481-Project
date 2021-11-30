@@ -383,5 +383,10 @@ namespace trvlApp
             PopupNoButton.Visibility = Visibility.Collapsed;
             PopupRemoveSharedItineraryButton.Visibility = Visibility.Collapsed;
         }
+
+        public void InvertedToggle(object sender, MouseButtonEventArgs e)
+        {
+            ItineraryPage._page1.ToggleInversion();
+        }
     }
 }
