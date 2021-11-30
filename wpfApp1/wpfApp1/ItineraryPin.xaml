@@ -201,7 +201,7 @@
                 <ImageBrush ImageSource="/TRVL-nobackground-cropped.png" Stretch="UniformToFill"/>
             </TextBlock.Background>
         </TextBlock>
-        <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="24" Margin="211,0,0,0" VerticalAlignment="Top" Width="22" FontWeight="Normal" RenderTransformOrigin="0.5,0.517" Click="OpenSettingsWindow">
+        <Button Content="" BorderThickness="0" HorizontalAlignment="Left" Height="24" Margin="211,0,0,0" VerticalAlignment="Top" Width="22" FontWeight="Normal" RenderTransformOrigin="0.5,0.517" Click="settingsNav">
             <Button.Background>
                 <ImageBrush ImageSource="/gear.png"/>
             </Button.Background>
