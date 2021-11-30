@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:trvlApp"
       mc:Ignorable="d" 
-      Height="300" Width="200"
+      Height="315" Width="215" ResizeMode="NoResize"
       Title="">
 
     <Grid Background="Azure">
