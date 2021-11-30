@@ -9,15 +9,15 @@
       Title="">
 
     <Grid Background="Azure">
-        <TextBox HorizontalAlignment="Left" x:Name="NameTextBox" PreviewMouseDown="NameTextBox_PreviewMouseDown" PreviewKeyDown="NameTextBox_PreviewKeyDown" Margin="10,16,0,0" Foreground="gainsboro" Text="&lt;Name&gt;" TextAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Global User Interface"/>
-        <TextBox HorizontalAlignment="Left" x:Name="LocationTextBox" PreviewMouseDown="LocationTextBox_PreviewMouseDown"  PreviewKeyDown="LocationTextBox_PreviewKeyDown" Margin="10,40,0,0" Foreground="gainsboro" Text="&lt;Location&gt;" TextAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Global User Interface"/>
-        <TextBox HorizontalAlignment="Left" x:Name="TimeStartTextBox" PreviewMouseDown="TimeStartTextBox_PreviewMouseDown"  PreviewKeyDown="TimeStartTextBox_PreviewKeyDown" Margin="10,100,0,0" Foreground="gainsboro" Text="hr:mn" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="42" Height="18" FontFamily="Global User Interface"/>
-        <ComboBox HorizontalAlignment="Left" x:Name="TimeStartDropdown" SelectionChanged="TimeStartDropdown_SelectionChanged" Margin="53,100,0,0" VerticalAlignment="Top" Width="46" SelectedItem="AM" RenderTransformOrigin="0.452,-0.516" Height="18" FontFamily="Global User Interface">
+        <TextBox HorizontalAlignment="Left" MaxHeight="18" x:Name="NameTextBox" PreviewMouseDown="NameTextBox_PreviewMouseDown" PreviewKeyDown="NameTextBox_PreviewKeyDown" Margin="10,16,0,0" Foreground="gainsboro" Text="&lt;Name&gt;" TextAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Global User Interface"/>
+        <TextBox HorizontalAlignment="Left" MaxHeight="36" x:Name="LocationTextBox" PreviewMouseDown="LocationTextBox_PreviewMouseDown"  PreviewKeyDown="LocationTextBox_PreviewKeyDown" Margin="10,40,0,0" Foreground="gainsboro" Text="&lt;Location&gt;" TextAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Global User Interface" Height="30"/>
+        <TextBox HorizontalAlignment="Left" x:Name="TimeStartTextBox" PreviewMouseDown="TimeStartTextBox_PreviewMouseDown"  PreviewKeyDown="TimeStartTextBox_PreviewKeyDown" Margin="10,109,0,0" Foreground="gainsboro" Text="hr:mn" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="42" Height="18" FontFamily="Global User Interface"/>
+        <ComboBox HorizontalAlignment="Left" x:Name="TimeStartDropdown" SelectionChanged="TimeStartDropdown_SelectionChanged" Margin="53,109,0,0" VerticalAlignment="Top" Width="46" SelectedItem="AM" RenderTransformOrigin="0.452,-0.516" Height="18" FontFamily="Global User Interface">
             <ComboBoxItem Content="AM"/>
             <ComboBoxItem Content="PM"/>
         </ComboBox>
-        <TextBox HorizontalAlignment="Left" x:Name="TimeEndTextBox" PreviewMouseDown="TimeEndTextBox_PreviewMouseDown"  PreviewKeyDown="TimeEndTextBox_PreviewKeyDown" Margin="100,100,0,0" Foreground="gainsboro" Text="hr:mn" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="44" Height="18" FontFamily="Global User Interface"/>
-        <ComboBox HorizontalAlignment="Left" x:Name="TimeEndDropdown" SelectionChanged="TimeEndDropdown_SelectionChanged" Margin="145,100,0,0" VerticalAlignment="Top" Width="46" SelectedItem="AM" RenderTransformOrigin="0.452,-0.516" Height="18" FontFamily="Global User Interface">
+        <TextBox HorizontalAlignment="Left" x:Name="TimeEndTextBox" PreviewMouseDown="TimeEndTextBox_PreviewMouseDown"  PreviewKeyDown="TimeEndTextBox_PreviewKeyDown" Margin="100,109,0,0" Foreground="gainsboro" Text="hr:mn" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="44" Height="18" FontFamily="Global User Interface"/>
+        <ComboBox HorizontalAlignment="Left" x:Name="TimeEndDropdown" SelectionChanged="TimeEndDropdown_SelectionChanged" Margin="145,109,0,0" VerticalAlignment="Top" Width="46" SelectedItem="AM" RenderTransformOrigin="0.452,-0.516" Height="18" FontFamily="Global User Interface">
             <ComboBoxItem Content="AM"/>
             <ComboBoxItem Content="PM"/>
         </ComboBox>
@@ -44,20 +44,16 @@
                 <ImageBrush ImageSource="/save.png"/>
             </Button.Background>
         </Button>
-        <!--<Button Content="" x:Name="GetDirectionsButton" Click="GetDirectionsButton_Click" BorderThickness="0" HorizontalAlignment="Left" Height="22" Width="66" Margin="124,74,0,188" FontWeight="Normal" RenderTransformOrigin="0.5,0.517" BorderBrush="#FFEAD9D9">
-            <Button.Background>
-                <ImageBrush ImageSource="/Directions.png"/>
-            </Button.Background>
-        </Button>-->
-        <Label Content="Time start and end:" HorizontalAlignment="Left" Margin="7,76,0,0" VerticalAlignment="Top"/>
-        <Label Content="Saved!" x:Name="SavedLabel" Visibility="Collapsed" FontFamily="Global User Interface" FontSize="10" HorizontalAlignment="Left" Margin="149,55,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.441,0.337"/>
 
-        <Button Content="" x:Name="GetDirectionsButton" Click="GetDirectionsButton_Click" BorderThickness="0" HorizontalAlignment="Left" Height="22" Width="66" Margin="127,76,0,0" VerticalAlignment="Top" FontWeight="Normal">
+        <Label Content="Time start and end:" HorizontalAlignment="Left" Margin="7,85,0,0" VerticalAlignment="Top"/>
+        <Label Content="Saved!" x:Name="SavedLabel" Visibility="Collapsed" FontFamily="Global User Interface" FontSize="10" HorizontalAlignment="Left" Margin="149,49,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.441,0.337"/>
+
+        <Button Content="" x:Name="GetDirectionsButton" Click="GetDirectionsButton_Click" BorderThickness="0" HorizontalAlignment="Left" Height="22" Width="66" Margin="129,73,0,0" VerticalAlignment="Top" FontWeight="Normal">
             <Button.Background>
                 <ImageBrush ImageSource="/Directions.png"/>
             </Button.Background>
         </Button>
 
-        <Button Content="View Pin" x:Name="ViewPinButton" Click="ViewPinButton_Click" IsEnabled="False" HorizontalAlignment="Left" FontFamily="Global User Interface" FontSize="10" Margin="148,55,0,0" VerticalAlignment="Top"/>
+        <Button Content="View Pin on Map" x:Name="ViewPinButton" Click="ViewPinButton_Click" IsEnabled="False" HorizontalAlignment="Left" FontFamily="Global User Interface" FontSize="10" Margin="10,75,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

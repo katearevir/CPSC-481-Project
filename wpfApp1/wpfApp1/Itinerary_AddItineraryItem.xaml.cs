@@ -447,6 +447,9 @@ namespace trvlApp
         {
             var locationTextbox = (TextBox)this.FindName("LocationTextBox");
 
+            if (locationTextbox.Text == "<Location>")
+                return;
+
             if (locationTextbox.Text.Contains(".")) ;
             else if (!locationTextbox.Text.Contains("Calgary"))
             {

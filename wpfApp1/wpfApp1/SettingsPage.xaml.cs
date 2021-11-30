@@ -382,6 +382,11 @@ namespace trvlApp
             PopupCancelSharingButton.Visibility = Visibility.Collapsed;
             PopupNoButton.Visibility = Visibility.Collapsed;
             PopupRemoveSharedItineraryButton.Visibility = Visibility.Collapsed;
+
+            if (CodeEnteredCorrectly)
+            {
+                ItineraryPage.EnableSharedTab();
+            }
         }
     }
 }
