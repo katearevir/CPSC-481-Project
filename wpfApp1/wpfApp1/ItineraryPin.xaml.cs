@@ -18,7 +18,7 @@ namespace trvlApp
     /// <summary>
     /// Interaction logic for ItineraryPin.xaml
     /// </summary>
-     public partial class ItineraryPin : Page
+    public partial class ItineraryPin : Page
     {
         private SettingsPage _settingsPage;
 
@@ -41,4 +41,5 @@ namespace trvlApp
             NavigationService.Navigate(_settingsPage);
         }
     }
+
 }
