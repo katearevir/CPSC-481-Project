@@ -356,5 +356,26 @@ namespace trvlApp
             AddItineraryItem_Window.Set_All_Fields("Chinatown Shopping", "Chinatown, Calgary, AB", "12:00", "12:50", Itinerary_AddItineraryItem.TimeEnum.PM,
                 Itinerary_AddItineraryItem.TimeEnum.PM, Itinerary_AddItineraryItem.LocationTypeEnum.PlaceOfInterest, "Meet up & explore mall for some quick shopping. Also restaurants in/nearby.");
         }
+
+        public void ToggleInversion()
+        {
+            // inverted toggle button from settings page toggled on 
+            if (_settingsPage.InvertedToggleButton.Toggled)
+            {
+                ItineraryLeftSide.Visibility = Visibility.Visible;
+                LeftSideEllipse.Visibility = Visibility.Visible;
+
+                ItineraryRightSide.Visibility = Visibility.Collapsed;
+                RightSideEllipse.Visibility = Visibility.Collapsed;
+            } else
+            {
+                ItineraryLeftSide.Visibility = Visibility.Collapsed;
+                LeftSideEllipse.Visibility = Visibility.Collapsed;
+
+                ItineraryRightSide.Visibility = Visibility.Visible;
+                RightSideEllipse.Visibility = Visibility.Visible;
+            }
+            
+        }
     }
 }

@@ -388,5 +388,10 @@ namespace trvlApp
                 ItineraryPage.EnableSharedTab();
             }
         }
+
+        public void InvertedToggle(object sender, MouseButtonEventArgs e)
+        {
+            ItineraryPage._page1.ToggleInversion();
+        }
     }
 }

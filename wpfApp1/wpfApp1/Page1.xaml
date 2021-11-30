@@ -78,12 +78,18 @@
         </Grid>
 
         <Grid Width="233" Height="480">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="238*"/>
+                <RowDefinition Height="11*"/>
+                <RowDefinition Height="231*"/>
+            </Grid.RowDefinitions>
 
             <Rectangle HorizontalAlignment="Center" Height="24" Stroke="Black" VerticalAlignment="Top" Width="234" Fill="White" Margin="0,-1,0,0"/>
 
-            <Ellipse HorizontalAlignment="Left" Height="156" Margin="204,0,0,0" Stroke="#FF686868" VerticalAlignment="Center" Width="57" Fill="#FF686868" Opacity="0.6"/>
+            <Ellipse x:Name="RightSideEllipse" HorizontalAlignment="Left" Height="156" Margin="204,162,0,0" Stroke="#FF686868" VerticalAlignment="Top" Width="57" Fill="#FF686868" Opacity="0.6" Grid.RowSpan="3"/>
+            <Ellipse x:Name="LeftSideEllipse" HorizontalAlignment="Left" Height="156" Margin="-34,162,0,0"  Stroke="#FF686868" VerticalAlignment="Top" Width="63" Fill="#FF686868" Opacity="0.6" Grid.RowSpan="3" Visibility="Collapsed"/>
 
-            <StackPanel Orientation="Horizontal" Margin="0,24,118,414">
+            <StackPanel Orientation="Horizontal" Margin="0,24,118,172">
                 <Button x:Name="food_filter" Content="" BorderThickness="0" Height="34" Width="34" FontWeight="Normal" Click="Button_Click_Foods">
                     <Button.Background>
                         <ImageBrush ImageSource="/restau_filter.png"/>
@@ -100,7 +106,7 @@
                     </Button.Background>
                 </Button>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0,428,0,10" Width="174" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" Margin="0,179,0,10" Width="174" HorizontalAlignment="Center" Grid.Row="2">
                 <TextBox Height="23" PreviewMouseDown="Search_PreviewMouseDown" PreviewKeyDown="Enter_Key_Search" x:Name="Search" Text="Search" VerticalContentAlignment="Center" TextWrapping="Wrap" Width="150" FontFamily="Global User Interface"/>
                 <Button Content="" Click="Button_Click_Search" BorderThickness="0" Height="24" Width="22" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
                     <Button.Background>
@@ -120,7 +126,7 @@
                     <ImageBrush ImageSource="/TRVL-nobackground-cropped.png" Stretch="UniformToFill"/>
                 </TextBlock.Background>
             </TextBlock>
-            <Menu Margin="0,1,157,456" Background="White">
+            <Menu Margin="0,1,157,214" Background="White">
                 <MenuItem  Height="23" Width="76" BorderBrush="#FFBBBBBB" Background="{x:Null}">
                     <MenuItem.Header>
                         <TextBlock VerticalAlignment="CENTER" HorizontalAlignment="Center">4:00 PM</TextBlock>
@@ -145,7 +151,7 @@
                     </MenuItem>
                 </MenuItem>
             </Menu>
-            <Button Content="ITINERARY" Click="NavigatePage" BorderThickness="0" Height="21" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" FontFamily="Global User Interface" Foreground="White" FontSize="16" FontWeight="Normal" Background="{x:Null}" BorderBrush="{x:Null}" Margin="152,0,-59,0">
+            <Button x:Name="ItineraryRightSide" Content="ITINERARY" Click="NavigatePage" BorderThickness="0" Height="20" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontFamily="Global User Interface" Foreground="White" FontSize="16" FontWeight="Normal" Background="{x:Null}" BorderBrush="{x:Null}" Margin="152,230,-59,0" Grid.RowSpan="3">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -154,8 +160,18 @@
                         <TranslateTransform/>
                     </TransformGroup>
                 </Button.RenderTransform>
-
             </Button>
+            <Button x:Name="ItineraryLeftSide" Content="ITINERARY" Click="NavigatePage"  BorderThickness="0" Height="20" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontFamily="Global User Interface" Foreground="White" FontSize="16" FontWeight="Normal" Background="{x:Null}" BorderBrush="{x:Null}" Margin="-59,228,152,0" Grid.RowSpan="2" Visibility="Collapsed">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90.021"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+
 
 
         </Grid>

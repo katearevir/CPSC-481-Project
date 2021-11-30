@@ -20,7 +20,7 @@ namespace trvlApp
     /// </summary>
     public partial class Page2 : Page
     {
-        private trvlApp.Page1 _page1;
+        public trvlApp.Page1 _page1;
         private SettingsPage _settingsPage;
         private Itinerary_AddItineraryItem AddItineraryItem_Window;
         public bool customEvent1_isVisible;
