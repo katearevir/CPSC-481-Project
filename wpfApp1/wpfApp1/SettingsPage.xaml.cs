@@ -132,31 +132,37 @@ namespace trvlApp
                 alertText2.Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
                 AlertTimingComboBox.IsEnabled = true;
                 if (FifteenAlert.IsSelected) {
+                    AlertNotificationLabel.Content = "Your next event is in ";
                     AlertTimingLabel.Content = "15 minutes.";
                     BlurredPopUpBackground.Visibility = Visibility.Visible;
                     EventAlarmStack.Visibility = Visibility.Visible;
                 } else if (ThirtyAlert.IsSelected)
                 {
+                    AlertNotificationLabel.Content = "Your next event is in ";
                     AlertTimingLabel.Content = "30 minutes.";
                     BlurredPopUpBackground.Visibility = Visibility.Visible;
                     EventAlarmStack.Visibility = Visibility.Visible;
                 } else if (OneHourAlert.IsSelected)
                 {
+                    AlertNotificationLabel.Content = "Your next event is in ";
                     AlertTimingLabel.Content = "60 minutes.";
                     BlurredPopUpBackground.Visibility = Visibility.Visible;
                     EventAlarmStack.Visibility = Visibility.Visible;
                 } else if (TwoHoursAlert.IsSelected)
                 {
+                    AlertNotificationLabel.Content = "Your next event is in ";
                     AlertTimingLabel.Content = "2 hours.";
                     BlurredPopUpBackground.Visibility = Visibility.Visible;
                     EventAlarmStack.Visibility = Visibility.Visible;
                 } else if (OneDayAlert.IsSelected)
                 {
+                    AlertNotificationLabel.Content = "Your next event is in ";
                     AlertTimingLabel.Content = "24 hours.";
                     BlurredPopUpBackground.Visibility = Visibility.Visible;
                     EventAlarmStack.Visibility = Visibility.Visible;
                 } else if (TwoDaysAlert.IsSelected)
                 {
+                    AlertNotificationLabel.Content = "Your next event is in ";
                     AlertTimingLabel.Content = "2 days.";
                     BlurredPopUpBackground.Visibility = Visibility.Visible;
                     EventAlarmStack.Visibility = Visibility.Visible;
@@ -209,6 +215,7 @@ namespace trvlApp
 
         private void FifteenMinSelected(object sender, RoutedEventArgs e)
         {
+            AlertNotificationLabel.Content = "Your next event is in ";
             AlertTimingLabel.Content = "15 minutes.";
             BlurredPopUpBackground.Visibility = Visibility.Visible;
             EventAlarmStack.Visibility = Visibility.Visible;
@@ -216,6 +223,7 @@ namespace trvlApp
 
         private void ThirtyMinSelected(object sender, RoutedEventArgs e)
         {
+            AlertNotificationLabel.Content = "Your next event is in ";
             AlertTimingLabel.Content = "30 minutes.";
             BlurredPopUpBackground.Visibility = Visibility.Visible;
             EventAlarmStack.Visibility = Visibility.Visible;
@@ -223,6 +231,7 @@ namespace trvlApp
 
         private void OneHourSelected(object sender, RoutedEventArgs e)
         {
+            AlertNotificationLabel.Content = "Your next event is in ";
             AlertTimingLabel.Content = "60 minutes.";
             BlurredPopUpBackground.Visibility = Visibility.Visible;
             EventAlarmStack.Visibility = Visibility.Visible;
@@ -230,6 +239,7 @@ namespace trvlApp
 
         private void TwoHoursSelected(object sender, RoutedEventArgs e)
         {
+            AlertNotificationLabel.Content = "Your next event is in ";
             AlertTimingLabel.Content = "2 hours.";
             BlurredPopUpBackground.Visibility = Visibility.Visible;
             EventAlarmStack.Visibility = Visibility.Visible;
@@ -237,6 +247,7 @@ namespace trvlApp
 
         private void OneDaySelected(object sender, RoutedEventArgs e)
         {
+            AlertNotificationLabel.Content = "Your next event is in ";
             AlertTimingLabel.Content = "24 hours.";
             BlurredPopUpBackground.Visibility = Visibility.Visible;
             EventAlarmStack.Visibility = Visibility.Visible;
@@ -244,6 +255,7 @@ namespace trvlApp
 
         private void TwoDaysSelected(object sender, RoutedEventArgs e)
         {
+            AlertNotificationLabel.Content = "Your next event is in ";
             AlertTimingLabel.Content = "2 days.";
             BlurredPopUpBackground.Visibility = Visibility.Visible;
             EventAlarmStack.Visibility = Visibility.Visible;
