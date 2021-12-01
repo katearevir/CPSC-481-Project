@@ -289,7 +289,7 @@
                         <ImageBrush ImageSource="/Directions.png"/>
                     </Button.Background>
                 </Button>
-                <Button Content="" BorderThickness="0" Height="25" Width="25" FontWeight="Normal">
+                <Button Content="" Click="AddItineraryItem_GlenbowMuseum" BorderThickness="0" Height="25" Width="25" FontWeight="Normal">
                     <Button.Background>
                         <ImageBrush ImageSource="/add.png"/>
                     </Button.Background>

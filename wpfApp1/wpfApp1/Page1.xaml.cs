@@ -21,7 +21,7 @@ namespace trvlApp
     public partial class Page1 : Page
     {
         private Page1 _page1;
-        private Page2 _page2;
+        public Page2 _page2;
         private SettingsPage _settingsPage;
         private RestaurantPin _restPin;
         private EventPin _eventPin;
@@ -39,7 +39,7 @@ namespace trvlApp
             _settingsPage.AddItineraryPage(_page2);
             _restPin = new RestaurantPin(_settingsPage);
             _eventPin = new EventPin(_settingsPage);
-            _attractionsPin = new AttractionsPin(_settingsPage);
+            _attractionsPin = new AttractionsPin(_settingsPage , this);
         }
 
         public Page1(trvlApp.Page2 page2)
