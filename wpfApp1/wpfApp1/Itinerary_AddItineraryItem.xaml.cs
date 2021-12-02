@@ -441,7 +441,7 @@ namespace trvlApp
 
         }
 
-
+        public bool fixingthisbug = false;
         public bool MainWindowIsMapPage = false;
         private void ViewPinButton_Click(object sender, RoutedEventArgs e)
         {
@@ -462,6 +462,13 @@ namespace trvlApp
                 ItineraryItem_Error errorWindow = new ItineraryItem_Error(
                     $"Could not find pin on map. Please make sure {locationTextbox.Text} can be found on Google Maps.");
                 errorWindow.Show();
+            }
+
+            if (fixingthisbug)
+            { return; }
+            else
+            {
+                fixingthisbug = true;
             }
 
             // Somehow navigate to page & center on green pin (Any green pin is fine)
