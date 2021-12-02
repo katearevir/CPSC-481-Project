@@ -9,18 +9,45 @@
     <Canvas x:Name="canvas" PreviewMouseMove="CanvasMain_PreviewMouseMove" PreviewMouseUp="CanvasMain_PreviewMouseUp">
         <Grid x:Name="background" Height="1923" Width="3000" Canvas.Left="-1500" Canvas.Top="-700" IsHitTestVisible="True">
             <Image Source="/bigMap.png" />
-            <Button x:Name="attraction_1"  Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="1630,881,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+            <Button x:Name="attraction_1"  Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="1924,712,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
                 <Button.Background>
                     <ImageBrush ImageSource="/interest_pin.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="attraction_2" Click="Button_Click_AttractionPin" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="1600,840,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+            <Button x:Name="attraction_2" Click="Button_Click_AttractionPin" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="1500,850,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
                 <Button.Background>
                     <ImageBrush ImageSource="/interest_pin.png"/>
                 </Button.Background>
             </Button>
 
-            <Button x:Name="food_1" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="1500,885,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+            <Button x:Name="attraction_3"  Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="1239,1544,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+                <Button.Background>
+                    <ImageBrush ImageSource="/interest_pin.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="attraction_4"  Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="2116,314,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+                <Button.Background>
+                    <ImageBrush ImageSource="/interest_pin.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="attraction_5"  Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="1885,1188,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+                <Button.Background>
+                    <ImageBrush ImageSource="/interest_pin.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="attraction_6"  Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="228,785,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+                <Button.Background>
+                    <ImageBrush ImageSource="/interest_pin.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="attraction_7"  Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="709,509,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+                <Button.Background>
+                    <ImageBrush ImageSource="/interest_pin.png"/>
+                </Button.Background>
+            </Button>
+
+
+            <Button x:Name="food_1" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="1361,905,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
                 <Button.Background>
                     <ImageBrush ImageSource="/restau_pin.png"/>
                 </Button.Background>
@@ -30,29 +57,79 @@
                     <ImageBrush ImageSource="/restau_pin.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="food_3" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="1600,1030,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+            <Button x:Name="food_3" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="1600,1208,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
                 <Button.Background>
                     <ImageBrush ImageSource="/restau_pin.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="food_4" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="1615,974,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+            <Button x:Name="food_4" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="2184,770,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+                <Button.Background>
+                    <ImageBrush ImageSource="/restau_pin.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="food_5" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="1971,905,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+                <Button.Background>
+                    <ImageBrush ImageSource="/restau_pin.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="food_6" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="1600,645,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+                <Button.Background>
+                    <ImageBrush ImageSource="/restau_pin.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="food_7" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="1376,670,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+                <Button.Background>
+                    <ImageBrush ImageSource="/restau_pin.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="food_8" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="1137,712,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+                <Button.Background>
+                    <ImageBrush ImageSource="/restau_pin.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="food_9" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="824,630,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
                 <Button.Background>
                     <ImageBrush ImageSource="/restau_pin.png"/>
                 </Button.Background>
             </Button>
 
-            <Button x:Name="event_1" Click="Button_Click_EventPin" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="1645,1045,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+            <Button x:Name="event_1" Click="Button_Click_EventPin" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="1600,1026,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
                 <Button.Background>
                     <ImageBrush ImageSource="/events_pin.png"/>
                 </Button.Background>
             </Button>
 
-            <Button x:Name="event_2" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="1615,732,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+            <Button x:Name="event_2" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="1675,544,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
                 <Button.Background>
                     <ImageBrush ImageSource="/events_pin.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="event_3" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="1660,916,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+            <Button x:Name="event_3" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="694,675,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+                <Button.Background>
+                    <ImageBrush ImageSource="/events_pin.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="event_4" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="974,524,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+                <Button.Background>
+                    <ImageBrush ImageSource="/events_pin.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="event_5" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="2311,722,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+                <Button.Background>
+                    <ImageBrush ImageSource="/events_pin.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="event_6" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="1224,564,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+                <Button.Background>
+                    <ImageBrush ImageSource="/events_pin.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="event_7" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="1956,549,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+                <Button.Background>
+                    <ImageBrush ImageSource="/events_pin.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="event_8" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="1600,895,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
                 <Button.Background>
                     <ImageBrush ImageSource="/events_pin.png"/>
                 </Button.Background>

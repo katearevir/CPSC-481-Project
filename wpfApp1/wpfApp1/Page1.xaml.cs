@@ -220,42 +220,54 @@ namespace trvlApp
 
                     if (_is_filtered_attraction == false)
                     {
-                        attraction_1.Visibility = Visibility.Visible;
-                        attraction_2.Visibility = Visibility.Visible;
+                        for (int i = 1; i <= 7; i++)
+                        {
+                            var attr = (Button)this.FindName("attraction_" + i);
+                            attr.Visibility = Visibility.Visible;
+                        }
                     }
                     else
                     {
-                        attraction_1.Visibility = Visibility.Hidden;
-                        attraction_2.Visibility = Visibility.Hidden;
+                        for (int i = 1; i <= 7; i++)
+                        {
+                            var attr = (Button)this.FindName("attraction_" + i);
+                            attr.Visibility = Visibility.Collapsed;
+                        }
                     }
 
                     if (_is_filtered_event == false)
                     {
 
-                        event_1.Visibility = Visibility.Visible;
-                        event_2.Visibility = Visibility.Visible;
-                        event_3.Visibility = Visibility.Visible;
+                        for (int i = 1; i <= 8; i++)
+                        {
+                            var _event = (Button)this.FindName("event_" + i);
+                            _event.Visibility = Visibility.Visible;
+                        }
                     }
                     else
                     {
-                        event_1.Visibility = Visibility.Hidden;
-                        event_2.Visibility = Visibility.Hidden;
-                        event_3.Visibility = Visibility.Hidden;
+                        for (int i = 1; i <= 8; i++)
+                        {
+                            var _event = (Button)this.FindName("event_" + i);
+                            _event.Visibility = Visibility.Collapsed;
+                        }
                     }
 
                     if (_is_filtered_food == false)
                     {
-                        food_1.Visibility = Visibility.Visible;
-                        food_2.Visibility = Visibility.Visible;
-                        food_3.Visibility = Visibility.Visible;
-                        food_4.Visibility = Visibility.Visible;
+                        for (int i = 1; i <= 9; i++)
+                        {
+                            var food = (Button)this.FindName("food_" + i);
+                            food.Visibility = Visibility.Visible;
+                        }
                     }
                     else
                     {
-                        food_1.Visibility = Visibility.Hidden;
-                        food_2.Visibility = Visibility.Hidden;
-                        food_3.Visibility = Visibility.Hidden;
-                        food_4.Visibility = Visibility.Hidden;
+                        for (int i = 1; i <= 9; i++)
+                        {
+                            var food = (Button)this.FindName("food_" + i);
+                            food.Visibility = Visibility.Collapsed;
+                        }
                     }
                 }
             }
@@ -293,15 +305,22 @@ namespace trvlApp
             {
                 attraction_filter.Background = new ImageBrush(new BitmapImage(new Uri("pack://application:,,,/interest_filter.png")));
                 _is_filtered_attraction = false;
-                attraction_1.Visibility = Visibility.Visible;
-                attraction_2.Visibility = Visibility.Visible;
+                for (int i = 1; i <= 7; i++)
+                {
+                    var attr = (Button)this.FindName("attraction_" + i);
+                    attr.Visibility = Visibility.Visible;
+                }
+                
             }
             else
             {
                 attraction_filter.Background = new ImageBrush(new BitmapImage(new Uri("pack://application:,,,/interest_filter_hidden.png")));
                 _is_filtered_attraction = true;
-                attraction_1.Visibility = Visibility.Hidden;
-                attraction_2.Visibility = Visibility.Hidden;
+                for (int i = 1; i <= 7; i++)
+                {
+                    var attr = (Button)this.FindName("attraction_" + i);
+                    attr.Visibility = Visibility.Collapsed;
+                }
             }
         }
 
@@ -311,17 +330,21 @@ namespace trvlApp
             {
                 event_filter.Background = new ImageBrush(new BitmapImage(new Uri("pack://application:,,,/events_filter.png")));
                 _is_filtered_event = false;
-                event_1.Visibility = Visibility.Visible;
-                event_2.Visibility = Visibility.Visible;
-                event_3.Visibility = Visibility.Visible;
+                for (int i = 1; i <= 8; i++)
+                {
+                    var _event = (Button)this.FindName("event_" + i);
+                    _event.Visibility = Visibility.Visible;
+                }
             }
             else
             {
                 event_filter.Background = new ImageBrush(new BitmapImage(new Uri("pack://application:,,,/events_filter_hidden.png")));
                 _is_filtered_event = true;
-                event_1.Visibility = Visibility.Hidden;
-                event_2.Visibility = Visibility.Hidden;
-                event_3.Visibility = Visibility.Hidden;
+                for (int i = 1; i <= 8; i++)
+                {
+                    var _event = (Button)this.FindName("event_" + i);
+                    _event.Visibility = Visibility.Collapsed;
+                }
             }
         }
 
@@ -331,19 +354,21 @@ namespace trvlApp
             {
                 food_filter.Background = new ImageBrush(new BitmapImage(new Uri("pack://application:,,,/restau_filter.png")));
                 _is_filtered_food = false;
-                food_1.Visibility = Visibility.Visible;
-                food_2.Visibility = Visibility.Visible;
-                food_3.Visibility = Visibility.Visible;
-                food_4.Visibility = Visibility.Visible;
+                for (int i = 1; i <= 9; i++)
+                {
+                    var food = (Button)this.FindName("food_" + i);
+                    food.Visibility = Visibility.Visible;
+                }
             }
             else
             {
                 food_filter.Background = new ImageBrush(new BitmapImage(new Uri("pack://application:,,,/restau_filter_hidden.png")));
                 _is_filtered_food = true;
-                food_1.Visibility = Visibility.Hidden;
-                food_2.Visibility = Visibility.Hidden;
-                food_3.Visibility = Visibility.Hidden;
-                food_4.Visibility = Visibility.Hidden;
+                for (int i = 1; i <= 9; i++)
+                {
+                    var food = (Button)this.FindName("food_" + i);
+                    food.Visibility = Visibility.Collapsed;
+                }
             }
         }
 
