@@ -30,7 +30,7 @@
                     <ImageBrush ImageSource="/interest_pin.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="attraction_5"  Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="1885,1188,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+            <Button x:Name="attraction_5"  Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="1690,1232,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
                 <Button.Background>
                     <ImageBrush ImageSource="/interest_pin.png"/>
                 </Button.Background>
@@ -41,6 +41,21 @@
                 </Button.Background>
             </Button>
             <Button x:Name="attraction_7"  Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="709,509,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+                <Button.Background>
+                    <ImageBrush ImageSource="/interest_pin.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="attraction_8"  Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="1182,865,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+                <Button.Background>
+                    <ImageBrush ImageSource="/interest_pin.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="attraction_9"  Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="1470,544,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+                <Button.Background>
+                    <ImageBrush ImageSource="/interest_pin.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="attraction_10"  Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="1870,860,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
                 <Button.Background>
                     <ImageBrush ImageSource="/interest_pin.png"/>
                 </Button.Background>
@@ -130,6 +145,18 @@
                 </Button.Background>
             </Button>
             <Button x:Name="event_8" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="1600,895,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+                <Button.Background>
+                    <ImageBrush ImageSource="/events_pin.png"/>
+                </Button.Background>
+            </Button>
+
+            <Button x:Name="event_9" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="2380,1036,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
+                <Button.Background>
+                    <ImageBrush ImageSource="/events_pin.png"/>
+                </Button.Background>
+            </Button>
+
+            <Button x:Name="event_10" Content="" BorderThickness="0" HorizontalAlignment="Left" Height="30" Margin="1254,979,0,0" VerticalAlignment="Top" Width="30" FontWeight="Normal" RenderTransformOrigin="0.5,0.517">
                 <Button.Background>
                     <ImageBrush ImageSource="/events_pin.png"/>
                 </Button.Background>
