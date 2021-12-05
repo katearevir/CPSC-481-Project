@@ -145,56 +145,77 @@ namespace trvlApp
             var SelectedTextbox = (TextBox)this.FindName("Search");
             if (SelectedTextbox.Text.ToLower() == "bubble tea")
             {
-                attraction_1.Visibility = Visibility.Hidden;
-                attraction_2.Visibility = Visibility.Hidden;
-                event_1.Visibility = Visibility.Hidden;
-                event_2.Visibility = Visibility.Hidden;
-                event_3.Visibility = Visibility.Hidden;
-                food_1.Visibility = Visibility.Hidden;
-                food_2.Visibility = Visibility.Hidden;
+                for (int i = 1; i <= 7; i++)
+                {
+                    var attr = (Button)this.FindName("attraction_" + i);
+                    attr.Visibility = Visibility.Collapsed;
+                }
+                for (int i = 1; i <= 8; i++)
+                {
+                    var _event = (Button)this.FindName("event_" + i);
+                    _event.Visibility = Visibility.Collapsed;
+                }
+                for (int i = 1; i <= 9; i++)
+                {
+                    var food = (Button)this.FindName("food_" + i);
+                    if (food != food_3 && food != food_4)
+                        food.Visibility = Visibility.Collapsed;
+                }
             }
             if (SelectedTextbox.Text == "")
             {
                 SelectedTextbox.Text = "Search";
-                
+
                 if (_is_filtered_attraction == false)
                 {
-                    attraction_1.Visibility = Visibility.Visible;
-                    attraction_2.Visibility = Visibility.Visible;
+                    for (int i = 1; i <= 7; i++)
+                    {
+                        var attr = (Button)this.FindName("attraction_" + i);
+                        attr.Visibility = Visibility.Visible;
+                    }
                 }
                 else
                 {
-                    attraction_1.Visibility = Visibility.Hidden;
-                    attraction_2.Visibility = Visibility.Hidden;
+                    for (int i = 1; i <= 7; i++)
+                    {
+                        var attr = (Button)this.FindName("attraction_" + i);
+                        attr.Visibility = Visibility.Collapsed;
+                    }
                 }
-                
+
                 if (_is_filtered_event == false)
                 {
 
-                    event_1.Visibility = Visibility.Visible;
-                    event_2.Visibility = Visibility.Visible;
-                    event_3.Visibility = Visibility.Visible;
+                    for (int i = 1; i <= 8; i++)
+                    {
+                        var _event = (Button)this.FindName("event_" + i);
+                        _event.Visibility = Visibility.Visible;
+                    }
                 }
                 else
                 {
-                    event_1.Visibility = Visibility.Hidden;
-                    event_2.Visibility = Visibility.Hidden;
-                    event_3.Visibility = Visibility.Hidden;
+                    for (int i = 1; i <= 8; i++)
+                    {
+                        var _event = (Button)this.FindName("event_" + i);
+                        _event.Visibility = Visibility.Collapsed;
+                    }
                 }
 
                 if (_is_filtered_food == false)
                 {
-                    food_1.Visibility = Visibility.Visible;
-                    food_2.Visibility = Visibility.Visible;
-                    food_3.Visibility = Visibility.Visible;
-                    food_4.Visibility = Visibility.Visible;
+                    for (int i = 1; i <= 9; i++)
+                    {
+                        var food = (Button)this.FindName("food_" + i);
+                        food.Visibility = Visibility.Visible;
+                    }
                 }
                 else
                 {
-                    food_1.Visibility = Visibility.Hidden;
-                    food_2.Visibility = Visibility.Hidden;
-                    food_3.Visibility = Visibility.Hidden;
-                    food_4.Visibility = Visibility.Hidden;
+                    for (int i = 1; i <= 9; i++)
+                    {
+                        var food = (Button)this.FindName("food_" + i);
+                        food.Visibility = Visibility.Collapsed;
+                    }
                 }
             }
         }
@@ -206,13 +227,24 @@ namespace trvlApp
                 var SelectedTextbox = (TextBox)this.FindName("Search");
                 if (SelectedTextbox.Text.ToLower() == "bubble tea")
                 {
-                    attraction_1.Visibility = Visibility.Hidden;
-                    attraction_2.Visibility = Visibility.Hidden;
-                    event_1.Visibility = Visibility.Hidden;
-                    event_2.Visibility = Visibility.Hidden;
-                    event_3.Visibility = Visibility.Hidden;
-                    food_1.Visibility = Visibility.Hidden;
-                    food_2.Visibility = Visibility.Hidden;
+                    for (int i = 1; i <= 7; i++)
+                    {
+                        var attr = (Button)this.FindName("attraction_" + i);
+                        attr.Visibility = Visibility.Collapsed;
+                    }
+                    for (int i = 1; i <= 8; i++)
+                    {
+                        var _event = (Button)this.FindName("event_" + i);
+                        _event.Visibility = Visibility.Collapsed;
+                    }
+                    for (int i = 1; i <= 9; i++)
+                    {
+                        var food = (Button)this.FindName("food_" + i);
+                        if (food != food_3 && food != food_4)
+                        {
+                            food.Visibility = Visibility.Collapsed;
+                        } 
+                    }
                 }
                 if (SelectedTextbox.Text == "")
                 {
