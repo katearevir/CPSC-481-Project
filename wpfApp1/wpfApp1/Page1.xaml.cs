@@ -58,6 +58,10 @@ namespace trvlApp
         Boolean _is_filtered_event = false;
         Boolean _is_filtered_food = false;
 
+        int foodLength = 9;
+        int eventLength = 10;
+        int attrLength = 10;
+
         public void NavigatePage(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(_page2);
@@ -145,17 +149,17 @@ namespace trvlApp
             var SelectedTextbox = (TextBox)this.FindName("Search");
             if (SelectedTextbox.Text.ToLower() == "bubble tea")
             {
-                for (int i = 1; i <= 10; i++)
+                for (int i = 1; i <= attrLength; i++)
                 {
                     var attr = (Button)this.FindName("attraction_" + i);
                     attr.Visibility = Visibility.Collapsed;
                 }
-                for (int i = 1; i <= 10; i++)
+                for (int i = 1; i <= eventLength; i++)
                 {
                     var _event = (Button)this.FindName("event_" + i);
                     _event.Visibility = Visibility.Collapsed;
                 }
-                for (int i = 1; i <= 9; i++)
+                for (int i = 1; i <= foodLength; i++)
                 {
                     var food = (Button)this.FindName("food_" + i);
                     if (food != food_3 && food != food_4)
@@ -168,7 +172,7 @@ namespace trvlApp
 
                 if (_is_filtered_attraction == false)
                 {
-                    for (int i = 1; i <= 10; i++)
+                    for (int i = 1; i <= attrLength; i++)
                     {
                         var attr = (Button)this.FindName("attraction_" + i);
                         attr.Visibility = Visibility.Visible;
@@ -176,7 +180,7 @@ namespace trvlApp
                 }
                 else
                 {
-                    for (int i = 1; i <= 10; i++)
+                    for (int i = 1; i <= attrLength; i++)
                     {
                         var attr = (Button)this.FindName("attraction_" + i);
                         attr.Visibility = Visibility.Collapsed;
@@ -186,7 +190,7 @@ namespace trvlApp
                 if (_is_filtered_event == false)
                 {
 
-                    for (int i = 1; i <= 10; i++)
+                    for (int i = 1; i <= eventLength; i++)
                     {
                         var _event = (Button)this.FindName("event_" + i);
                         _event.Visibility = Visibility.Visible;
@@ -194,7 +198,7 @@ namespace trvlApp
                 }
                 else
                 {
-                    for (int i = 1; i <= 10; i++)
+                    for (int i = 1; i <= eventLength; i++)
                     {
                         var _event = (Button)this.FindName("event_" + i);
                         _event.Visibility = Visibility.Collapsed;
@@ -203,7 +207,7 @@ namespace trvlApp
 
                 if (_is_filtered_food == false)
                 {
-                    for (int i = 1; i <= 9; i++)
+                    for (int i = 1; i <= foodLength; i++)
                     {
                         var food = (Button)this.FindName("food_" + i);
                         food.Visibility = Visibility.Visible;
@@ -211,7 +215,7 @@ namespace trvlApp
                 }
                 else
                 {
-                    for (int i = 1; i <= 9; i++)
+                    for (int i = 1; i <= foodLength; i++)
                     {
                         var food = (Button)this.FindName("food_" + i);
                         food.Visibility = Visibility.Collapsed;
@@ -227,17 +231,17 @@ namespace trvlApp
                 var SelectedTextbox = (TextBox)this.FindName("Search");
                 if (SelectedTextbox.Text.ToLower() == "bubble tea")
                 {
-                    for (int i = 1; i <= 10; i++)
+                    for (int i = 1; i <= attrLength; i++)
                     {
                         var attr = (Button)this.FindName("attraction_" + i);
                         attr.Visibility = Visibility.Collapsed;
                     }
-                    for (int i = 1; i <= 10; i++)
+                    for (int i = 1; i <= eventLength; i++)
                     {
                         var _event = (Button)this.FindName("event_" + i);
                         _event.Visibility = Visibility.Collapsed;
                     }
-                    for (int i = 1; i <= 9; i++)
+                    for (int i = 1; i <= foodLength; i++)
                     {
                         var food = (Button)this.FindName("food_" + i);
                         if (food != food_3 && food != food_4)
@@ -252,7 +256,7 @@ namespace trvlApp
 
                     if (_is_filtered_attraction == false)
                     {
-                        for (int i = 1; i <= 10; i++)
+                        for (int i = 1; i <= attrLength; i++)
                         {
                             var attr = (Button)this.FindName("attraction_" + i);
                             attr.Visibility = Visibility.Visible;
@@ -260,7 +264,7 @@ namespace trvlApp
                     }
                     else
                     {
-                        for (int i = 1; i <= 10; i++)
+                        for (int i = 1; i <= foodLength; i++)
                         {
                             var attr = (Button)this.FindName("attraction_" + i);
                             attr.Visibility = Visibility.Collapsed;
@@ -270,7 +274,7 @@ namespace trvlApp
                     if (_is_filtered_event == false)
                     {
 
-                        for (int i = 1; i <= 10; i++)
+                        for (int i = 1; i <= eventLength; i++)
                         {
                             var _event = (Button)this.FindName("event_" + i);
                             _event.Visibility = Visibility.Visible;
@@ -278,7 +282,7 @@ namespace trvlApp
                     }
                     else
                     {
-                        for (int i = 1; i <= 10; i++)
+                        for (int i = 1; i <= eventLength; i++)
                         {
                             var _event = (Button)this.FindName("event_" + i);
                             _event.Visibility = Visibility.Collapsed;
@@ -287,7 +291,7 @@ namespace trvlApp
 
                     if (_is_filtered_food == false)
                     {
-                        for (int i = 1; i <= 9; i++)
+                        for (int i = 1; i <= foodLength; i++)
                         {
                             var food = (Button)this.FindName("food_" + i);
                             food.Visibility = Visibility.Visible;
@@ -295,7 +299,7 @@ namespace trvlApp
                     }
                     else
                     {
-                        for (int i = 1; i <= 9; i++)
+                        for (int i = 1; i <= foodLength; i++)
                         {
                             var food = (Button)this.FindName("food_" + i);
                             food.Visibility = Visibility.Collapsed;
