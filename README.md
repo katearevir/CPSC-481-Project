@@ -29,7 +29,7 @@ Click on "ITINERARY" or "MAP" to switch between pages.
   - Back button to go back to itinerary page.
 - **Editing/Deleting an itinerary item:**
   - After adding Mcdonalds to itinerary, click "McDonalds" item to edit.
-  - Floppy disk to save changes.
+  - Floppy disk to save changes (Note: will not actually save changes since data for item are hardcoded).
   - Trash icon to delete.
 - **Shared tab:**
   - In the Settings page, enter "123456" under **Import Share Code**.
