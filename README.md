@@ -11,12 +11,16 @@ Click on "ITINERARY" or "MAP" to switch between pages.
 ### ON THE MAP PAGE
 - Click and drag to view the map.
 - Double-click on itinerary pins to view location details/reviews.
-- List of pins that work *(all contained in the initial view of the map)*: 
-  - food_2 (bottom left orange pin)
-  - event_1 (top left purple pin)
-  - attraction_2 (bottom centre blue pin)
+- **List of pins that work *(all contained in the initial view of the map)***: 
+  - food_2 (bottom-left orange pin)
+  - event_1 (bottom blue pin)
+  - attraction_2 (top-left purple pin)
   - top green pin
-- Once you are in the location details page, click the back button or out of the window to go back to the map page.
+- Adding itinerary item from map:
+  1. Double-click on attraction_1 pin (Glenbow Museum)
+  2. Click on + button
+  3. Floppy disk to save (Note: will not actually save changes since data for items are hardcoded).
+- If you are in the location details page, click the back button or out of the window to go back to the map page.
 - Click on filter buttons to filter out pins.
 - Search "bubble tea" (enter or search icon) to filter out "bubble tea places".
 ### ON THE ITINERARY PAGE
@@ -29,14 +33,15 @@ Click on "ITINERARY" or "MAP" to switch between pages.
   - Back button to go back to itinerary page.
 - **Editing/Deleting an itinerary item:**
   - After adding Mcdonalds to itinerary, click "McDonalds" item to edit.
-  - Floppy disk to save changes (Note: will not actually save changes since data for item are hardcoded).
+  - Floppy disk to save changes (Note: will not actually save changes since data for items are hardcoded).
   - Trash icon to delete.
 - **Shared tab:**
   - In the Settings page, enter "123456" under **Import Share Code**.
   - Click icon next to it.
   - Clicking "OK" on the popup will take you back to the itinerary page containing the shared itinerary.
+  - "Chinatown Shopping" itinerary item is clickable.
 
-## Main Pages
+## XAML Pages Information
 1. Page1.xaml is the map page.
 2. Page2.xaml is the itinerary page.
 3. SettingsPage.xaml is the settings page.
