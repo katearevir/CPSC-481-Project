@@ -58,7 +58,7 @@ namespace trvlApp
         Boolean _is_filtered_event = false;
         Boolean _is_filtered_food = false;
 
-        int foodLength = 9;
+        int foodLength = 14;
         int eventLength = 10;
         int attrLength = 10;
 
