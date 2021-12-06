@@ -1,10 +1,14 @@
 # CPSC-481-Project
 Itinerary app by Frank Guo, Jiexuan Li, Kate Rivera, Minnie Thai, and Sandesh Regmi
 
-## Getting Started
-1. Within the project folder, open the wpfApp1 folder.
-2. Select trvlApp.sln to load the project in Visual Studio.
-3. Run the build.
+## Requirements
+.NET 5.0 is required to run this WPF app.
+
+## Setup
+1. Download project.
+2. Within the project folder, open the wpfApp1 folder.
+3. Select trvlApp.sln to load the project in Visual Studio.
+4. Run the build.
 
 ## Navigating The App
 Click on "ITINERARY" or "MAP" to switch between pages.
