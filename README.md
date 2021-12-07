@@ -44,13 +44,15 @@ Click on "ITINERARY" or "MAP" to switch between pages.
   - Click icon next to it.
   - Clicking "OK" on the popup will take you back to the itinerary page containing the shared itinerary.
   - "Chinatown Shopping" itinerary item is clickable.
+- **Viewing pin on map:**
+  - Click "Chinatown Shopping"
+  - Click "View pin on map"
 
 ## XAML Pages Information
 1. Page1.xaml is the map page.
 2. Page2.xaml is the itinerary page.
 3. SettingsPage.xaml is the settings page.
 4. RestaurantPin.xaml contains an example of restaurant details.
-5. EventPin.xaml containts an example of event details.
+5. EventPin.xaml contains an example of event details.
 6. AttractionsPin.xaml contains an example of attraction details.
 7. Itinerary_AddItineraryItem.xaml is the popup for adding itinerary items.
-
