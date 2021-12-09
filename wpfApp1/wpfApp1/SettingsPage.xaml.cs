@@ -360,6 +360,7 @@ namespace trvlApp
 
         private void StopExportingItinerary_Click(object sender, RoutedEventArgs e)
         {
+            ImportBoxTitle.Content = "Stop Sharing Itinerary?";
             ImportPopUpLabel.Content = new TextBlock
             {
                 Text = "Are you sure you want to stop sharing your itinerary? This will remove your itinerary from the shared tab of anyone that can see your shared itinerary.",
@@ -373,6 +374,7 @@ namespace trvlApp
 
         private void RemoveSharedItinerary_Click(object sender, RoutedEventArgs e)
         {
+            ImportBoxTitle.Content = "Remove Shared Itinerary?";
             ImportPopUpLabel.Content = new TextBlock
             {
                 Text = "Are you sure you want to remove the shared itinerary? You will not be able to see the previously shared itinerary without another code.",
